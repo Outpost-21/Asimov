@@ -9,7 +9,7 @@ using Verse;
 
 namespace Asimov
 {
-    public class RecipeProps
+    public class AutomatonRecipeDef : RecipeDef
     {
         public PawnKindDef pawnKind;
 
@@ -17,8 +17,10 @@ namespace Asimov
 
         public int workToMake = 0;
 
-        public List<ResearchProjectDef> researchPrerequisites = new List<ResearchProjectDef>();
-
         public List<MemeDef> memePrerequisites = new List<MemeDef>();
+
+        public string recipeIcon = null;
+
+        public string productionString = "Fabricating: ";
     }
 }

@@ -16,23 +16,22 @@ namespace Asimov
             compClass = typeof(Comp_Automaton);
         }
 
+        public bool canUseWeapons = false;
+
         public List<WorkTypeDef> enabledWorkTypes = new List<WorkTypeDef>();
 
         public List<SkillLevelSetting> skillSettings = new List<SkillLevelSetting>();
 
-        public bool noSkillLoss = true;
+        public float skillGainMulti = 0f;
 
-        public bool noSkillGain = true;
-        public float skillGainMulti = 1f;
-
-        public bool canSocialize = false;
-
-        public bool deathMatters = false;
+        public float skillLossMulti = 0f;
 
         public bool corpseEdible = false;
 
         public bool corpseRots = false;
 
         public List<ThingDef> repairThings = new List<ThingDef>();
+
+        public RecipeProps recipeProps = new RecipeProps();
     }
 }

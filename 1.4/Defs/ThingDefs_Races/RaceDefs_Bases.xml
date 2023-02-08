@@ -48,7 +48,7 @@
 	<PawnKindDef Name="AsimovAutomatonKindBase" Abstract="True">
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<aiAvoidCover>true</aiAvoidCover>
-		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<destroyGearOnDrop>false</destroyGearOnDrop>
 		<canStrip>false</canStrip>
 		<minGenerationAge>200</minGenerationAge>
 		<forceNormalGearQuality>true</forceNormalGearQuality>

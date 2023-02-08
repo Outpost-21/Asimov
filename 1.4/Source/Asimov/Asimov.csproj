@@ -84,8 +84,15 @@
     <Compile Include="Comps\Comp_EnergySource.cs" />
     <Compile Include="Data\EnergyCategory.cs" />
     <Compile Include="AI\Jobs\JobDriver_ConsumeEnergySource.cs" />
+    <Compile Include="Harmony\Patch_Pawn_IsColonistPlayerControlled.cs" />
+    <Compile Include="Harmony\Patch_FloatMenuMakerMap_CanTakeOrder.cs" />
+    <Compile Include="Harmony\Patch_ITab_Pawn_Gear_DrawThingRow.cs" />
+    <Compile Include="Harmony\Patch_ITab_Pawn_Gear_CanControl.cs" />
+    <Compile Include="Harmony\Patch_FloatMenuMakerMap_ChoicesAtFor.cs" />
+    <Compile Include="Harmony\Patch_FloatMenuMakerMap_AddDraftedOrders.cs" />
     <Compile Include="ModExtensions\DefModExt_ExtraStrings.cs" />
     <Compile Include="Harmony\Patch_CaravanUIUtility_AddPawnsSections.cs" />
+    <Compile Include="Data\RecipeProps.cs" />
     <Compile Include="Utilities\EnergyUtil.cs" />
     <Compile Include="ModExtensions\DefModExt_EnergyNeed.cs" />
     <Compile Include="Needs\Need_Energy.cs" />

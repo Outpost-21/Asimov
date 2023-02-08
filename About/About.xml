@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Asimov</name>
+	<author>Neronix17</author>
+	<packageId>Neronix17.Asimov</packageId>
+	<url>https://www.patreon.com/neronix17</url>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+	<description>After several human sacrifices and a pact made with a crossroads demon I bring to you a foundation mod. Not a framework but a foundation, frameworks have no content built into it, this does, so it's a foundation to build on. No more having half a dozen different batteries/power cells/chargepacks or charging platforms/ports/sockets/plugs to fuel your autonomous worker collective, now just one set usable by any and all. The only cost is a small fragment of your soul and maybe a moment of time configuring settings.
+
+[b]Automatons[/b]
+To be clear, since people would ask and probably will anyway because y'all have literacy issues and fail to read the most basic descriptions, this does not include any Automatons, it is a tool for modders to create them without having to create an entire energy need and functionality for them. These Automatons are typically just simple robots tasked with one or two jobs, like Biotech mechanoids in a way, unlike those however the player has control over the jobs they can currently do with a simple set of toggles.
+
+[b]User Features:[/b]
+You will not see these in-game if there is nothing capable of using them installed. If you have a mod using this foundation just to create golems without an energy need then of course these things will not be enabled.
+- Charging Ports - Wall mounted ports where Automatons can charge directly from, they'll take a moment just like you fleshy meatsacks do when eating but without the mess and disgusting sounds.
+- Wireless Power - There are both mid and late game methods for wireless power, Automatons will not seek it out however so you'll just have to be strategic with your placement.
+- Chargepacks - Food packets for Automatons essentially. They'll leave behind empty chargepacks which can be recharged in a Chargepack Recharger.
+- Recharger - Recharges chargepacks, automated so does not require pawns to work at the building, just needs empty packs brought to it and it'll dispense charged ones over time. Simple and cost effective.
+
+[b]Modder Features:[/b]
+- Easy creation of new Automatons that can function fully on their own.
+- Automatons can be drafted, but only if set up to be able to do so.
+- Individual colour mask selections, repaint Automatons whatever colour you want and individually rather than all at once!
+- Control over which charging methods they can use, users can still override in the settings if they prefer so they don't have to come whining to you about it either. They still will of course, we know they can't read.
+- Can also be used to handle animals/golems/zombies/etc capable of doing jobs too, the energy need is not a mandatory component!
+
+[b]FAQ[/b]
+[list][*][b]Why does a framework have CONTENT?[/b]
+[i]If you install this and nothing else, you will not be able to SEE that content outside of developer options. If a building isn't able to be used by any Automatons loaded, it will be hidden from the Architect menu, same goes for Chargepacks recipes and charger, they'll be disabled if you do not need them. You literally have nothing to whine about for once.[/i]
+[*][b]Why use this?[/b]
+[i]I don't care if you do, it just makes it easier for me than coding this into like 7 separate mods so, cope I guess.[/i]
+[*][b]Does this alter how Biotech mechanoids work?[/b]
+[i]Not without the patch mod specifically for doing so no. I actively avoided Biotech's mechanoids till I was done creating this foundation mod so it would not require the DLC, even though you definitely should get the Biotech DLC regardless, it's good.[/i]
+[*][b]Why "Asimov"?[/b]
+[i]After Isaac Asimov, the famous writer that came up with the three laws of robotics. I'm not creative at coming up with good names for things so I thought that was as good as anything else and more interesting than "Robot Framework".[/i][/list]</description>
+	<modDependencies>
+		<li>
+			<packageId>Ludeon.RimWorld.Biotech</packageId>
+			<displayName>RimWorld - Biotech</displayName>
+			<downloadUrl>https://store.steampowered.com/app/1826140/RimWorld__Biotech/</downloadUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld.Biotech</li>
+	</loadAfter>
+</ModMetaData>

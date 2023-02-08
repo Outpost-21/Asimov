@@ -1,0 +1,4 @@
+C:\RWModCategories\Neronix17\_Libraries\Asimov\1.4\Assemblies\Asimov.dll
+C:\RWModCategories\Neronix17\_Libraries\Asimov\1.4\Source\Asimov\obj\Debug\Asimov.csproj.AssemblyReference.cache
+C:\RWModCategories\Neronix17\_Libraries\Asimov\1.4\Source\Asimov\obj\Debug\Asimov.csproj.CoreCompileInputs.cache
+C:\RWModCategories\Neronix17\_Libraries\Asimov\1.4\Source\Asimov\obj\Debug\Asimov.dll

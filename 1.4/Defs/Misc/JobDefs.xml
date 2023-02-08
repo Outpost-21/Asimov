@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<JobDef>
+		<defName>Asimov_Hibernate</defName>
+		<driverClass>Asimov.JobDriver_Hibernate</driverClass>
+		<reportString>hibernating at TargetA.</reportString>
+	</JobDef>
+
+	<JobDef>
+		<defName>Asimov_RechargeFromSocket</defName>
+		<driverClass>Asimov.JobDriver_RechargeFromSocket</driverClass>
+		<reportString>recharging at TargetA.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<suspendable>false</suspendable>
+	</JobDef>
+
+	<JobDef>
+		<defName>Asimov_ConsumeEnergySource</defName>
+		<driverClass>Asimov.JobDriver_ConsumeEnergySource</driverClass>
+		<reportString>recharging from TargetA.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<suspendable>false</suspendable>
+		<modExtensions>
+			<li Class="Asimov.DefModExt_ExtraStrings">
+				<extraReportString>recharging TargetB with TargetA.</extraReportString>
+			</li>
+		</modExtensions>
+	</JobDef>
+
+</Defs>

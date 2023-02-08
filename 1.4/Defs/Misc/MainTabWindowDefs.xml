@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<MainButtonDef>
+	  <defName>Asimov_Automatons</defName>
+	  <label>automatons</label>
+	  <description>View and organize the colony's automatons.</description>
+	  <workerClass>Asimov.MainButtonWorker_ToggleAutomatonTab</workerClass>
+	  <tabWindowClass>Asimov.MainTabWindow_Automatons</tabWindowClass>
+	  <order>41</order>
+	  <closesWorldView>true</closesWorldView>
+	</MainButtonDef>
+
+</Defs>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Core -->
+	
+	<Asimov.Automatons>Automatons</Asimov.Automatons>
+
+	<!-- Drafting -->
+	
+	<Asimov.CannotDraftEmergencyPower>Cannot Draft (Running on Emergency Power)</Asimov.CannotDraftEmergencyPower>
+	<Asimov.CannotDraftDownedAutomaton>Cannot draft (Downed)</Asimov.CannotDraftDownedAutomaton>
+
+	<!-- Hibernation -->
+	
+	<Asimov.Hibernate>Hibernate {0} Here</Asimov.Hibernate>
+	<Asimov.HibernateFailNoPower>Cannot Hibernate (no power)</Asimov.HibernateFailNoPower>
+	<Asimov.HibernateFailReserveOrReach>Cannot Hibernate (can't reach)</Asimov.HibernateFailReserveOrReach>
+	<Asimov.HibernateFail>Cannot Hibernate (unknown reason)</Asimov.HibernateFail>
+	
+</LanguageData>

@@ -27,5 +27,11 @@
 			</li>
 		</modExtensions>
 	</JobDef>
+	
+	<JobDef>
+		<defName>Asimov_FillAutoCrafter</defName>
+		<driverClass>JobDriver_HaulToContainer</driverClass>
+		<reportString>hauling TargetA.</reportString>
+	</JobDef>
 
 </Defs>

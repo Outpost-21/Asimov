@@ -210,7 +210,7 @@ namespace Asimov
             int result = -1;
             if (curRecipe != null)
             {
-                result = (int)(curRecipe.workToMake * Props.craftingTimeMultiplier);
+                result = (int)(curRecipe.workAmount * Props.craftingTimeMulti);
             }
             workTick = result;
             workTickMax = result;

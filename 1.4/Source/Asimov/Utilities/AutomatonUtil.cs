@@ -24,11 +24,6 @@ namespace Asimov
         {
             if (pawn.Faction != null && pawn.Faction.IsPlayer && pawn.drafter != null)
             {
-                //Need_Energy need = pawn.needs.TryGetNeed<Need_Energy>();
-                //if (need != null && need.EmergencyPower)
-                //{
-                //    return "Asimov.CannotDraftEmergencyPower".Translate(pawn.Named("PAWN"));
-                //}
                 if (pawn.Downed)
                 {
                     return "Asimov.CannotDraftDownedAutomaton".Translate(pawn.Named("PAWN"));

@@ -11,9 +11,6 @@ using Verse.AI;
 
 namespace Asimov
 {
-    /// <summary>
-    /// Grabs a thing and fills the AutomatedProducer with it.
-    /// </summary>
     public class JobDriver_FillAutoCrafter : JobDriver
     {
         private const TargetIndex CarryThingIndex = TargetIndex.A;

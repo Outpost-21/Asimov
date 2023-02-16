@@ -84,7 +84,7 @@ namespace Asimov
             }
             if (!IsFrozen)
             {
-                CurLevel -= GetPawnOxygenConsumption() * 200f;
+                CurLevel -= GetPawnEnergyConsumption() * 200f;
 
                 if (EmergencyPower)
                 {
@@ -97,7 +97,7 @@ namespace Asimov
             }
         }
 
-        public float GetPawnOxygenConsumption()
+        public float GetPawnEnergyConsumption()
         {
             DefModExt_EnergyNeed modExt = pawn.def.GetModExtension<DefModExt_EnergyNeed>();
 

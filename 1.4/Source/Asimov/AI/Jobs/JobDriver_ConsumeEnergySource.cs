@@ -12,8 +12,8 @@ namespace Asimov
 {
     public class JobDriver_ConsumeEnergySource : JobDriver
     {
-        private const TargetIndex PowerDestIndex = TargetIndex.A;
-        private const TargetIndex OtherPawnIndex = TargetIndex.B;
+        public const TargetIndex PowerDestIndex = TargetIndex.A;
+        public const TargetIndex OtherPawnIndex = TargetIndex.B;
 
         public Need_Energy energyNeed;
         public bool isUsedFromInventory = false;
@@ -144,7 +144,7 @@ namespace Asimov
                         Comp_EnergySource energyComp = carriedThing.TryGetComp<Comp_EnergySource>();
                         if (energyComp != null)
                         {
-                            energyComp.RechargeEnergyNeed((Pawn)TargetB.Thing);
+                            energyComp.RechargeEnergyNeed(TargetB.Pawn);
                         }
 
                         pawn.carryTracker.DestroyCarriedThing();
@@ -175,6 +175,7 @@ namespace Asimov
                 });
 
                 yield return rechargeToil;
+                yield return Toils_Reserve.Release(OtherPawnIndex);
             }
         }
     }

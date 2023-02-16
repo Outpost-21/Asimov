@@ -50,10 +50,6 @@ namespace Asimov
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            if (CompAutomaton != null)
-            {
-                LogUtil.LogMessage($"Automaton Init ID: {ThingID}");
-            };
             if (workSettings == null)
             {
                 UpdateWorkPriorities();

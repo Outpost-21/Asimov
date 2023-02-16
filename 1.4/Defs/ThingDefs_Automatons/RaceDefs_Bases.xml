@@ -19,14 +19,12 @@
 		<race>
 			<trainability>None</trainability>
 			<fleshType>Asimov_Automaton</fleshType>
-			<body>Mech_Light</body>
 			<intelligence>ToolUser</intelligence>
 			<needsRest>false</needsRest>
 			<hasGenders>false</hasGenders>
 			<foodType>None</foodType>
 			<lifeExpectancy>2500</lifeExpectancy>
 			<bloodDef>Filth_MachineBits</bloodDef>
-			<nameGenerator>NamerMech</nameGenerator>
 			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
 			<soundCallIntervalFriendlyFactor>2</soundCallIntervalFriendlyFactor>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -49,7 +47,7 @@
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<aiAvoidCover>true</aiAvoidCover>
 		<destroyGearOnDrop>false</destroyGearOnDrop>
-		<canStrip>false</canStrip>
+		<canStrip>true</canStrip>
 		<minGenerationAge>200</minGenerationAge>
 		<forceNormalGearQuality>true</forceNormalGearQuality>
 		<weaponMoney>9999~9999</weaponMoney>
@@ -57,7 +55,13 @@
 		<weaponTags></weaponTags>
 		<techHediffsChance>1</techHediffsChance>
 		<techHediffsMoney>9999~9999</techHediffsMoney>
-		<!-- <controlGroupPortraitZoom>1.0</controlGroupPortraitZoom> -->
 	</PawnKindDef>
+
+	<Asimov.AutomatonRecipeDef Name="AsimovAutomatonRecipeBase" Abstract="True">
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workSkill>Crafting</workSkill>
+	</Asimov.AutomatonRecipeDef>
 
 </Defs>

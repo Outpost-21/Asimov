@@ -31,7 +31,5 @@ namespace Asimov
         public bool corpseRots = false;
 
         public List<ThingDef> repairThings = new List<ThingDef>();
-
-        public RecipeProps recipeProps = new RecipeProps();
     }
 }

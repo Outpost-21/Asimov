@@ -16,8 +16,8 @@ namespace Asimov
             compClass = typeof(Comp_AutoCrafter);
         }
 
-        public float craftingTimeMultiplier = 1.0f;
+        public float craftingTimeMulti = 1.0f;
 
-        public List<RecipeDef> recipes = new List<RecipeDef>();
+        public List<AutomatonRecipeDef> recipes = new List<AutomatonRecipeDef>();
     }
 }

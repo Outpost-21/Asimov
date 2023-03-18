@@ -70,6 +70,16 @@ namespace Asimov
 
         public void InitialisePawnData()
         {
+            Initialise_Training();
+            Initialise_Drafter();
+            Initialise_Equipment();
+            Initialise_Skills();
+            Initialise_Story();
+            Initialise_WorkSettings();
+        }
+
+        public void Initialise_Training()
+        {
             if (training != null)
             {
                 foreach (TrainableDef trainable in DefDatabase<TrainableDef>.AllDefs)
@@ -81,14 +91,26 @@ namespace Asimov
                     }
                 }
             }
-            if(drafter == null)
+        }
+
+        public void Initialise_Drafter()
+        {
+            if (drafter == null)
             {
                 drafter = new Pawn_DraftController(this);
             }
+        }
+
+        public void Initialise_Equipment()
+        {
             if (equipment == null)
             {
                 equipment = new Pawn_EquipmentTracker(this);
             }
+        }
+
+        public void Initialise_Skills()
+        {
             if (skills == null)
             {
                 skills = new Pawn_SkillTracker(this);
@@ -96,11 +118,15 @@ namespace Asimov
                 {
                     skill.Level = 0;
                 }
-                for (int i = 0; i < compAutomaton.Props.skillSettings.Count; i++)
+                for (int i = 0; i < CompAutomaton.Props.skillSettings.Count; i++)
                 {
-                    skills.skills.Find(sk => sk.def == compAutomaton.Props.skillSettings[i].skill).Level = compAutomaton.Props.skillSettings[i].level;
+                    skills.skills.Find(sk => sk.def == compAutomaton.Props.skillSettings[i].skill).Level = CompAutomaton.Props.skillSettings[i].level;
                 }
             }
+        }
+
+        public void Initialise_Story()
+        {
             if (story == null)
             {
                 story = new Pawn_StoryTracker(this)
@@ -108,6 +134,10 @@ namespace Asimov
                     bodyType = BodyTypeDefOf.Thin
                 };
             }
+        }
+
+        public void Initialise_WorkSettings()
+        {
             if (workSettings == null)
             {
                 workSettings = new Pawn_WorkSettings(this);

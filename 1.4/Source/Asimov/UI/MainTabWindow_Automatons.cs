@@ -14,7 +14,7 @@ namespace Asimov
 		public override PawnTableDef PawnTableDef => AsimovDefOf.Asimov_Automatons;
 
 		public override IEnumerable<Pawn> Pawns => from p in Find.CurrentMap.mapPawns.PawnsInFaction(Faction.OfPlayer)
-												   where p.def.HasComp(typeof(Comp_Automaton))
+												   where p.def.HasComp(typeof(Comp_Automaton)) && p.RaceProps.intelligence != Intelligence.Humanlike
 												   select p;
 
 		public override void PostOpen()

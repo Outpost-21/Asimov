@@ -7,7 +7,7 @@
 	<supportedVersions>
 		<li>1.4</li>
 	</supportedVersions>
-	<description>After several human sacrifices and a pact made with a crossroads demon I bring to you a foundation mod. Not a framework but a foundation, frameworks have no content built into it, this does, so it's a foundation to build on. No more having half a dozen different batteries/power cells/chargepacks or charging platforms/ports/sockets/plugs to fuel your autonomous worker collective, now just one set usable by any and all. The only cost is a small fragment of your soul and maybe a moment of time configuring settings.
+	<description>After several human sacrifices and a pact made with a crossroads demon I bring to you a foundation mod. Not a framework but a foundation, frameworks have no content built into it, this does, so it's a foundation to build on. No more having half a dozen different batteries/power cells/chargepacks or charging platforms/ports/sockets/plugs to fuel your autonomous worker collective, now just one set usable by any and all. The only cost is a small fragment of your soul and maybe a moment of time configuring settings. If you don't need any of that content though, it won't be visible on the player end outside of messing with DevMode tools. The primary purpose of this is for the creation of Automatons (autonomous working "animals") and non-human pawns.
 
 [b]Automatons[/b]
 To be clear, since people would ask and probably will anyway because y'all have literacy issues and fail to read the most basic descriptions, this does not include any Automatons, it is a tool for modders to create them without having to create an entire energy need and functionality for them. These Automatons are typically just simple robots tasked with one or two jobs, like Biotech mechanoids in a way, unlike those however the player has control over the jobs they can currently do with a simple set of toggles.
@@ -24,7 +24,8 @@ You will not see these in-game if there is nothing capable of using them install
 - Automatons can be drafted, but only if set up to be able to do so.
 - Individual colour mask selections, repaint Automatons whatever colour you want and individually rather than all at once!
 - Control over which charging methods they can use, users can still override in the settings if they prefer so they don't have to come whining to you about it either. They still will of course, we know they can't read.
-- Can also be used to handle animals/golems/zombies/etc capable of doing jobs too, the energy need is not a mandatory component!
+- Can also be used to handle animals/golems/zombies/etc capable of doing jobs too, the energy need is not a mandatory component and associated buildings/items are hidden when not needed!
+- Lightweight race framework for handling non-human pawns, nowhere near as flexible as Humanoid Alien Races but if you only need some small changes and no gene mechanics on the race, this does the job!
 
 [b]FAQ[/b]
 [list][*][b]Why does a framework have CONTENT?[/b]
@@ -34,7 +35,9 @@ You will not see these in-game if there is nothing capable of using them install
 [*][b]Does this alter how Biotech mechanoids work?[/b]
 [i]Not without the patch mod specifically for doing so no. I actively avoided Biotech's mechanoids till I was done creating this foundation mod so it would not require the DLC, even though you definitely should get the Biotech DLC regardless, it's good.[/i]
 [*][b]Why "Asimov"?[/b]
-[i]After Isaac Asimov, the famous writer that came up with the three laws of robotics. I'm not creative at coming up with good names for things so I thought that was as good as anything else and more interesting than "Robot Framework".[/i][/list]</description>
+[i]After Isaac Asimov, the famous writer that came up with the three laws of robotics. I'm not creative at coming up with good names for things so I thought that was as good as anything else and more interesting than "Robot Framework".[/i]
+[*][b]Why not use Humanoid Alien Races for races?[/b]
+[i]While erdelf's work on HAR is amazing and extremely useful for creating races, the effect Biotech had on the updating process for HAR completely killed my motivation to use it, not only that it had a domino effect on many of my mods updating slower because I felt like I was waiting for it to be fully updated for several months. Simply put I don't want to rely on HAR in future.[/i][/list]</description>
 	<modDependencies>
 		<li>
 			<packageId>Ludeon.RimWorld.Biotech</packageId>

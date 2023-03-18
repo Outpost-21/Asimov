@@ -31,5 +31,9 @@ namespace Asimov
         public bool corpseRots = false;
 
         public List<ThingDef> repairThings = new List<ThingDef>();
+
+        // Only Applies to Humanlikes
+
+        public bool colonyCaresIfDead = false;
     }
 }

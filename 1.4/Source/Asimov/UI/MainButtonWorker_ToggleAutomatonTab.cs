@@ -25,7 +25,7 @@ namespace Asimov
 					List<Pawn> list = currentMap.mapPawns.SpawnedPawnsInFaction(Faction.OfPlayer);
 					for (int i = 0; i < list.Count; i++)
 					{
-						if (list[i].TryGetComp<Comp_Automaton>() != null)
+						if (list[i].TryGetComp<Comp_Automaton>() != null && list[i].RaceProps.intelligence != Intelligence.Humanlike)
 						{
 							return false;
 						}
@@ -33,7 +33,7 @@ namespace Asimov
 					List<Pawn> list2 = currentMap.mapPawns.PawnsInFaction(Faction.OfPlayer);
 					for (int j = 0; j < list2.Count; j++)
 					{
-						if (list2[j].TryGetComp<Comp_Automaton>() != null)
+						if (list2[j].TryGetComp<Comp_Automaton>() != null && list2[j].RaceProps.intelligence != Intelligence.Humanlike)
 						{
 							return false;
 						}

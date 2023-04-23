@@ -5,6 +5,10 @@
 	
 	<Asimov.Automatons>Automatons</Asimov.Automatons>
 
+	<!-- Energy -->
+
+	<Asimov.ConsumeEnergySource>Charge from energy source</Asimov.ConsumeEnergySource>
+
 	<!-- Drafting -->
 	
 	<Asimov.CannotDraftEmergencyPower>Cannot Draft (Running on Emergency Power)</Asimov.CannotDraftEmergencyPower>

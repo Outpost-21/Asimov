@@ -35,11 +35,15 @@ namespace Asimov
                 return null;
             }
             Need_Energy energy = pawn.needs.TryGetNeed<Need_Energy>();
-            if (energy != null && energy.CurCategory < EnergyCategory.GettingLow)
+            if(energy == null)
             {
                 return null;
             }
-            if (Find.TickManager.TicksGame < GetLastTryTick(pawn) * 2500)
+            if (energy.CurCategory < EnergyCategory.GettingLow)
+            {
+                return null;
+            }
+            if (Find.TickManager.TicksGame < GetLastTryTick(pawn) + 2500)
             {
                 return null;
             }
@@ -117,7 +121,7 @@ namespace Asimov
         private int GetLastTryTick(Pawn pawn)
         {
             int result;
-            if (pawn.mindState.thinkData.TryGetValue(base.UniqueSaveKey, out result))
+            if (pawn.mindState.thinkData.TryGetValue(UniqueSaveKey, out result))
             {
                 return result;
             }
@@ -126,7 +130,7 @@ namespace Asimov
 
         private void SetLastTryTick(Pawn pawn, int val)
         {
-            pawn.mindState.thinkData[base.UniqueSaveKey] = val;
+            pawn.mindState.thinkData[UniqueSaveKey] = val;
         }
     }
 }

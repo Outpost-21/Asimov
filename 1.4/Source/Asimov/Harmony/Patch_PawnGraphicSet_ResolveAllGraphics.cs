@@ -44,13 +44,17 @@ namespace Asimov
                     string headPath = PawnGraphicUtil.GetHeadPath(pawn);
                     if (headPath != null)
                     {
-                        __instance.headGraphic = PawnGraphicUtil.GetInner<Graphic_Multi>(new GraphicRequest(typeof(Graphic_Multi), headPath, (ContentFinder<Texture2D>.Get(headPath + "_northm", false) == null) ? pawnDef.customGraphics.Shader : ShaderDatabase.CutoutComplex, pawnDef.customGraphics.bodyScale, skinFirst, skinSecond, null, 0, null, headPath));
+                        Shader shader = (ContentFinder<Texture2D>.Get(headPath + "_northm", false) == null) ? pawnDef.customGraphics.Shader : ShaderDatabase.CutoutComplex;
+                        LogUtil.LogMessage($"HeadShader = {shader}");
+                        __instance.headGraphic = GraphicDatabase.Get<Graphic_Multi>(headPath, shader, pawnDef.customGraphics.bodyScale, skinFirst, skinSecond);
                     }
 
                     string bodyPath = PawnGraphicUtil.GetBodyPath(pawn, pawnDef.customGraphics.bodyPath);
                     if (bodyPath != null)
                     {
-                        __instance.nakedGraphic = PawnGraphicUtil.GetInner<Graphic_Multi>(new GraphicRequest(typeof(Graphic_Multi), bodyPath, (ContentFinder<Texture2D>.Get(bodyPath + "_northm", false) == null) ? pawnDef.customGraphics.Shader : ShaderDatabase.CutoutComplex, pawnDef.customGraphics.bodyScale, skinFirst, skinSecond, null, 0, null, bodyPath));
+                        Shader shader = (ContentFinder<Texture2D>.Get(bodyPath + "_northm", false) == null) ? pawnDef.customGraphics.Shader : ShaderDatabase.CutoutComplex;
+                        LogUtil.LogMessage($"BodyShader = {shader}");
+                        __instance.nakedGraphic = GraphicDatabase.Get<Graphic_Multi>(bodyPath, shader, pawnDef.customGraphics.bodyScale, skinFirst, skinSecond);
                     }
 
                     if(pawnDef.pawnSettings != null)

@@ -21,7 +21,7 @@ namespace Asimov
 
         public static void LogMessage(string msg)
         {
-            if (Log.ReachedMaxMessagesLimit)
+            if (Log.ReachedMaxMessagesLimit || !AsimovMod.settings.verboseLogging)
             {
                 return;
             }
@@ -32,7 +32,7 @@ namespace Asimov
 
         public static void LogWarning(string msg)
         {
-            if (Log.ReachedMaxMessagesLimit)
+            if (Log.ReachedMaxMessagesLimit || !AsimovMod.settings.verboseLogging)
             {
                 return;
             }
@@ -43,7 +43,7 @@ namespace Asimov
 
         public static void LogError(string msg)
         {
-            if (Log.ReachedMaxMessagesLimit)
+            if (Log.ReachedMaxMessagesLimit || !AsimovMod.settings.verboseLogging)
             {
                 return;
             }

@@ -11,7 +11,7 @@ namespace Asimov
 {
     public class AsimovSettings : ModSettings
     {
-        public bool verboseLogging = false;
+        public bool verboseLogging = true;
 
         public override void ExposeData()
         {

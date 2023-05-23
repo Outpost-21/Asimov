@@ -28,7 +28,7 @@ namespace Asimov
             {
                 if(shaderType == null)
                 {
-                    return ShaderDatabase.CutoutSkin;
+                    return ShaderDatabase.Cutout;
                 }
                 return shaderType.Shader;
             }

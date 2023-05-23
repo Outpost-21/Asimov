@@ -14,15 +14,15 @@ namespace Asimov
         // Genes
         public bool blockGeneMechanics = false;
 
-        public bool restrictGenesToRace = false;
-        public bool restrictRaceGenes = false;
-        public List<GeneDef> geneWhitelist = new List<GeneDef>();
-        public List<GeneDef> geneBlacklist = new List<GeneDef>();
+        public bool restrictGenesToRace = false; //TODO
+        public bool restrictRaceGenes = false; //TODO
+        public List<GeneDef> geneWhitelist = new List<GeneDef>(); //TODO
+        public List<GeneDef> geneBlacklist = new List<GeneDef>(); //TODO
 
-        public bool restrictXenotypesToRace = false;
-        public bool restrictRaceXenotypes = false;
-        public List<XenotypeDef> xenotypeWhitelist = new List<XenotypeDef>();
-        public List<XenotypeDef> xenotypeBlacklist = new List<XenotypeDef>();
+        public bool restrictXenotypesToRace = false; //TODO
+        public bool restrictRaceXenotypes = false; //TODO
+        public List<XenotypeDef> xenotypeWhitelist = new List<XenotypeDef>(); //TODO
+        public List<XenotypeDef> xenotypeBlacklist = new List<XenotypeDef>(); //TODO
 
         // General Stuff
         public bool immuneToAge = false; //TODO

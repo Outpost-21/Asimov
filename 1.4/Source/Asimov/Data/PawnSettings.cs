@@ -11,19 +11,6 @@ namespace Asimov
 {
     public class PawnSettings
     {
-        // Genes
-        public bool blockGeneMechanics = false;
-
-        public bool restrictGenesToRace = false; //TODO
-        public bool restrictRaceGenes = false; //TODO
-        public List<GeneDef> geneWhitelist = new List<GeneDef>(); //TODO
-        public List<GeneDef> geneBlacklist = new List<GeneDef>(); //TODO
-
-        public bool restrictXenotypesToRace = false; //TODO
-        public bool restrictRaceXenotypes = false; //TODO
-        public List<XenotypeDef> xenotypeWhitelist = new List<XenotypeDef>(); //TODO
-        public List<XenotypeDef> xenotypeBlacklist = new List<XenotypeDef>(); //TODO
-
         // General Stuff
         public bool immuneToAge = false; //TODO
         public bool useHumanRecipes = false; //TODO

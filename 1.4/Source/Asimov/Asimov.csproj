@@ -89,13 +89,16 @@
     <Compile Include="AI\Jobs\JobDriver_RechargeFromSocket.cs" />
     <Compile Include="AI\Jobs\JobDriver_Hibernate.cs" />
     <Compile Include="AsimovDefOf.cs" />
+    <Compile Include="Comps\CompProperties_EnergyProvider.cs" />
     <Compile Include="Comps\CompProperties_PawnData.cs" />
     <Compile Include="Comps\Comp_PawnData.cs" />
+    <Compile Include="Comps\Comp_EnergyProvider.cs" />
     <Compile Include="Data\BodyAddon.cs" />
     <Compile Include="Defs\PawnDef.cs" />
     <Compile Include="Data\ColorPair.cs" />
     <Compile Include="Data\CustomGraphics.cs" />
     <Compile Include="Data\PawnSettings.cs" />
+    <Compile Include="Harmony\Patch_ITab_Genes_CanShowGenesTab.cs" />
     <Compile Include="Harmony\Patch_ITab_Genes_Hidden.cs" />
     <Compile Include="Harmony\Patch_Pawn_GeneTracker_AddGene.cs" />
     <Compile Include="Utilities\GenUtil.cs" />

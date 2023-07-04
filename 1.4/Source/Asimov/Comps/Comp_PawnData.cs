@@ -15,5 +15,16 @@ namespace Asimov
 
         public Color? skinFirst;
         public Color? skinSecond;
+
+        public bool resolved;
+
+        public void ResolveGraphics()
+        {
+            Pawn pawn = parent as Pawn;
+            if (pawn != null)
+            {
+                pawn.Drawer.renderer.graphics.ResolveAllGraphics();
+            }
+        }
     }
 }

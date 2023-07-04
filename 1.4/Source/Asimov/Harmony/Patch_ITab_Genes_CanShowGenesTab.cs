@@ -12,17 +12,18 @@ using Verse.AI;
 
 namespace Asimov
 {
-    [HarmonyPatch(typeof(ITab_Genes), "Hidden", MethodType.Getter)]
-    public static class Patch_ITab_Genes_Hidden
+    [HarmonyPatch(typeof(ITab_Genes), "CanShowGenesTab")]
+    public static class Patch_ITab_Genes_CanShowGenesTab
 	{
         [HarmonyPostfix]
         public static void Postfix(ITab_Genes __instance, ref bool __result)
 		{
-            if (!__result)
+            if (__result)
 			{
-				if (__instance.SelPawnForGenes.def is PawnDef def)
+				ThingDef pawn = ITab_Genes.PawnForGenes(Find.Selector.SingleSelectedThing).def;
+				if (pawn is PawnDef def)
 				{
-					__result = true;
+					__result = false;
 				}
 			}
 		}

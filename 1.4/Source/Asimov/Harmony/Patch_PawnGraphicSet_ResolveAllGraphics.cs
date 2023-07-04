@@ -25,7 +25,7 @@ namespace Asimov
 
                 if(pawnDef != null && comp != null && pawnDef.customGraphics != null)
                 {
-                    if (!pawnDef.customGraphics.skinColorPairs.NullOrEmpty())
+                    if (!pawnDef.customGraphics.skinColorPairs.NullOrEmpty() && !comp.resolved)
                     {
                         ColorPair pair = pawnDef.customGraphics.GetSkinColor;
                         if(comp.skinFirst == null)
@@ -36,6 +36,7 @@ namespace Asimov
                         {
                             comp.skinSecond = pair.colorTwo;
                         }
+                        comp.resolved = true;
                     }
 
                     Color skinFirst = comp.skinFirst ?? pawn.story.SkinColor;
@@ -45,7 +46,7 @@ namespace Asimov
                     if (headPath != null)
                     {
                         Shader shader = (ContentFinder<Texture2D>.Get(headPath + "_northm", false) == null) ? pawnDef.customGraphics.Shader : ShaderDatabase.CutoutComplex;
-                        LogUtil.LogMessage($"HeadShader = {shader}");
+                        // LogUtil.LogMessage($"HeadShader = {shader}");
                         __instance.headGraphic = GraphicDatabase.Get<Graphic_Multi>(headPath, shader, pawnDef.customGraphics.bodyScale, skinFirst, skinSecond);
                     }
 
@@ -53,7 +54,7 @@ namespace Asimov
                     if (bodyPath != null)
                     {
                         Shader shader = (ContentFinder<Texture2D>.Get(bodyPath + "_northm", false) == null) ? pawnDef.customGraphics.Shader : ShaderDatabase.CutoutComplex;
-                        LogUtil.LogMessage($"BodyShader = {shader}");
+                        // LogUtil.LogMessage($"BodyShader = {shader}");
                         __instance.nakedGraphic = GraphicDatabase.Get<Graphic_Multi>(bodyPath, shader, pawnDef.customGraphics.bodyScale, skinFirst, skinSecond);
                     }
 

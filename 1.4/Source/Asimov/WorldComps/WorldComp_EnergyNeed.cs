@@ -23,6 +23,16 @@ namespace Asimov
 
         }
 
+        public void AddSocketCharger(Building building)
+        {
+            chargingSockets.Add(building);
+        }
+
+        public void RemoveSocketCharger(Building building)
+        {
+            chargingSockets.Remove(building);
+        }
+
         public void AddWirelessCharger(Building building, bool global)
         {
             wirelessChargers.Add(building);

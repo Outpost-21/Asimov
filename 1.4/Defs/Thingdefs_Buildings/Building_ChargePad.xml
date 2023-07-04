@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>Asimov_ChargePad</defName>
+		<label>chargepad</label>
+		<description>Charging pad used automatically by rechargable automatons.</description>
+		<graphicData>
+			<texPath>Asimov/Buildings/Chargepad</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tradeability>Sellable</tradeability>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Standable</passability>
+		<blockWind>false</blockWind>
+		<rotatable>false</rotatable>
+		<fillPercent>0.1</fillPercent>
+		<tickerType>Rare</tickerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<thingCategories>
+			<li>BuildingsSpecial</li>
+		</thingCategories>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToBuild>1000</WorkToBuild>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>6</Mass>
+			<Flammability>0.3</Flammability>
+		</statBases>
+		<costList>
+			<Steel>80</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<researchPrerequisites>
+			<li>Electricity</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<designationCategory>Power</designationCategory>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Small</destroySound>
+			<bed_humanlike>false</bed_humanlike>
+			<bed_showSleeperBody>True</bed_showSleeperBody>
+			<sowTag>SupportPlantsOnly</sowTag>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+		</building>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>50</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable" />
+			<li Class="Asimov.CompProperties_EnergySource">
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

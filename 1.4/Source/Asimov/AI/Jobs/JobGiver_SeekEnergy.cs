@@ -50,7 +50,7 @@ namespace Asimov
             SetLastTryTick(pawn, Find.TickManager.TicksGame);
 
             // Try power sockets.
-            Building building = EnergyUtil.GetClosestPowerSocket(pawn);
+            Thing building = EnergyUtil.GetClosestPowerSocket(pawn);
             if (building != null)
             {
                 foreach (IntVec3 cell in GenAdj.CellsAdjacentCardinal(building).OrderByDescending(selector => selector.DistanceTo(pawn.Position)))

@@ -8,6 +8,9 @@
 	<!-- Energy -->
 
 	<Asimov.ConsumeEnergySource>Charge from energy source</Asimov.ConsumeEnergySource>
+	
+	<Asimov.GoRechargeLabel>Recharge</Asimov.GoRechargeLabel>
+	<Asimov.GoRechargeDescription>Seek out and recharge from the closest available charging socket/platform.</Asimov.GoRechargeDescription>
 
 	<!-- Drafting -->
 	
@@ -20,5 +23,20 @@
 	<Asimov.HibernateFailNoPower>Cannot Hibernate (no power)</Asimov.HibernateFailNoPower>
 	<Asimov.HibernateFailReserveOrReach>Cannot Hibernate (can't reach)</Asimov.HibernateFailReserveOrReach>
 	<Asimov.HibernateFail>Cannot Hibernate (unknown reason)</Asimov.HibernateFail>
+	
+	<Asimov.GoHibernateLabel>Hibernate</Asimov.GoHibernateLabel>
+	<Asimov.GoHibernateDescription>Seek out and hibernate at the closest available hibernation spot.</Asimov.GoHibernateDescription>
+	<Asimov.NoHibernationSpot>No reachable and unreserved hibernation spot found.</Asimov.NoHibernationSpot>
+
+	<!-- Recolourable Pawns -->
+
+	<Asimov.FirstColorLabel>Primary Color</Asimov.FirstColorLabel>
+	<Asimov.FirstColorDescription>Changes the primary colour of the pawn.</Asimov.FirstColorDescription>
+	<Asimov.SecondColorLabel>Secondary Color</Asimov.SecondColorLabel>
+	<Asimov.SecondColorDescription>Changes the secondary colour of the pawn.</Asimov.SecondColorDescription>
+	<Asimov.ColorTitle>Color Picker</Asimov.ColorTitle>
+	<Asimov.Apply>Apply</Asimov.Apply>
+	<Asimov.HexLabel>Hexcode</Asimov.HexLabel>
+	<Asimov.HexColorCodeIsIllFormer>Hex color code is not valid.</Asimov.HexColorCodeIsIllFormer>
 	
 </LanguageData>

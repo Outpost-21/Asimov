@@ -12,13 +12,11 @@ namespace Asimov
     public class PawnSettings
     {
         // General Stuff
-        public bool immuneToAge = false; //TODO
-        public bool useHumanRecipes = false; //TODO
+        public bool immuneToAge = false;
 
         // Body
-        public List<HeadTypeDef> headTypeWhitelist = new List<HeadTypeDef>(); //TODO
-        public List<BodyTypeDef> bodyTypeWhitelist = new List<BodyTypeDef>(); //TODO
-        public List<BodyTypeDef> bodyTypeWhitelistFemale = new List<BodyTypeDef>(); //TODO
+        public List<HeadTypeDef> headTypeWhitelist = new List<HeadTypeDef>();
+        public List<BodyTypeDef> bodyTypeWhitelist = new List<BodyTypeDef>();
 
         // Styles
         public bool allowHair = true;
@@ -29,46 +27,16 @@ namespace Asimov
         public List<string> tattooTagWhitelist = new List<string>(); //TODO
 
         // Thoughts
-        public bool restrictThoughtsToRace = false;
-        public bool restrictRaceThoughts = false;
-        public List<ThoughtDef> thoughtBlacklist = new List<ThoughtDef>(); //TODO
-        public List<ThoughtDef> thoughtWhitelist = new List<ThoughtDef>(); //TODO
+        public bool onlyRestrictedThoughts = false;
+        public List<ThoughtDef> thoughts = new List<ThoughtDef>();
 
         // Traits
-        public bool restrictTraitsToRace = false;
-        public bool restrictRaceTraits = false;
-        public List<TraitDef> traitBlacklist = new List<TraitDef>(); //TODO
-        public List<TraitDef> traitWhitelist = new List<TraitDef>(); //TODO
-        public IntRange traitCount = new IntRange(2, 3);
-
-        // Weapons
-        public bool restrictWeaponsToRace = false;
-        public bool restrictRaceWeapons = false;
-        public List<ThingDef> weaponBlacklist = new List<ThingDef>(); //TODO
-        public List<ThingDef> weaponWhitelist = new List<ThingDef>(); //TODO
-
-        // Apparel
-        public bool restrictApparelToRace = false;
-        public bool restrictRaceApparel = false;
-        public List<ThingDef> apparelBlacklist = new List<ThingDef>(); //TODO
-        public List<ThingDef> apparelWhitelist = new List<ThingDef>(); //TODO
-
-        // Food
-        public bool restrictFoodToRace = false;
-        public bool restrictRaceFood = false;
-        public List<ThingDef> foodBlacklist = new List<ThingDef>(); //TODO
-        public List<ThingDef> foodWhiteList = new List<ThingDef>(); //TODO
-
-        // Buildings
-        public bool restrictBuildingsToRace = false;
-        public bool restrictRaceBuildings = false;
-        public List<ThingDef> buildingBlacklist = new List<ThingDef>(); //TODO
-        public List<ThingDef> buildingWhitelist = new List<ThingDef>(); //TODO
+        public bool onlyRestrictedTraits = false;
+        public List<TraitDef> traits = new List<TraitDef>();
+        public bool hasTraits = true;
 
         // Backstories
-        public bool restrictBackstoriesToRace = false;
-        public bool restrictRaceToBackstories = false;
-        public List<string> backstoryBlacklist = new List<string>(); //TODO
-        public List<string> backstoryWhitelist = new List<string>(); //TODO
+        public bool onlyRestrictedBackstories = false;
+        public List<string> backstories = new List<string>();
     }
 }

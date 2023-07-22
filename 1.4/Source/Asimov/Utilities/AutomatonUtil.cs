@@ -20,6 +20,15 @@ namespace Asimov
             return false;
         }
 
+        public static bool IsHumanlikeAutomaton(this Pawn pawn)
+        {
+            if(pawn.def as PawnDef != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public static AcceptanceReport CanDraftAutomaton(Pawn pawn)
         {
             if (pawn.Faction != null && pawn.Faction.IsPlayer && pawn.drafter != null)

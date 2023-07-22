@@ -21,9 +21,6 @@
 		<thingCategories>
 			<li>BuildingsSpecial</li>
 		</thingCategories>
-		<thingSetMakerTags>
-			<li>RewardStandardHighFreq</li>
-		</thingSetMakerTags>
 		<statBases>
 			<WorkToBuild>1000</WorkToBuild>
 			<MaxHitPoints>100</MaxHitPoints>
@@ -51,11 +48,13 @@
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>50</basePowerConsumption>
+				<basePowerConsumption>0</basePowerConsumption>
+			</li>
+			<li Class="Asimov.CompProperties_EnergyProvider">
+				<drainToRefill>50</drainToRefill>
+				<rechargeRate>0.001</rechargeRate>
 			</li>
 			<li Class="CompProperties_Flickable" />
-			<li Class="Asimov.CompProperties_EnergySource">
-			</li>
 		</comps>
 	</ThingDef>
 

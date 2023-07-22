@@ -30,5 +30,11 @@ namespace Asimov
         public static StatDef Asimov_EnergyMultiplier;
 
         public static FleshTypeDef Asimov_Automaton;
+
+        public static ThingDef Asimov_HibernationSpot;
+        public static ThingDef Asimov_ChargePad;
+
+        public static ThingDef Asimov_Chargepack;
+        public static ThingDef Asimov_Chargepack_Empty;
     }
 }

@@ -34,7 +34,7 @@ namespace Asimov
             WorldComp_EnergyNeed comp = GetEnergyNeedWorldComp;
             if (pawn.Spawned && !comp.wirelessChargers.NullOrEmpty())
             {
-                List<Building> chargersOnMap = comp.wirelessChargers.Where(wc => wc.Map != null && wc.Map == pawn.Map).ToList();
+                List<Thing> chargersOnMap = comp.wirelessChargers.Where(wc => wc.Map != null && wc.Map == pawn.Map).ToList();
                 if (!chargersOnMap.NullOrEmpty() && chargersOnMap.Any(wc => pawn.Position.DistanceTo(wc.Position) <= wc.def.specialDisplayRadius))
                 {
                     return true;
@@ -43,39 +43,73 @@ namespace Asimov
             return false;
         }
 
-        public static List<Building> GetLocalChargingSockets(Pawn pawn)
+        public static List<Thing> GetLocalChargingSockets(Pawn pawn)
         {
             WorldComp_EnergyNeed comp = GetEnergyNeedWorldComp;
             if (pawn.Spawned && !comp.chargingSockets.NullOrEmpty())
             {
-                return comp?.chargingSockets?.Where(wc => wc.Map != null && wc.Map == pawn.Map)?.ToList() ?? new List<Building>();
+                return comp?.chargingSockets?.Where(wc => wc.Map != null && wc.Map == pawn.Map)?.ToList() ?? new List<Thing>();
             }
-            return new List<Building>();
+            return new List<Thing>();
         }
 
-        public static Building GetClosestPowerSocket(Pawn pawn)
+        public static Thing GetClosestPowerSocket(Pawn pawn)
         {
-            Building building = null;
-            List<Building> localSockets = GetLocalChargingSockets(pawn);
+            Thing building = null;
+            List<Thing> localSockets = GetLocalChargingSockets(pawn);
             if (!localSockets.NullOrEmpty())
             {
                 for (int i = 0; i < localSockets.Count(); i++)
                 {
-                    Building curr = localSockets[i];
-                    if ((building == null || building.Position.DistanceTo(pawn.Position) > curr.Position.DistanceTo(pawn.Position)) && building.PowerComp.PowerNet.CurrentStoredEnergy() > 50f)
+                    Thing curr = localSockets[i];
+                    if ((building == null || building.Position.DistanceTo(pawn.Position) > curr.Position.DistanceTo(pawn.Position)) && curr.EnergyProvider().CanRechargeTick)
                     {
-                        foreach (IntVec3 cell in GenAdj.CellsAdjacentCardinal(curr).OrderByDescending(selector => selector.DistanceTo(pawn.Position)))
+                        if (curr.Position.Walkable(pawn.Map) && curr.Position.InAllowedArea(pawn) && pawn.CanReserve(curr) && pawn.CanReach(curr.Position, PathEndMode.OnCell, Danger.Deadly))
                         {
-                            if (cell.Walkable(pawn.Map) && cell.InAllowedArea(pawn) && pawn.CanReserve(new LocalTargetInfo(cell)) && pawn.CanReach(cell, PathEndMode.OnCell, Danger.Deadly))
-                            {
-                                building = curr;
-                                break;
-                            }
+                            building = curr;
+                            break;
                         }
                     }
                 }
             }
             return building;
+        }
+
+        public static Comp_EnergyProvider EnergyProvider(this Thing building)
+        {
+            return building.TryGetComp<Comp_EnergyProvider>();
+        }
+
+        public static Thing GetClosestUnreservedHibernationSpot(Pawn pawn)
+        {
+            Thing building = null;
+            List<Thing> localSpots = GetLocalHibernationSpots(pawn);
+            if (!localSpots.NullOrEmpty())
+            {
+                for (int i = 0; i < localSpots.Count(); i++)
+                {
+                    Thing curr = localSpots[i];
+                    if (building == null || building.Position.DistanceTo(pawn.Position) > curr.Position.DistanceTo(pawn.Position))
+                    {
+                        if (curr.Position.Walkable(pawn.Map) && curr.Position.InAllowedArea(pawn) && pawn.CanReserve(curr) && pawn.CanReach(curr.Position, PathEndMode.OnCell, Danger.Deadly))
+                        {
+                            building = curr;
+                            break;
+                        }
+                    }
+                }
+            }
+            return building;
+        }
+
+        public static List<Thing> GetLocalHibernationSpots(Pawn pawn)
+        {
+            WorldComp_EnergyNeed comp = GetEnergyNeedWorldComp;
+            if (pawn.Spawned && !comp.hibernationSpots.NullOrEmpty())
+            {
+                return comp?.hibernationSpots?.Where(wc => wc.Map != null && wc.Map == pawn.Map)?.ToList() ?? new List<Thing>();
+            }
+            return new List<Thing>();
         }
     }
 }

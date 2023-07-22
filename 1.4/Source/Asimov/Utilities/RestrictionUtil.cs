@@ -24,5 +24,22 @@ namespace Asimov
             }
             return true;
         }
+
+        public static bool CanHaveTrait(this TraitDef trait, ThingDef raceDef)
+        {
+            PawnDef def = raceDef as PawnDef;
+            if(def != null && (def.pawnSettings.traits.NullOrEmpty() || def.pawnSettings.traits.Contains(trait)))
+            {
+                if (!def.pawnSettings.traits.NullOrEmpty())
+                {
+                    return def.pawnSettings.traits.Contains(trait);
+                }
+            }
+            else if (AsimovStartup.traitRaceRestrictions.ContainsKey(trait))
+            {
+                return AsimovStartup.traitRaceRestrictions[trait].Contains(raceDef);
+            }
+            return true;
+        }
     }
 }

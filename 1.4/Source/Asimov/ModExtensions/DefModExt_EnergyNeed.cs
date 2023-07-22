@@ -11,9 +11,8 @@ namespace Asimov
 {
     public class DefModExt_EnergyNeed : DefModExtension
     {
-        public bool canConsumeBatteries = true;
+        public bool canChargeFromChargepacks = true;
         public bool canChargeWirelessly = true;
         public bool canChargeFromSocket = true;
-        public bool canHibernate = true;
     }
 }

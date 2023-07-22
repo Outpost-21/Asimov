@@ -22,9 +22,7 @@ namespace Asimov
 
         public int ticksSpentCharging = 0;
 
-        public const int maxTicksSpentCharging = 300;
-
-        public float powerNetEnergyDrainedPerTick = 1.32f;
+        public const int maxTicksSpentCharging = 2000;
 
         public override void Notify_Starting()
         {
@@ -58,27 +56,25 @@ namespace Asimov
 
             Toil rechargeToil = new Toil();
 
+            Comp_EnergyProvider comp = powerBuilding.TryGetComp<Comp_EnergyProvider>();
+
             rechargeToil.tickAction = delegate
             {
-                CompPowerBattery compBattery = powerBuilding.PowerComp?.PowerNet?.batteryComps?.FirstOrDefault(battery => battery.StoredEnergy > powerNetEnergyDrainedPerTick);
-
-                if (compBattery != null)
+                if(comp != null)
                 {
-                    compBattery.DrawPower(powerNetEnergyDrainedPerTick);
-
-                    energyNeed.CurLevel += energyNeed.MaxLevel / maxTicksSpentCharging;
+                    comp.RechargePawn(pawn);
                 }
 
                 ticksSpentCharging++;
             };
             rechargeToil.AddEndCondition(delegate
             {
-                if (powerBuilding == null || powerBuilding.PowerComp == null)
+                if (powerBuilding == null || comp == null)
                 {
                     return JobCondition.Incompletable;
                 }
 
-                if (powerBuilding.PowerComp?.PowerNet.CurrentStoredEnergy() < powerNetEnergyDrainedPerTick)
+                if (!comp.CanRechargeTick)
                 {
                     return JobCondition.Incompletable;
                 }

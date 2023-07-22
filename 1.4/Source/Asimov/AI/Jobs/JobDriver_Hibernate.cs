@@ -47,13 +47,12 @@ namespace Asimov
             };
             hibernateToil.tickAction = delegate ()
             {
-                //Check if we took damage recently. If that is the case, abort.
+                // Interrupt if pawn takes damage.
                 if (pawn.mindState.lastHarmTick - Find.TickManager.TicksGame >= -20)
                 {
                     EndJobWith(JobCondition.InterruptOptional);
                 }
-
-                //If there is fire nearby, abort.
+                // Interrupt if a fire is found nearby.
                 if (Find.TickManager.TicksGame % 200 == 0)
                 {
                     foreach (IntVec3 vec in pawn.CellsAdjacent8WayAndInside())
@@ -65,8 +64,7 @@ namespace Asimov
                         }
                     }
                 }
-
-                //If our target lost power its bad, abort.
+                // Interrupt if spot loses power (if powered).
                 if (powerTrader != null && !powerTrader.PowerOn)
                 {
                     EndJobWith(JobCondition.InterruptOptional);

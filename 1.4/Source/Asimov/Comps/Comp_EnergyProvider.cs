@@ -28,24 +28,24 @@ namespace Asimov
                 powerComp = parent.TryGetComp<CompPowerTrader>();
             }
 
-            Find.World.GetComponent<WorldComp_EnergyNeed>().AddSocketCharger(parent as Building);
+            EnergyUtil.GetEnergyNeedWorldComp.AddSocketCharger(parent);
         }
 
         public override void PostDeSpawn(Map map)
         {
             base.PostDeSpawn(map);
 
-            Find.World.GetComponent<WorldComp_EnergyNeed>().RemoveSocketCharger(parent as Building);
+            EnergyUtil.GetEnergyNeedWorldComp.RemoveSocketCharger(parent);
         }
 
-        public void RechargePawn(Pawn pawn, float percentage)
+        public void RechargePawn(Pawn pawn)
         {
             Need_Energy energyNeed = (Need_Energy)pawn.needs.TryGetNeed(AsimovDefOf.Asimov_EnergyNeed);
             if(energyNeed != null)
             {
                 if (CanRechargeTick)
                 {
-                    powerComp.PowerNet.DistributeEnergyAmongBatteries(-RechargeCostPerTick);
+                    powerComp.PowerNet.ChangeStoredEnergy(-RechargeCostPerTick);
                     energyNeed.CurLevel += Props.rechargeRate;
                 }
             }

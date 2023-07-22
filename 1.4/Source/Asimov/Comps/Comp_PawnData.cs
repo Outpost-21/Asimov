@@ -26,5 +26,13 @@ namespace Asimov
                 pawn.Drawer.renderer.graphics.ResolveAllGraphics();
             }
         }
+
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_Values.Look(ref skinFirst, "skinFirst");
+            Scribe_Values.Look(ref skinSecond, "skinSecond");
+            Scribe_Values.Look(ref resolved, "resolved");
+        }
     }
 }

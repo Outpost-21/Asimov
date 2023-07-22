@@ -14,7 +14,7 @@ namespace Asimov
 		public override bool HasCheckbox(Pawn pawn)
 		{
 			Comp_Automaton comp = pawn.TryGetComp<Comp_Automaton>();
-			if (comp != null && pawn.Faction == Faction.OfPlayer && pawn.workSettings != null)
+			if (comp != null && !pawn.RaceProps.Humanlike && pawn.Faction == Faction.OfPlayer && pawn.workSettings != null)
 			{
 				return comp.Props.enabledWorkTypes.Contains(def.workType);
 			}

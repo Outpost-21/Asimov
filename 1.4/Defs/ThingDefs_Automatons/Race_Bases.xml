@@ -38,6 +38,9 @@
 			<li>ITab_Pawn_Gear</li>
 			<li>ITab_Pawn_Log</li>
 		</inspectorTabs>
+		<comps>
+			<li Class="Asimov.CompProperties_Hibernation" />
+		</comps>
 		<modExtensions>
 			<li Class="Asimov.DefModExt_EnergyNeed" />
 		</modExtensions>

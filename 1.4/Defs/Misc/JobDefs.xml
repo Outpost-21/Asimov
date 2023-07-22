@@ -5,6 +5,7 @@
 		<defName>Asimov_Hibernate</defName>
 		<driverClass>Asimov.JobDriver_Hibernate</driverClass>
 		<reportString>hibernating at TargetA.</reportString>
+		<faceDir>South</faceDir>
 	</JobDef>
 
 	<JobDef>

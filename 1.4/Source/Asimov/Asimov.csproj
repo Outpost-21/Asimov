@@ -84,10 +84,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AI\Jobs\JobGiver_Automaton.cs" />
-    <Compile Include="AI\Jobs\JobGiver_SeekEnergy.cs" />
-    <Compile Include="AI\Jobs\JobDriver_RechargeFromSocket.cs" />
-    <Compile Include="AI\Jobs\JobDriver_Hibernate.cs" />
+    <Compile Include="Jobs\JobGiver_Automaton.cs" />
+    <Compile Include="Jobs\JobGiver_SeekEnergy.cs" />
+    <Compile Include="Jobs\JobDriver_RechargeFromSocket.cs" />
+    <Compile Include="Jobs\JobDriver_Hibernate.cs" />
     <Compile Include="AsimovDefOf.cs" />
     <Compile Include="AsimovStartup.cs" />
     <Compile Include="Buildings\Building_HibernationSpot.cs" />
@@ -129,7 +129,7 @@
     <Compile Include="Comps\Comp_AutoCrafter.cs" />
     <Compile Include="Comps\Comp_EnergySource.cs" />
     <Compile Include="Data\EnergyCategory.cs" />
-    <Compile Include="AI\Jobs\JobDriver_ConsumeEnergySource.cs" />
+    <Compile Include="Jobs\JobDriver_ConsumeEnergySource.cs" />
     <Compile Include="Harmony\Patch_Pawn_IsColonistPlayerControlled.cs" />
     <Compile Include="Harmony\Patch_FloatMenuMakerMap_CanTakeOrder.cs" />
     <Compile Include="Harmony\Patch_ITab_Pawn_Gear_DrawThingRow.cs" />
@@ -137,7 +137,7 @@
     <Compile Include="Harmony\Patch_FloatMenuMakerMap_ChoicesAtFor.cs" />
     <Compile Include="Harmony\Patch_FloatMenuMakerMap_AddDraftedOrders.cs" />
     <Compile Include="Data\ProducerStatus.cs" />
-    <Compile Include="AI\Jobs\JobDriver_FillAutoCrafter.cs" />
+    <Compile Include="Jobs\JobDriver_FillAutoCrafter.cs" />
     <Compile Include="Data\RepeatMode.cs" />
     <Compile Include="Utilities\RestrictionUtil.cs" />
     <Compile Include="Utilities\TexUtil.cs" />

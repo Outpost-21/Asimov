@@ -36,10 +36,8 @@ namespace Asimov
 
         public float RechargePawn(Pawn pawn, float reqEnergy)
         {
-            if(powerComp == null)
-            {
-                return reqEnergy;
-            }
+            if(powerComp == null) { return reqEnergy; }
+            if (!powerComp.PowerOn) { return reqEnergy; }
             Need_Energy energyNeed = (Need_Energy)pawn.needs.TryGetNeed(AsimovDefOf.Asimov_EnergyNeed);
             float changeVal = Mathf.Min(reqEnergy, powerComp.PowerNet.CurrentStoredEnergy());
             if (energyNeed != null)

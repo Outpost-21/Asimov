@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>Asimov_LongRangeWirelessCharger</defName>
+		<label>long range wireless charger</label>
+		<description>An extremely powerful wireless energy transmitter for charging Automatons in an area. Compatible Automatons can charge from this across any distance.</description>
+		<graphicData>
+			<texPath>Asimov/Buildings/MapWideTransmitter</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(7.5, 7.5)</drawSize>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<size>(1,1)</size>
+		<uiIconPath>Asimov/Buildings/MapWideTransmitter_MenuIcon</uiIconPath>
+		<uiIconScale>1</uiIconScale>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>180</pathCost>
+		<blockWind>true</blockWind>
+		<fillPercent>0.5</fillPercent>
+		<canOverlapZones>false</canOverlapZones>
+		<designationCategory>Power</designationCategory>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToBuild>7500</WorkToBuild>
+			<MaxHitPoints>600</MaxHitPoints>
+			<Flammability>0.3</Flammability>
+		</statBases>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<costList>
+			<Steel>500</Steel>
+			<Plasteel>200</Plasteel>
+			<Uranium>25</Uranium>
+			<ComponentSpacer>40</ComponentSpacer>
+		</costList>
+		<researchPrerequisites>
+			<li>Fabrication</li>
+		</researchPrerequisites>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>0</basePowerConsumption>
+			</li>
+			<li Class="Asimov.CompProperties_WirelessCharger">
+				<mapWide>true</mapWide>
+				<worldWide>true</worldWide>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

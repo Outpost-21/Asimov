@@ -100,12 +100,6 @@ namespace Asimov
         public float GetPawnEnergyConsumption()
         {
             DefModExt_EnergyNeed modExt = pawn.def.GetModExtension<DefModExt_EnergyNeed>();
-
-            if (pawn.InWirelessChargerRange())
-            {
-                CurLevel = 1f;
-                return 0f;
-            }
             return 2.66666666E-05f * EnergyRate;
         }
     }

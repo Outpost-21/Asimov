@@ -16,6 +16,8 @@ namespace Asimov
 
         Pawn pawn => parent as Pawn;
 
+        public bool autoHibernate = true;
+
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             foreach (Gizmo gizmo in base.CompGetGizmosExtra())
@@ -37,6 +39,24 @@ namespace Asimov
                     pawn.jobs.TryTakeOrderedJob(new Job(AsimovDefOf.Asimov_Hibernate, hibernationSpot), JobTag.Misc);
                 }
             };
+            yield return new Command_Toggle()
+            {
+                defaultLabel = "Asimov.AutoHibernateLabel".Translate(),
+                defaultDesc = "Asimov.AutoHibernateDescription".Translate(),
+                icon = ContentFinder<Texture2D>.Get("Asimov/UI/Hibernate"),
+                isActive = () => autoHibernate,
+                toggleAction = delegate
+                {
+                    autoHibernate = !autoHibernate;
+                }
+            };
+        }
+
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+
+            Scribe_Values.Look(ref autoHibernate, "autoHibernate", true);
         }
     }
 }

@@ -26,6 +26,9 @@
 	
 	<Asimov.GoHibernateLabel>Hibernate</Asimov.GoHibernateLabel>
 	<Asimov.GoHibernateDescription>Seek out and hibernate at the closest available hibernation spot.</Asimov.GoHibernateDescription>
+	<Asimov.AutoHibernateLabel>Auto Hibernate</Asimov.AutoHibernateLabel>
+	<Asimov.AutoHibernateDescription>If enabled, when energy is low and no power source is available the pawn can use, they will seek a hibernation spot instead.</Asimov.AutoHibernateDescription>
+	<Asimov.LowEnergyHibernation>{0} is going to hibernate due to a lack of energy and no usable sources.</Asimov.LowEnergyHibernation>
 	<Asimov.NoHibernationSpot>No reachable and unreserved hibernation spot found.</Asimov.NoHibernationSpot>
 
 	<!-- Recolourable Pawns -->

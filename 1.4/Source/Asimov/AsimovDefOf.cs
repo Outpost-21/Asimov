@@ -33,6 +33,9 @@ namespace Asimov
 
         public static ThingDef Asimov_HibernationSpot;
         public static ThingDef Asimov_ChargePad;
+        public static ThingDef Asimov_WirelessCharger;
+        public static ThingDef Asimov_LongRangeWirelessCharger;
+
 
         public static ThingDef Asimov_Chargepack;
         public static ThingDef Asimov_Chargepack_Empty;

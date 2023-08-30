@@ -29,6 +29,53 @@ namespace Asimov
             }
         }
 
+        public static float PullEnergyFromChargers(this List<Thing> chargers, Pawn pawn, float reqEnergy)
+        {
+            float remaining = reqEnergy;
+
+            foreach (Thing thing in chargers)
+            {
+                if(remaining <= 0f)
+                {
+                    return 0f;
+                }
+                Comp_WirelessCharger chargeComp = thing.TryGetComp<Comp_WirelessCharger>();
+                if(chargeComp != null)
+                {
+                    remaining -= chargeComp.RechargePawn(pawn, remaining);
+                }
+            }
+            
+            return remaining;
+        }
+
+        public static List<Thing> GetGlobalChargers()
+        {
+            WorldComp_EnergyNeed comp = GetEnergyNeedWorldComp;
+            return comp.wirelessChargersGlobal;
+        }
+
+        public static List<Thing> GetWirelessChargersInRange(this Pawn pawn)
+        {
+            WorldComp_EnergyNeed comp = GetEnergyNeedWorldComp;
+            List<Thing> result = new List<Thing>();
+            if (pawn.Spawned && !comp.wirelessChargers.NullOrEmpty())
+            {
+                List<Thing> chargersOnMap = comp.wirelessChargers.Where(wc => wc.Map != null && wc.Map == pawn.Map).ToList();
+                if (!chargersOnMap.NullOrEmpty()) 
+                {
+                    foreach(Thing charger in chargersOnMap)
+                    {
+                        if (pawn.Position.DistanceTo(charger.Position) <= charger.TryGetComp<Comp_WirelessCharger>()?.Props?.range)
+                        {
+                            result.Add(charger);
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+
         public static bool InWirelessChargerRange(this Pawn pawn)
         {
             WorldComp_EnergyNeed comp = GetEnergyNeedWorldComp;

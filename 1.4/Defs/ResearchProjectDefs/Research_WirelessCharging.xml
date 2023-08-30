@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>Asimov_WirelessCharging</defName>
+		<label>wireless charging</label>
+		<description>Unlocks buildings capable of wirelessly charging Automatons.</description>
+		<baseCost>8000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Fabrication</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<researchViewX>14.00</researchViewX>
+		<researchViewY>2.50</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

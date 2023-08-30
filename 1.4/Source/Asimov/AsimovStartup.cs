@@ -72,7 +72,8 @@ namespace Asimov
             }
             if (!anyNeedWireless)
             {
-
+                AsimovDefOf.Asimov_WirelessCharger.designationCategory = null;
+                AsimovDefOf.Asimov_LongRangeWirelessCharger.designationCategory = null;
             }
             if (!anyNeedChargepacks)
             {

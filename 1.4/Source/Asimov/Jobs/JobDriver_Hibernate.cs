@@ -41,8 +41,10 @@ namespace Asimov
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.OnCell);
 
             Toil hibernateToil = new Toil();
+            hibernateToil.handlingFacing = true;
             hibernateToil.initAction = delegate ()
             {
+                pawn.Rotation = Rot4.South;
                 pawn.pather.StopDead();
             };
             hibernateToil.tickAction = delegate ()

@@ -21,7 +21,7 @@ namespace Asimov
 			if (pawn.IsAutomaton())
 			{
 				Comp_Automaton comp = pawn.GetComp<Comp_Automaton>();
-				if (comp == null || !comp.Props.canUseWeapons)
+				if (comp == null || !comp.Props.canUseRanged)
 				{
 					return;
 				}

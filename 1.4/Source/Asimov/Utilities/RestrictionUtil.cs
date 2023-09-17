@@ -28,16 +28,16 @@ namespace Asimov
         public static bool CanHaveTrait(this TraitDef trait, ThingDef raceDef)
         {
             PawnDef def = raceDef as PawnDef;
-            if(def != null && (def.pawnSettings.traits.NullOrEmpty() || def.pawnSettings.traits.Contains(trait)))
+            if(def != null)
             {
-                if (!def.pawnSettings.traits.NullOrEmpty())
+                if (!def.pawnSettings.traits.NullOrEmpty() && def.pawnSettings.onlyRestrictedTraits)
                 {
                     return def.pawnSettings.traits.Contains(trait);
                 }
             }
             else if (AsimovStartup.traitRaceRestrictions.ContainsKey(trait))
             {
-                return AsimovStartup.traitRaceRestrictions[trait].Contains(raceDef);
+                return AsimovStartup.traitRaceRestrictions[trait].Contains(raceDef.defName);
             }
             return true;
         }

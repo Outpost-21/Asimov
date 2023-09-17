@@ -16,24 +16,29 @@ namespace Asimov
             compClass = typeof(Comp_Automaton);
         }
 
-        public bool canUseWeapons = false;
+        public bool canUseRanged = true;
+        public bool canUseMelee = true;
+        public bool corpseEdible = true;
+        public bool corpseRots = true;
+        public bool affectedByEMP = false;
+        public bool immuneToDisease = false;
+        public bool huntTarget = true;
+        public bool flattenSkills = false;
+        public bool clearPassions = false;
+
+        public float skillGainMulti = 1f;
+        public float skillLossMulti = 1f;
+
+        public int defaultSkillLevel = 0;
+
+        public string workDisableTerm = "programming";
 
         public List<WorkTypeDef> enabledWorkTypes = new List<WorkTypeDef>();
 
         public List<SkillLevelSetting> skillSettings = new List<SkillLevelSetting>();
 
-        public float skillGainMulti = 0f;
-
-        public float skillLossMulti = 0f;
-
-        public bool corpseEdible = false;
-
-        public bool corpseRots = false;
-
         public List<ThingDef> repairThings = new List<ThingDef>();
 
-        // Only Applies to Humanlikes
-
-        public bool colonyCaresIfDead = false;
+        public List<NeedDef> disabledNeeds = new List<NeedDef>();
     }
 }

@@ -12,15 +12,16 @@ using Verse.AI;
 
 namespace Asimov
 {
-    [HarmonyPatch(typeof(PawnGenerator), "GenerateTraits", null)]
-    public static class Patch_PawnGenerator_GenerateTraits
-    {
+    [HarmonyPatch(typeof(FoodUtility), "IsAcceptablePreyFor")]
+    public static class Patch_FoodUtility_IsAcceptablePreyFor
+	{
         [HarmonyPrefix]
-        public static bool Prefix(Pawn pawn, PawnGenerationRequest request)
+        public static bool Prefix(ref bool __result, Pawn predator, Pawn prey)
         {
-            PawnDef def = pawn.def as PawnDef;
-            if (def != null && !def.pawnSettings.hasTraits)
+            Comp_Automaton comp = prey.TryGetComp<Comp_Automaton>();
+            if (comp != null && comp.Props.immuneToDisease)
             {
+                __result = false;
                 return false;
             }
             return true;

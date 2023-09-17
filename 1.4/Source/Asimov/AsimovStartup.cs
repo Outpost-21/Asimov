@@ -12,7 +12,7 @@ namespace Asimov
     [StaticConstructorOnStartup]
     public static class AsimovStartup
     {
-        public static Dictionary<TraitDef, List<ThingDef>> traitRaceRestrictions = new Dictionary<TraitDef, List<ThingDef>>();
+        public static Dictionary<TraitDef, List<string>> traitRaceRestrictions = new Dictionary<TraitDef, List<string>>();
 
         static AsimovStartup()
         {
@@ -31,13 +31,26 @@ namespace Asimov
                     {
                         if (!traitRaceRestrictions.ContainsKey(trait))
                         {
-                            traitRaceRestrictions.Add(trait, new List<ThingDef>() { def });
+                            traitRaceRestrictions.Add(trait, new List<string>() { def.defName });
                         }
                         else
                         {
-                            traitRaceRestrictions[trait].Add(def);
+                            traitRaceRestrictions[trait].Add(def.defName);
                         }
                     }
+                }
+            }
+            bool logRestrictions = true;
+            if (logRestrictions)
+            {
+                foreach(KeyValuePair<TraitDef, List<string>> kvp in traitRaceRestrictions)
+                {
+                    string traitMsg = "Trait Restricted: " + kvp.Key.LabelCap;
+                    foreach(string s in kvp.Value)
+                    {
+                        traitMsg += "\n- " + s;
+                    }
+                    LogUtil.LogMessage(traitMsg);
                 }
             }
         }

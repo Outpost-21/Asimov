@@ -13,6 +13,8 @@ namespace Asimov
     {
         // General Stuff
         public bool immuneToAge = false;
+        public bool generateRelations = true;
+        public bool colonyCaresIfDead = false;
 
         // Body
         public List<HeadTypeDef> headTypeWhitelist = new List<HeadTypeDef>();
@@ -38,5 +40,9 @@ namespace Asimov
         // Backstories
         public bool onlyRestrictedBackstories = false;
         public List<string> backstories = new List<string>();
+
+        // Apparel
+        public bool onlyRestrictedApparel = false;
+        public List<string> apparel = new List<string>();
     }
 }

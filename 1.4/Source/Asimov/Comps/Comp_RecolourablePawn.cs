@@ -47,7 +47,7 @@ namespace Asimov
             Pawn pawn = parent as Pawn;
             if (pawn != null)
             {
-                Comp_PawnData comp = pawn.TryGetComp<Comp_PawnData>();
+                Comp_Automaton comp = pawn.TryGetComp<Comp_Automaton>();
                 if (comp != null)
                 {
                     result = second ? (comp.skinSecond ?? Color.white) : (comp.skinFirst ?? Color.white);
@@ -61,7 +61,7 @@ namespace Asimov
             Pawn pawn = parent as Pawn;
             if (pawn != null)
             {
-                Comp_PawnData comp = pawn.TryGetComp<Comp_PawnData>();
+                Comp_Automaton comp = pawn.TryGetComp<Comp_Automaton>();
                 if (comp != null)
                 {
                     if (!second)

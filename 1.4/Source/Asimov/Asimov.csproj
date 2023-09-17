@@ -86,6 +86,19 @@
   <ItemGroup>
     <Compile Include="Comps\CompProperties_WirelessCharger.cs" />
     <Compile Include="Comps\Comp_WirelessCharger.cs" />
+    <Compile Include="Harmony\Patch_Pawn_NeedsTracker_ShouldHaveNeed.cs" />
+    <Compile Include="Harmony\Patch_Pawn_GetDisabledWorkTypes.cs" />
+    <Compile Include="Harmony\Patch_Pawn_GetReasonsForDisabledWorkType.cs" />
+    <Compile Include="Harmony\Patch_PawnGenerator_GenerateSkills.cs" />
+    <Compile Include="Harmony\Patch_PawnGenerator_FinalLevelOfSkill.cs" />
+    <Compile Include="Harmony\Patch_SkillRecord_TotallyDisabled.cs" />
+    <Compile Include="Harmony\Patch_ThingDef_IsIngestible.cs" />
+    <Compile Include="Harmony\Patch_SkillRecord_Learn.cs" />
+    <Compile Include="Harmony\Patch_StunHandler_AffectedByEMP.cs" />
+    <Compile Include="Harmony\Patch_ImmunityHandler_DiseaseContractChanceFactor.cs" />
+    <Compile Include="Harmony\Patch_IncidentWorker_Disease_PotentialVictims.cs" />
+    <Compile Include="Harmony\Patch_FoodUtility_IsAcceptablePreyFor.cs" />
+    <Compile Include="Harmony\Patch_PawnRelationWorker_BaseGenerationChanceFactor.cs" />
     <Compile Include="Jobs\JobGiver_Automaton.cs" />
     <Compile Include="Jobs\JobGiver_SeekEnergy.cs" />
     <Compile Include="Jobs\JobDriver_RechargeFromSocket.cs" />
@@ -95,11 +108,9 @@
     <Compile Include="Buildings\Building_HibernationSpot.cs" />
     <Compile Include="Comps\CompProperties_Hibernation.cs" />
     <Compile Include="Comps\CompProperties_EnergyProvider.cs" />
-    <Compile Include="Comps\CompProperties_PawnData.cs" />
     <Compile Include="Comps\CompProperties_RecolourablePawn.cs" />
     <Compile Include="Comps\Comp_RecolourablePawn.cs" />
     <Compile Include="Comps\Comp_Hibernation.cs" />
-    <Compile Include="Comps\Comp_PawnData.cs" />
     <Compile Include="Comps\Comp_EnergyProvider.cs" />
     <Compile Include="Data\BodyAddon.cs" />
     <Compile Include="Defs\PawnDef.cs" />
@@ -118,7 +129,6 @@
     <Compile Include="Utilities\GenUtil.cs" />
     <Compile Include="Harmony\Patch_PawnGenerator_GenerateBodyType.cs" />
     <Compile Include="Harmony\Patch_Pawn_StoryTracker_TryGetRandomHeadFromSet.cs" />
-    <None Include="Harmony\Patch_PawnGenerator_GetBodyTypeFor.cs" />
     <Compile Include="Harmony\Patch_PawnGraphicSet_ResolveAllGraphics.cs" />
     <Compile Include="Utilities\PawnGraphicUtil.cs" />
     <Compile Include="Utilities\AutoCrafterUtil.cs" />
@@ -164,7 +174,6 @@
     <Compile Include="UI\MainTabWindow_Automatons.cs" />
     <Compile Include="UI\PawnColumnWorker_DraftAutomaton.cs" />
     <Compile Include="Utilities\SettingsUtil.cs" />
-    <Compile Include="Data\AsimovSettingsPage.cs" />
     <Compile Include="Utilities\LogUtil.cs" />
     <Compile Include="PatchOperations\PatchOperation_SettingActive.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

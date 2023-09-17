@@ -22,7 +22,7 @@ namespace Asimov
 			{
 				Pawn pawn = pawnToShowInfoAbout(__instance);
 				Comp_Automaton comp = pawn.GetComp<Comp_Automaton>();
-				if (comp != null && !comp.Props.canUseWeapons)
+				if (comp != null && !comp.Props.canUseRanged)
 				{
 					__result = false;
 				}

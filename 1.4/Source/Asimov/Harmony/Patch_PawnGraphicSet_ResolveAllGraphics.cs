@@ -21,7 +21,7 @@ namespace Asimov
             if(pawn.def is PawnDef pawnDef)
             {
                 //LogUtil.LogError("Shouldn't Be Here");
-                Comp_PawnData comp = pawn.TryGetComp<Comp_PawnData>();
+                Comp_Automaton comp = pawn.TryGetComp<Comp_Automaton>();
 
                 if(pawnDef != null && comp != null && pawnDef.customGraphics != null)
                 {

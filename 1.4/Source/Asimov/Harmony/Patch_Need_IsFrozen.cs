@@ -22,7 +22,7 @@ namespace Asimov
 			{
 				if(__instance.pawn.TryGetComp<Comp_Hibernation>() != null)
                 {
-                    if(__instance.pawn.CurJob.def == AsimovDefOf.Asimov_Hibernate && !__instance.pawn.pather.Moving)
+                    if(__instance.pawn.CurJob?.def == AsimovDefOf.Asimov_Hibernate && (bool)!__instance.pawn?.pather?.Moving)
                     {
                         __result = true;
                     }

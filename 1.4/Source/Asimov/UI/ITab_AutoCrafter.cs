@@ -72,11 +72,11 @@ namespace Asimov
             GUI.BeginGroup(rect);
             Text.Font = GameFont.Small;
             Rect rect2 = new Rect(0f, 0f, 150f, 29f);
-            if (Widgets.ButtonText(rect2, "SetAutoBill".Translate(), true, false, true))
+            if (Widgets.ButtonText(rect2, "Asimov.SetAutoBill".Translate(), true, false, true))
             {
                 Find.WindowStack.Add(new FloatMenu(recipeOptionsMaker()));
             }
-            UIHighlighter.HighlightOpportunity(rect2, "SetAutoBill");
+            UIHighlighter.HighlightOpportunity(rect2, "Asimov.SetAutoBill");
 
             Text.Anchor = TextAnchor.UpperLeft;
             GUI.color = Color.white;
@@ -96,7 +96,7 @@ namespace Asimov
             //    this.SelTable.GetComp<Comp_AutomatedProducer>().repeatCurrentRecipe = !this.SelTable.GetComp<Comp_AutomatedProducer>().repeatCurrentRecipe;
             //    SoundDefOf.Click.PlayOneShotOnCamera(null);
             //}
-            //TooltipHandler.TipRegion(rect6, "RepeatAutoBillTip".Translate());
+            //TooltipHandler.TipRegion(rect6, "Asimov.RepeatAutoBillTip".Translate());
 
             // Repeat Quantity Input
             Utility_AutoProducerCard.DoConfigInterface(rect6.AtZero(), Color.white, comp);
@@ -109,7 +109,7 @@ namespace Asimov
                 comp.CancelRecipe();
                 SoundDefOf.Click.PlayOneShotOnCamera(null);
             }
-            TooltipHandler.TipRegion(rect5, "DeleteAutoBillTip".Translate());
+            TooltipHandler.TipRegion(rect5, "Asimov.DeleteAutoBillTip".Translate());
 
             // Info - Recipe Info
             Rect rectRepeat = new Rect(4, 28f, 160f, 24f);

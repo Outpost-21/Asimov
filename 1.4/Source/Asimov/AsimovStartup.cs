@@ -45,7 +45,7 @@ namespace Asimov
             {
                 foreach(KeyValuePair<TraitDef, List<string>> kvp in traitRaceRestrictions)
                 {
-                    string traitMsg = "Trait Restricted: " + kvp.Key.LabelCap;
+                    string traitMsg = "Trait Restricted: " + kvp.Key.defName;
                     foreach(string s in kvp.Value)
                     {
                         traitMsg += "\n- " + s;

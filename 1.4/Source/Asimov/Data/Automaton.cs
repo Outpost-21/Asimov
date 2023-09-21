@@ -61,9 +61,12 @@ namespace Asimov
             InitialisePawnData();
             if (training != null && Faction != null && Faction.IsPlayer)
             {
-                for (int i = 0; i < compAutomaton.Props.enabledWorkTypes.Count; i++)
+                if (!compAutomaton.Props.enabledWorkTypes.NullOrEmpty())
                 {
-                    workSettings.SetPriority(compAutomaton.Props.enabledWorkTypes[i], 3);
+                    for (int i = 0; i < compAutomaton.Props.enabledWorkTypes.Count; i++)
+                    {
+                        workSettings.SetPriority(compAutomaton.Props.enabledWorkTypes[i], 3);
+                    }
                 }
             }
         }
@@ -141,8 +144,13 @@ namespace Asimov
             if (workSettings == null)
             {
                 workSettings = new Pawn_WorkSettings(this);
-                workSettings.EnableAndInitialize();
-                workSettings.DisableAll();
+                if(workSettings.priorities == null)
+                {
+                    workSettings.priorities = new DefMap<WorkTypeDef, int>();
+                }
+                // Doing the necessary parts manually since this otherwise errors...
+                //workSettings.EnableAndInitialize();
+                //workSettings.DisableAll();
             }
         }
     }

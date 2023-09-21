@@ -86,6 +86,7 @@
   <ItemGroup>
     <Compile Include="Comps\CompProperties_WirelessCharger.cs" />
     <Compile Include="Comps\Comp_WirelessCharger.cs" />
+    <Compile Include="Harmony\Patch_GatheringsUtility_ShouldGuestKeepAttendingGathering.cs" />
     <Compile Include="Harmony\Patch_Pawn_NeedsTracker_ShouldHaveNeed.cs" />
     <Compile Include="Harmony\Patch_Pawn_GetDisabledWorkTypes.cs" />
     <Compile Include="Harmony\Patch_Pawn_GetReasonsForDisabledWorkType.cs" />

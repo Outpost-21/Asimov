@@ -36,7 +36,7 @@
 			<ComponentSpacer>4</ComponentSpacer>
 		</costList>
 		<researchPrerequisites>
-			<li>Fabrication</li>
+			<li>Asimov_WirelessCharging</li>
 		</researchPrerequisites>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
@@ -51,6 +51,9 @@
 			</li>
 		</comps>
 		<specialDisplayRadius>32</specialDisplayRadius>
+		<placeWorkers>
+			<li>Asimov.PlaceWorker_NeedWirelessCharging</li>
+		</placeWorkers>
 	</ThingDef>
 
 </Defs>

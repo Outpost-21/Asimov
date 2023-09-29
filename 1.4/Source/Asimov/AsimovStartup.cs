@@ -14,6 +14,12 @@ namespace Asimov
     {
         public static Dictionary<TraitDef, List<string>> traitRaceRestrictions = new Dictionary<TraitDef, List<string>>();
 
+        public static bool buildingHideFlag_HibernationSpot = true;
+        public static bool buildingHideFlag_Chargepad = true;
+        public static bool buildingHideFlag_wirelessCharging = true;
+
+        public static bool researchHideFlag_wirelessCharging = true;
+
         static AsimovStartup()
         {
             CheckIfBuildingsNeeded();
@@ -66,31 +72,38 @@ namespace Asimov
                 DefModExt_EnergyNeed modExt = thing.GetModExtension<DefModExt_EnergyNeed>();
                 if(modExt != null)
                 {
-                    if (modExt.canChargeFromChargepacks) { anyNeedChargepacks = true; } 
-                    if (modExt.canChargeFromSocket) { anyNeedSockets = true; }
-                    if (modExt.canChargeWirelessly) { anyNeedWireless = true; }
+                    if (modExt.canChargeFromChargepacks) { anyNeedChargepacks = true; LogUtil.LogMessage("Found Chargepack Users..."); } 
+                    if (modExt.canChargeFromSocket) { anyNeedSockets = true; LogUtil.LogMessage("Found Chargepad Users..."); }
+                    if (modExt.canChargeWirelessly) { anyNeedWireless = true; LogUtil.LogMessage("Found Wireless Charger Users..."); }
                 }
                 if (thing.HasComp(typeof(Comp_Hibernation)))
                 {
                     anyNeedHibernationSpots = true;
+                    LogUtil.LogMessage("Found Hibernation Spot Users...");
                 }
             }
-            if (!anyNeedHibernationSpots)
+            if (anyNeedHibernationSpots)
             {
-                AsimovDefOf.Asimov_HibernationSpot.designationCategory = null;
+                LogUtil.LogMessage("Showing Hibernation Spot");
+                buildingHideFlag_HibernationSpot = false;
             }
-            if (!anyNeedSockets)
+            if (anyNeedSockets)
             {
-                AsimovDefOf.Asimov_ChargePad.designationCategory = null;
+                LogUtil.LogMessage("Showing Chargepad");
+                buildingHideFlag_Chargepad = false;
+                AsimovDefOf.Asimov_ChargePad.researchPrerequisites.Add(AsimovDefOf.Electricity);
             }
-            if (!anyNeedWireless)
+            if (anyNeedWireless)
             {
-                AsimovDefOf.Asimov_WirelessCharger.designationCategory = null;
-                AsimovDefOf.Asimov_LongRangeWirelessCharger.designationCategory = null;
+                LogUtil.LogMessage("Showing Wireless Chargers");
+                researchHideFlag_wirelessCharging = false;
             }
-            if (!anyNeedChargepacks)
+            if (anyNeedChargepacks)
             {
-                AsimovDefOf.Asimov_Chargepack.recipeMaker.recipeUsers.Clear();
+                LogUtil.LogMessage("Showing Chargepacks");
+                AsimovDefOf.FabricationBench.recipes.Add(AsimovDefOf.Asimov_RechargeChargepack);
+                AsimovDefOf.FabricationBench.recipes.Add(AsimovDefOf.Asimov_RechargeChargepackBulk);
+                AsimovDefOf.Asimov_Chargepack.recipeMaker.recipeUsers.Add(AsimovDefOf.FabricationBench);
             }
         }
     }

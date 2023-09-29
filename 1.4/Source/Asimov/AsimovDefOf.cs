@@ -17,6 +17,8 @@ namespace Asimov
             DefOfHelper.EnsureInitializedInCtor(typeof(AsimovDefOf));
         }
 
+        public static ResearchProjectDef Asimov_WirelessCharging;
+
         public static PawnTableDef Asimov_Automatons;
 
         public static NeedDef Asimov_EnergyNeed;
@@ -39,5 +41,14 @@ namespace Asimov
 
         public static ThingDef Asimov_Chargepack;
         public static ThingDef Asimov_Chargepack_Empty;
+
+        public static RecipeDef Asimov_RechargeChargepack;
+        public static RecipeDef Asimov_RechargeChargepackBulk;
+
+        // Vanilla
+
+        public static ThingDef FabricationBench;
+
+        public static ResearchProjectDef Electricity;
     }
 }

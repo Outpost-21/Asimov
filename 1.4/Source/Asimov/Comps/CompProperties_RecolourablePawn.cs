@@ -15,9 +15,23 @@ namespace Asimov
 
         public bool channelTwo = false;
 
+        public List<ColorPair> skinColorPairs = new List<ColorPair>();
+
         public CompProperties_RecolourablePawn()
         {
             compClass = typeof(Comp_RecolourablePawn);
+        }
+
+        public ColorPair GetSkinColor
+        {
+            get
+            {
+                if (skinColorPairs.NullOrEmpty())
+                {
+                    return new ColorPair();
+                }
+                return skinColorPairs.RandomElementByWeight((ColorPair x) => x.weight);
+            }
         }
     }
 }

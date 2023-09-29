@@ -32,7 +32,6 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 		</costList>
 		<researchPrerequisites>
-			<li>Electricity</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		<designationCategory>Power</designationCategory>
@@ -56,6 +55,9 @@
 			</li>
 			<li Class="CompProperties_Flickable" />
 		</comps>
+		<placeWorkers>
+			<li>Asimov.PlaceWorker_NeedChargepad</li>
+		</placeWorkers>
 	</ThingDef>
 
 </Defs>

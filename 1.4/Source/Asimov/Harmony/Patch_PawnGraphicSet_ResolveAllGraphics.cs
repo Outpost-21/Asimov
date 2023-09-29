@@ -84,6 +84,46 @@ namespace Asimov
                     return false;
                 }
             }
+            else if (pawn.IsAutomaton())
+            {
+                Comp_Automaton comp = pawn.TryGetComp<Comp_Automaton>();
+
+                if(comp != null)
+                {
+                    Comp_RecolourablePawn compRecol = pawn.TryGetComp<Comp_RecolourablePawn>();
+                    if (!compRecol.Props.skinColorPairs.NullOrEmpty() && !comp.resolved)
+                    {
+                        ColorPair pair = compRecol.Props.GetSkinColor;
+                        if (comp.skinFirst == null)
+                        {
+                            comp.skinFirst = pair.colorOne;
+                        }
+                        if (comp.skinSecond == null)
+                        {
+                            comp.skinSecond = pair.colorTwo;
+                        }
+                        comp.resolved = true;
+                    }
+
+                    Color skinFirst = comp.skinFirst ?? pawn.story.SkinColor;
+                    Color skinSecond = comp.skinSecond ?? pawn.story.SkinColor;
+
+                    PawnKindLifeStage curKindLifeStage = pawn.ageTracker.CurKindLifeStage;
+                    string bodyPath = curKindLifeStage.bodyGraphicData.Graphic.path;
+                    if (bodyPath != null)
+                    {
+                        Shader shader = (ContentFinder<Texture2D>.Get(bodyPath + "_northm", false) == null) ? ShaderDatabase.Cutout : ShaderDatabase.CutoutComplex;
+                        // LogUtil.LogMessage($"BodyShader = {shader}");
+                        __instance.nakedGraphic = GraphicDatabase.Get<Graphic_Multi>(bodyPath, shader, curKindLifeStage.bodyGraphicData.drawSize, skinFirst, skinSecond);
+                    }
+
+                    __instance.ResolveApparelGraphics();
+                    __instance.ResolveGeneGraphics();
+                    PortraitsCache.SetDirty(pawn);
+                    GlobalTextureAtlasManager.TryMarkPawnFrameSetDirty(pawn);
+                    return false;
+                }
+            }
             return true;
         }
     }

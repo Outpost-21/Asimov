@@ -87,6 +87,7 @@
     <Compile Include="Comps\CompProperties_WirelessCharger.cs" />
     <Compile Include="Comps\Comp_WirelessCharger.cs" />
     <Compile Include="Harmony\Patch_GatheringsUtility_ShouldGuestKeepAttendingGathering.cs" />
+    <Compile Include="Harmony\Patch_MainTabWindow_Research_VisibleResearchProjects.cs" />
     <Compile Include="Harmony\Patch_Pawn_NeedsTracker_ShouldHaveNeed.cs" />
     <Compile Include="Harmony\Patch_Pawn_GetDisabledWorkTypes.cs" />
     <Compile Include="Harmony\Patch_Pawn_GetReasonsForDisabledWorkType.cs" />
@@ -126,6 +127,9 @@
     <Compile Include="Harmony\Patch_Need_IsFrozen.cs" />
     <Compile Include="Harmony\Patch_ITab_Genes_Hidden.cs" />
     <Compile Include="Harmony\Patch_Pawn_GeneTracker_AddGene.cs" />
+    <Compile Include="PlaceWorkers\PlaceWorker_NeedHibernationSpot.cs" />
+    <Compile Include="PlaceWorkers\PlaceWorker_NeedWirelessCharging.cs" />
+    <Compile Include="PlaceWorkers\PlaceWorker_NeedChargepad.cs" />
     <Compile Include="UI\Popup_ColourPicker.cs" />
     <Compile Include="Utilities\GenUtil.cs" />
     <Compile Include="Harmony\Patch_PawnGenerator_GenerateBodyType.cs" />

@@ -44,7 +44,7 @@ namespace Asimov
                 List<FloatMenuOption> list = new List<FloatMenuOption>();
                 foreach (AutomatonRecipeDef recipe in SelTable.def.GetCompProperties<CompProperties_AutoCrafter>().recipes)
                 {
-                    if (recipe.researchPrerequisites.NullOrEmpty() || recipe.researchPrerequisites.All(rpd => rpd.IsFinished))
+                    if ((recipe.researchPrerequisite == null || recipe.researchPrerequisite.IsFinished) && (recipe.researchPrerequisites.NullOrEmpty() || recipe.researchPrerequisites.All(rpd => rpd.IsFinished)))
                     {
                         list.Add(new FloatMenuOption(recipe.LabelCap, delegate ()
                         {

@@ -26,7 +26,6 @@
 			<productCount>5</productCount>
 			<workSkill>Crafting</workSkill>
 			<recipeUsers>
-				<li>FabricationBench</li>
 			</recipeUsers>
 		</recipeMaker>
 		<costList>

@@ -46,7 +46,7 @@ namespace Asimov
                     }
                 }
             }
-            bool logRestrictions = true;
+            bool logRestrictions = false;
             if (logRestrictions)
             {
                 foreach(KeyValuePair<TraitDef, List<string>> kvp in traitRaceRestrictions)
@@ -72,35 +72,30 @@ namespace Asimov
                 DefModExt_EnergyNeed modExt = thing.GetModExtension<DefModExt_EnergyNeed>();
                 if(modExt != null)
                 {
-                    if (modExt.canChargeFromChargepacks) { anyNeedChargepacks = true; LogUtil.LogMessage("Found Chargepack Users..."); } 
-                    if (modExt.canChargeFromSocket) { anyNeedSockets = true; LogUtil.LogMessage("Found Chargepad Users..."); }
-                    if (modExt.canChargeWirelessly) { anyNeedWireless = true; LogUtil.LogMessage("Found Wireless Charger Users..."); }
+                    if (modExt.canChargeFromChargepacks) { anyNeedChargepacks = true; } 
+                    if (modExt.canChargeFromSocket) { anyNeedSockets = true; }
+                    if (modExt.canChargeWirelessly) { anyNeedWireless = true; }
                 }
                 if (thing.HasComp(typeof(Comp_Hibernation)))
                 {
                     anyNeedHibernationSpots = true;
-                    LogUtil.LogMessage("Found Hibernation Spot Users...");
                 }
             }
             if (anyNeedHibernationSpots)
             {
-                LogUtil.LogMessage("Showing Hibernation Spot");
                 buildingHideFlag_HibernationSpot = false;
             }
             if (anyNeedSockets)
             {
-                LogUtil.LogMessage("Showing Chargepad");
                 buildingHideFlag_Chargepad = false;
                 AsimovDefOf.Asimov_ChargePad.researchPrerequisites.Add(AsimovDefOf.Electricity);
             }
             if (anyNeedWireless)
             {
-                LogUtil.LogMessage("Showing Wireless Chargers");
                 researchHideFlag_wirelessCharging = false;
             }
             if (anyNeedChargepacks)
             {
-                LogUtil.LogMessage("Showing Chargepacks");
                 AsimovDefOf.FabricationBench.recipes.Add(AsimovDefOf.Asimov_RechargeChargepack);
                 AsimovDefOf.FabricationBench.recipes.Add(AsimovDefOf.Asimov_RechargeChargepackBulk);
                 AsimovDefOf.Asimov_Chargepack.recipeMaker.recipeUsers.Add(AsimovDefOf.FabricationBench);

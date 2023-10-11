@@ -61,11 +61,11 @@ namespace Asimov
             InitialisePawnData();
             if (training != null && Faction != null && Faction.IsPlayer)
             {
-                if (!compAutomaton.Props.enabledWorkTypes.NullOrEmpty())
+                if (!compAutomaton.EnabledWorkTypes.NullOrEmpty())
                 {
-                    for (int i = 0; i < compAutomaton.Props.enabledWorkTypes.Count; i++)
+                    for (int i = 0; i < compAutomaton.EnabledWorkTypes.Count; i++)
                     {
-                        workSettings.SetPriority(compAutomaton.Props.enabledWorkTypes[i], 3);
+                        workSettings.SetPriority(compAutomaton.EnabledWorkTypes[i], 3);
                     }
                 }
             }

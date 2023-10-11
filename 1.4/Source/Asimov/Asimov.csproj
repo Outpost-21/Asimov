@@ -130,6 +130,7 @@
     <Compile Include="PlaceWorkers\PlaceWorker_NeedHibernationSpot.cs" />
     <Compile Include="PlaceWorkers\PlaceWorker_NeedWirelessCharging.cs" />
     <Compile Include="PlaceWorkers\PlaceWorker_NeedChargepad.cs" />
+    <Compile Include="ScenParts\ScenPart_StartingAutomatons.cs" />
     <Compile Include="UI\Popup_ColourPicker.cs" />
     <Compile Include="Utilities\GenUtil.cs" />
     <Compile Include="Harmony\Patch_PawnGenerator_GenerateBodyType.cs" />

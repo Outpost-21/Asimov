@@ -24,6 +24,10 @@ namespace Asimov
             {
                 yield return gizmo;
             }
+            if (!pawn.IsColonist)
+            {
+                yield break;
+            }
             yield return new Command_Action()
             {
                 defaultLabel = "Asimov.GoHibernateLabel".Translate(),
@@ -50,6 +54,7 @@ namespace Asimov
                     autoHibernate = !autoHibernate;
                 }
             };
+            yield break;
         }
 
         public override void PostExposeData()

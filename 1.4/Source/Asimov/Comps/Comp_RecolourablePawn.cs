@@ -11,6 +11,8 @@ namespace Asimov
 {
     public class Comp_RecolourablePawn : ThingComp
     {
+        Pawn pawn => parent as Pawn;
+
         public CompProperties_RecolourablePawn Props => (CompProperties_RecolourablePawn)props;
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -18,6 +20,10 @@ namespace Asimov
             foreach (Gizmo gizmo in base.CompGetGizmosExtra())
             {
                 yield return gizmo;
+            }
+            if (!pawn.IsColonist)
+            {
+                yield break;
             }
             if (Props.channelOne)
             {
@@ -39,6 +45,7 @@ namespace Asimov
                     action = () => Find.WindowStack.Add(new Popup_ColourPicker(this, true))
                 };
             }
+            yield break;
         }
 
         public Color GetSkinColor(bool second)

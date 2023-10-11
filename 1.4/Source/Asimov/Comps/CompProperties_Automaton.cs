@@ -33,6 +33,7 @@ namespace Asimov
 
         public string workDisableTerm = "programming";
 
+        public bool enableAllWorkTypes = false;
         public List<WorkTypeDef> enabledWorkTypes = new List<WorkTypeDef>();
 
         public List<SkillLevelSetting> skillSettings = new List<SkillLevelSetting>();

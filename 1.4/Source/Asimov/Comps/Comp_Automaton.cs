@@ -18,21 +18,46 @@ namespace Asimov
 
         public bool resolved;
 
-        public List<WorkTypeDef> enabledWorkTypes = new List<WorkTypeDef>();
+        public List<WorkTypeDef> extraEnabledWorkTypes = new List<WorkTypeDef>();
+
+        public List<WorkTypeDef> cachedEnabledWorkTypes = new List<WorkTypeDef>();
+
+        public List<WorkTypeDef> EnabledWorkTypes
+        {
+            get
+            {
+                if (cachedEnabledWorkTypes == null)
+                {
+                    cachedEnabledWorkTypes = new List<WorkTypeDef>();
+                    foreach (WorkTypeDef workType in DefDatabase<WorkTypeDef>.AllDefs)
+                    {
+                        if ((Props.enableAllWorkTypes || extraEnabledWorkTypes.Contains(workType) && (bool)Props.enabledWorkTypes?.Contains(workType)) && !cachedEnabledWorkTypes.Contains(workType))
+                        {
+                            cachedEnabledWorkTypes.Add(workType);
+                        }
+                    }
+                }
+                return cachedEnabledWorkTypes;
+            }
+        }
+
         public List<WorkTypeDef> cachedDisabledWorkTypes = new List<WorkTypeDef>();
 
         public List<WorkTypeDef> DisabledWorkTypes
         {
             get
             {
-                if (cachedDisabledWorkTypes.NullOrEmpty())
+                if (cachedDisabledWorkTypes == null)
                 {
                     cachedDisabledWorkTypes = new List<WorkTypeDef>();
-                    foreach (WorkTypeDef workType in DefDatabase<WorkTypeDef>.AllDefs)
+                    if (!Props.enableAllWorkTypes)
                     {
-                        if (!enabledWorkTypes.Contains(workType) && (bool)!Props.enabledWorkTypes?.Contains(workType) && !cachedDisabledWorkTypes.Contains(workType))
+                        foreach (WorkTypeDef workType in DefDatabase<WorkTypeDef>.AllDefs)
                         {
-                            cachedDisabledWorkTypes.Add(workType);
+                            if (!extraEnabledWorkTypes.Contains(workType) && (bool)!EnabledWorkTypes?.Contains(workType) && !cachedDisabledWorkTypes.Contains(workType))
+                            {
+                                cachedDisabledWorkTypes.Add(workType);
+                            }
                         }
                     }
                 }
@@ -55,7 +80,7 @@ namespace Asimov
             Scribe_Values.Look(ref skinFirst, "skinFirst");
             Scribe_Values.Look(ref skinSecond, "skinSecond");
             Scribe_Values.Look(ref resolved, "resolved");
-            Scribe_Collections.Look(ref enabledWorkTypes, "enabledWorkTypes");
+            Scribe_Collections.Look(ref extraEnabledWorkTypes, "extraEnabledWorkTypes");
         }
     }
 }

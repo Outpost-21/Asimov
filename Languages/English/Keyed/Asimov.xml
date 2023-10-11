@@ -9,6 +9,7 @@
 	<Asimov.SetAutoBill>Set Production</Asimov.SetAutoBill>
 	<Asimov.RepeatAutoBillTip>Repeats current production recipe.</Asimov.RepeatAutoBillTip>
 	<Asimov.DeleteAutoBillTip>Cancels current production recipe.</Asimov.DeleteAutoBillTip>
+	<Asimov.RandomAutomaton>Random Automaton</Asimov.RandomAutomaton>
 
 	<!-- Energy -->
 

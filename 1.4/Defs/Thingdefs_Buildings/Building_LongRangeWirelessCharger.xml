@@ -13,7 +13,7 @@
 		<tickerType>Normal</tickerType>
 		<size>(1,1)</size>
 		<uiIconPath>Asimov/Buildings/MapWideTransmitter_MenuIcon</uiIconPath>
-		<uiIconScale>1</uiIconScale>
+		<uiIconScale>0.80</uiIconScale>
 		<altitudeLayer>BuildingOnTop</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<pathCost>180</pathCost>

@@ -38,6 +38,13 @@ namespace Asimov
             EnergyUtil.GetEnergyNeedWorldComp.RemoveSocketCharger(parent);
         }
 
+        public override void PostDestroy(DestroyMode mode, Map previousMap)
+        {
+            base.PostDestroy(mode, previousMap);
+
+            EnergyUtil.GetEnergyNeedWorldComp.RemoveHibernationSpot(parent);
+        }
+
         public void RechargePawn(Pawn pawn)
         {
             Need_Energy energyNeed = (Need_Energy)pawn.needs.TryGetNeed(AsimovDefOf.Asimov_EnergyNeed);

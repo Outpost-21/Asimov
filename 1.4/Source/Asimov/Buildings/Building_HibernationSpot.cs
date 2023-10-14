@@ -24,6 +24,12 @@ namespace Asimov
             EnergyUtil.GetEnergyNeedWorldComp.RemoveHibernationSpot(this);
         }
 
+        public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
+        {
+            base.Destroy(mode);
+            EnergyUtil.GetEnergyNeedWorldComp.RemoveHibernationSpot(this);
+        }
+
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
         {
             foreach(FloatMenuOption option in base.GetFloatMenuOptions(selPawn))

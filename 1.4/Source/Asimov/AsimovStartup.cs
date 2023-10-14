@@ -15,6 +15,7 @@ namespace Asimov
         public static Dictionary<TraitDef, List<string>> traitRaceRestrictions = new Dictionary<TraitDef, List<string>>();
 
         public static bool buildingHideFlag_HibernationSpot = true;
+        public static bool buildingHideFlag_Chargepacks = true;
         public static bool buildingHideFlag_Chargepad = true;
         public static bool buildingHideFlag_wirelessCharging = true;
 
@@ -96,6 +97,7 @@ namespace Asimov
             }
             if (anyNeedChargepacks)
             {
+                buildingHideFlag_Chargepacks = false;
                 AsimovDefOf.FabricationBench.recipes.Add(AsimovDefOf.Asimov_RechargeChargepack);
                 AsimovDefOf.FabricationBench.recipes.Add(AsimovDefOf.Asimov_RechargeChargepackBulk);
                 AsimovDefOf.Asimov_Chargepack.recipeMaker.recipeUsers.Add(AsimovDefOf.FabricationBench);

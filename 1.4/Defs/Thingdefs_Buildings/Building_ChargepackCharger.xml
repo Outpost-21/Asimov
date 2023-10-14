@@ -2,21 +2,23 @@
 <Defs>
 
 	<ThingDef ParentName="BuildingBase">
-		<defName>Asimov_ChargePad</defName>
-		<label>chargepad</label>
-		<description>Charging pad used automatically by rechargable automatons.</description>
+		<defName>Asimov_ChargepackCharger</defName>
+		<label>chargepack charger</label>
+		<description>Charging array used to bulk recharge chargepacks.</description>
 		<graphicData>
-			<texPath>Asimov/Buildings/Chargepad</texPath>
+			<texPath>Asimov/Buildings/ChargepackCharger</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3, 3)</drawSize>
 		</graphicData>
 		<uiIconScale>0.80</uiIconScale>
+		<thingClass>Asimov.Building_ChargepackCharger</thingClass>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>Standable</passability>
 		<blockWind>false</blockWind>
 		<rotatable>false</rotatable>
 		<fillPercent>0.1</fillPercent>
-		<tickerType>Rare</tickerType>
+		<tickerType>Normal</tickerType>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<thingCategories>
 			<li>BuildingsSpecial</li>
@@ -24,15 +26,13 @@
 		<statBases>
 			<WorkToBuild>1000</WorkToBuild>
 			<MaxHitPoints>100</MaxHitPoints>
-			<Mass>6</Mass>
+			<Mass>4</Mass>
 			<Flammability>0.3</Flammability>
 		</statBases>
 		<costList>
-			<Steel>80</Steel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<Steel>40</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
-		<researchPrerequisites>
-		</researchPrerequisites>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		<designationCategory>Power</designationCategory>
 		<building>
@@ -47,16 +47,26 @@
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>0</basePowerConsumption>
-			</li>
-			<li Class="Asimov.CompProperties_EnergyProvider">
-				<drainToRefill>50</drainToRefill>
-				<rechargeRate>0.001</rechargeRate>
+				<basePowerConsumption>200</basePowerConsumption>
 			</li>
 			<li Class="CompProperties_Flickable" />
 		</comps>
+		<modExtensions>
+			<li Class="Asimov.DefModExt_ChargerGraphics">
+				<workingGraphicData>
+					<texPath>Asimov/Buildings/ChargepackCharger_Working</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(3, 3)</drawSize>
+				</workingGraphicData>
+				<finishedGraphicData>
+					<texPath>Asimov/Buildings/ChargepackCharger_Finished</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(3, 3)</drawSize>
+				</finishedGraphicData>
+			</li>
+		</modExtensions>
 		<placeWorkers>
-			<li>Asimov.PlaceWorker_NeedChargepad</li>
+			<li>Asimov.PlaceWorker_NeedChargepacks</li>
 		</placeWorkers>
 	</ThingDef>
 

@@ -26,6 +26,8 @@ namespace Asimov
         public static JobDef Asimov_Hibernate;
         public static JobDef Asimov_ConsumeEnergySource;
         public static JobDef Asimov_RechargeFromSocket;
+        public static JobDef Asimov_InsertChargepacks;
+        public static JobDef Asimov_RemoveChargepacks;
 
         public static HediffDef Asimov_EmergencyPower;
 

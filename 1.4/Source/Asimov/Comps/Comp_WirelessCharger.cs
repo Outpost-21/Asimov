@@ -34,6 +34,13 @@ namespace Asimov
             EnergyUtil.GetEnergyNeedWorldComp.RemoveWirelessCharger(parent, Props.worldWide);
         }
 
+        public override void PostDestroy(DestroyMode mode, Map previousMap)
+        {
+            base.PostDestroy(mode, previousMap);
+
+            EnergyUtil.GetEnergyNeedWorldComp.RemoveWirelessCharger(parent, Props.worldWide);
+        }
+
         public float RechargePawn(Pawn pawn, float reqEnergy)
         {
             if(powerComp == null) { return reqEnergy; }

@@ -17,6 +17,16 @@
 	
 	<Asimov.GoRechargeLabel>Recharge</Asimov.GoRechargeLabel>
 	<Asimov.GoRechargeDescription>Seek out and recharge from the closest available charging socket/platform.</Asimov.GoRechargeDescription>
+	<Asimov.NoEmptyChargepacksFound>No drained Chargepacks found.</Asimov.NoEmptyChargepacksFound>
+	<Asimov.BeginProcessingEarlyLabel>Begin Recharging</Asimov.BeginProcessingEarlyLabel>
+	<Asimov.BeginProcessingEarlyDesc>Allows you to manually begin the recharging process if there aren't enough empty chargepacks to fill the machine. There is no downside to doing so, other than it being a smaller quantity recharged in this run of the device.</Asimov.BeginProcessingEarlyDesc>
+	<Asimov.CurrentState>Current State:</Asimov.CurrentState>
+	<Asimov.State_Inactive>Inactive</Asimov.State_Inactive>
+	<Asimov.State_AwaitingInput>Awaiting Depleted Chargepacks</Asimov.State_AwaitingInput>
+	<Asimov.State_Working>Recharging {0}</Asimov.State_Working>
+	<Asimov.State_Finished>Finished</Asimov.State_Finished>
+	<Asimov.State_ProductRemoved>Resetting...</Asimov.State_ProductRemoved>
+	<Asimov.State_Invalid>Invalid</Asimov.State_Invalid>
 
 	<!-- Drafting -->
 	

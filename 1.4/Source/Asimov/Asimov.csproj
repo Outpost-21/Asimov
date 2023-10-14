@@ -84,8 +84,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Building_ChargepackCharger.cs" />
     <Compile Include="Comps\CompProperties_WirelessCharger.cs" />
     <Compile Include="Comps\Comp_WirelessCharger.cs" />
+    <Compile Include="DefModExt_ChargerGraphics.cs" />
     <Compile Include="Harmony\Patch_GatheringsUtility_ShouldGuestKeepAttendingGathering.cs" />
     <Compile Include="Harmony\Patch_MainTabWindow_Research_VisibleResearchProjects.cs" />
     <Compile Include="Harmony\Patch_Pawn_NeedsTracker_ShouldHaveNeed.cs" />
@@ -101,6 +103,8 @@
     <Compile Include="Harmony\Patch_IncidentWorker_Disease_PotentialVictims.cs" />
     <Compile Include="Harmony\Patch_FoodUtility_IsAcceptablePreyFor.cs" />
     <Compile Include="Harmony\Patch_PawnRelationWorker_BaseGenerationChanceFactor.cs" />
+    <Compile Include="JobDriver_InsertChargepacks.cs" />
+    <Compile Include="JobDriver_RemoveChargepacks.cs" />
     <Compile Include="Jobs\JobGiver_Automaton.cs" />
     <Compile Include="Jobs\JobGiver_SeekEnergy.cs" />
     <Compile Include="Jobs\JobDriver_RechargeFromSocket.cs" />
@@ -127,10 +131,13 @@
     <Compile Include="Harmony\Patch_Need_IsFrozen.cs" />
     <Compile Include="Harmony\Patch_ITab_Genes_Hidden.cs" />
     <Compile Include="Harmony\Patch_Pawn_GeneTracker_AddGene.cs" />
+    <Compile Include="PlaceWorkers\PlaceWorker_NeedChargepacks.cs" />
     <Compile Include="PlaceWorkers\PlaceWorker_NeedHibernationSpot.cs" />
     <Compile Include="PlaceWorkers\PlaceWorker_NeedWirelessCharging.cs" />
     <Compile Include="PlaceWorkers\PlaceWorker_NeedChargepad.cs" />
+    <Compile Include="ProcessState.cs" />
     <Compile Include="ScenParts\ScenPart_StartingAutomatons.cs" />
+    <Compile Include="StockGenerator\StockGenerator_Automatons.cs" />
     <Compile Include="UI\Popup_ColourPicker.cs" />
     <Compile Include="Utilities\GenUtil.cs" />
     <Compile Include="Harmony\Patch_PawnGenerator_GenerateBodyType.cs" />
@@ -187,6 +194,8 @@
     <Compile Include="AsimovSettings.cs" />
     <Compile Include="AI\WorkGiverProperties_FillAutoCrafter.cs" />
     <Compile Include="AI\WorkGiver_FillAutoCrafter.cs" />
+    <Compile Include="WorkGiver_InsertChargepacks.cs" />
+    <Compile Include="WorkGiver_RemoveChargepacks.cs" />
     <Compile Include="WorldComps\WorldComp_EnergyNeed.cs" />
   </ItemGroup>
   <ItemGroup>

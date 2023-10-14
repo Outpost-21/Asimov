@@ -29,6 +29,16 @@ namespace Asimov
             }
         }
 
+        public static List<Thing> GetChargepackChargersOnMap(Map map)
+        {
+            WorldComp_EnergyNeed comp = GetEnergyNeedWorldComp;
+            if (comp.chargepackChargers.ContainsKey(map))
+            {
+                return comp.chargepackChargers[map].ToList();
+            }
+            return new List<Thing>();
+        }
+
         public static float PullEnergyFromChargers(this List<Thing> chargers, Pawn pawn, float reqEnergy)
         {
             float remaining = reqEnergy;

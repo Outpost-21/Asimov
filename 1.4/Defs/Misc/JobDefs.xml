@@ -34,5 +34,17 @@
 		<driverClass>JobDriver_HaulToContainer</driverClass>
 		<reportString>hauling TargetA.</reportString>
 	</JobDef>
+	
+	<JobDef>
+		<defName>Asimov_InsertChargepacks</defName>
+		<driverClass>Asimov.JobDriver_InsertChargepacks</driverClass>
+		<reportString>inserting chargepacks.</reportString>
+	</JobDef>
+	
+	<JobDef>
+		<defName>Asimov_RemoveChargepacks</defName>
+		<driverClass>Asimov.JobDriver_RemoveChargepacks</driverClass>
+		<reportString>removing chargepacks.</reportString>
+	</JobDef>
 
 </Defs>

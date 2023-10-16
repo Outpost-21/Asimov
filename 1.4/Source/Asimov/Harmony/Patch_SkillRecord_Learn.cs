@@ -16,7 +16,7 @@ namespace Asimov
     public class Patch_SkillRecord_Learn
     {
         [HarmonyPrefix]
-        public static bool Prefix(SkillRecord __instance, float xp, bool direct = false)
+        public static bool Prefix(SkillRecord __instance, ref float xp, bool direct = false)
         {
             Comp_Automaton comp = __instance.Pawn.TryGetComp<Comp_Automaton>();
             if(comp != null)

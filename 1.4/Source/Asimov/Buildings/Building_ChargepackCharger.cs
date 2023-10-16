@@ -305,14 +305,14 @@ namespace Asimov
 
         public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
         {
-            base.DeSpawn(mode);
             EnergyUtil.GetEnergyNeedWorldComp.RemoveChargepackCharger(this, Map);
+            base.DeSpawn(mode);
         }
 
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
-            base.Destroy(mode);
             EnergyUtil.GetEnergyNeedWorldComp.RemoveChargepackCharger(this, Map);
+            base.Destroy(mode);
         }
     }
 }

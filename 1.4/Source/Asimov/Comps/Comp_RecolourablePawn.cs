@@ -21,7 +21,7 @@ namespace Asimov
             {
                 yield return gizmo;
             }
-            if (!pawn.IsColonist)
+            if (!pawn.Faction?.IsPlayer ?? false)
             {
                 yield break;
             }

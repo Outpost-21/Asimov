@@ -123,6 +123,8 @@ namespace Asimov
         public override void ExposeData()
         {
             base.ExposeData();
+            Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
+            Scribe_Values.Look(ref processState, "processState");
             Scribe_Values.Look(ref processTick, "processTick");
             Scribe_Values.Look(ref processManualStart, "processManualStart");
         }

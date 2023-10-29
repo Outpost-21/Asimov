@@ -84,9 +84,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\JobDriver_HibernateTillRepaired.cs" />
+    <Compile Include="AI\WorkGiver_RepairPawn.cs" />
     <Compile Include="Buildings\Building_ChargepackCharger.cs" />
     <Compile Include="Comps\CompProperties_WirelessCharger.cs" />
     <Compile Include="Comps\Comp_WirelessCharger.cs" />
+    <Compile Include="Harmony\Patch_WorkGiver_Tend_HasJobOnThing.cs" />
+    <Compile Include="AI\JobDriver_RepairTarget.cs" />
     <Compile Include="ModExtensions\DefModExt_ChargerGraphics.cs" />
     <Compile Include="Harmony\Patch_GatheringsUtility_ShouldGuestKeepAttendingGathering.cs" />
     <Compile Include="Harmony\Patch_MainTabWindow_Research_VisibleResearchProjects.cs" />
@@ -103,12 +107,12 @@
     <Compile Include="Harmony\Patch_IncidentWorker_Disease_PotentialVictims.cs" />
     <Compile Include="Harmony\Patch_FoodUtility_IsAcceptablePreyFor.cs" />
     <Compile Include="Harmony\Patch_PawnRelationWorker_BaseGenerationChanceFactor.cs" />
-    <Compile Include="Jobs\JobDriver_InsertChargepacks.cs" />
-    <Compile Include="Jobs\JobDriver_RemoveChargepacks.cs" />
-    <Compile Include="Jobs\JobGiver_Automaton.cs" />
-    <Compile Include="Jobs\JobGiver_SeekEnergy.cs" />
-    <Compile Include="Jobs\JobDriver_RechargeFromSocket.cs" />
-    <Compile Include="Jobs\JobDriver_Hibernate.cs" />
+    <Compile Include="AI\JobDriver_InsertChargepacks.cs" />
+    <Compile Include="AI\JobDriver_RemoveChargepacks.cs" />
+    <Compile Include="AI\JobGiver_Automaton.cs" />
+    <Compile Include="AI\JobGiver_SeekEnergy.cs" />
+    <Compile Include="AI\JobDriver_RechargeFromSocket.cs" />
+    <Compile Include="AI\JobDriver_Hibernate.cs" />
     <Compile Include="AsimovDefOf.cs" />
     <Compile Include="AsimovStartup.cs" />
     <Compile Include="Buildings\Building_HibernationSpot.cs" />
@@ -138,6 +142,7 @@
     <Compile Include="Data\ProcessState.cs" />
     <Compile Include="ScenParts\ScenPart_StartingAutomatons.cs" />
     <Compile Include="StockGenerator\StockGenerator_Automatons.cs" />
+    <Compile Include="AI\Toils_Repair.cs" />
     <Compile Include="UI\Popup_ColourPicker.cs" />
     <Compile Include="Utilities\GenUtil.cs" />
     <Compile Include="Harmony\Patch_PawnGenerator_GenerateBodyType.cs" />
@@ -154,7 +159,7 @@
     <Compile Include="Comps\Comp_AutoCrafter.cs" />
     <Compile Include="Comps\Comp_EnergySource.cs" />
     <Compile Include="Data\EnergyCategory.cs" />
-    <Compile Include="Jobs\JobDriver_ConsumeEnergySource.cs" />
+    <Compile Include="AI\JobDriver_ConsumeEnergySource.cs" />
     <Compile Include="Harmony\Patch_Pawn_IsColonistPlayerControlled.cs" />
     <Compile Include="Harmony\Patch_FloatMenuMakerMap_CanTakeOrder.cs" />
     <Compile Include="Harmony\Patch_ITab_Pawn_Gear_DrawThingRow.cs" />
@@ -162,7 +167,7 @@
     <Compile Include="Harmony\Patch_FloatMenuMakerMap_ChoicesAtFor.cs" />
     <Compile Include="Harmony\Patch_FloatMenuMakerMap_AddDraftedOrders.cs" />
     <Compile Include="Data\ProducerStatus.cs" />
-    <Compile Include="Jobs\JobDriver_FillAutoCrafter.cs" />
+    <Compile Include="AI\JobDriver_FillAutoCrafter.cs" />
     <Compile Include="Data\RepeatMode.cs" />
     <Compile Include="Utilities\RestrictionUtil.cs" />
     <Compile Include="Utilities\TexUtil.cs" />
@@ -196,6 +201,8 @@
     <Compile Include="AI\WorkGiver_FillAutoCrafter.cs" />
     <Compile Include="AI\WorkGiver_InsertChargepacks.cs" />
     <Compile Include="AI\WorkGiver_RemoveChargepacks.cs" />
+    <Compile Include="AI\WorkGiver_RepairOther.cs" />
+    <Compile Include="AI\WorkGiver_RepairSelf.cs" />
     <Compile Include="WorldComps\WorldComp_EnergyNeed.cs" />
   </ItemGroup>
   <ItemGroup>

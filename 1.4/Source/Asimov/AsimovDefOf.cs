@@ -24,6 +24,8 @@ namespace Asimov
         public static NeedDef Asimov_EnergyNeed;
 
         public static JobDef Asimov_Hibernate;
+        public static JobDef Asimov_HibernateTillRepaired;
+        public static JobDef Asimov_RepairAutomaton;
         public static JobDef Asimov_ConsumeEnergySource;
         public static JobDef Asimov_RechargeFromSocket;
         public static JobDef Asimov_InsertChargepacks;

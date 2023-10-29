@@ -9,6 +9,7 @@
 			<texPath>Asimov/Buildings/Chargepad</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<thingClass>Asimov.Building_HibernationSpot</thingClass>
 		<uiIconScale>0.80</uiIconScale>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<altitudeLayer>Building</altitudeLayer>

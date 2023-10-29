@@ -25,6 +25,7 @@ namespace Asimov
         public bool huntTarget = true;
         public bool flattenSkills = false;
         public bool clearPassions = false;
+        public bool canBeTended = false;
 
         public float skillGainMulti = 1f;
         public float skillLossMulti = 1f;

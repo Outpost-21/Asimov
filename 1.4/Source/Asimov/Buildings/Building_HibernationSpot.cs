@@ -47,12 +47,23 @@ namespace Asimov
                         {
                             if (power.PowerOn)
                             {
-                                FloatMenuOption option = new FloatMenuOption("Asimov.Hibernate".Translate(selPawn.Name.ToStringShort),
-                                delegate ()
                                 {
-                                    selPawn.jobs.TryTakeOrderedJob(new Job(AsimovDefOf.Asimov_Hibernate, this), JobTag.Misc);
-                                });
-                                yield return option;
+                                    FloatMenuOption option = new FloatMenuOption("Asimov.Hibernate".Translate(selPawn.Name.ToStringShort),
+                                    delegate ()
+                                    {
+                                        selPawn.jobs.TryTakeOrderedJob(new Job(AsimovDefOf.Asimov_Hibernate, this), JobTag.Misc);
+                                    });
+                                    yield return option;
+                                }
+                                if (selPawn.health.hediffSet.HasTendableInjury()) 
+                                {
+                                    FloatMenuOption option = new FloatMenuOption("Asimov.HibernateTillRepaired".Translate(selPawn.Name.ToStringShort),
+                                    delegate ()
+                                    {
+                                        selPawn.jobs.TryTakeOrderedJob(new Job(AsimovDefOf.Asimov_HibernateTillRepaired, this), JobTag.Misc);
+                                    });
+                                    yield return option;
+                                }
                             }
                             else
                             {

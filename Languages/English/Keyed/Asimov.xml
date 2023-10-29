@@ -36,6 +36,7 @@
 	<!-- Hibernation -->
 	
 	<Asimov.Hibernate>Hibernate {0} Here</Asimov.Hibernate>
+	<Asimov.HibernateTillRepaired>Hibernate {0} Here till fully repaired</Asimov.HibernateTillRepaired>
 	<Asimov.HibernateFailNoPower>Cannot Hibernate (no power)</Asimov.HibernateFailNoPower>
 	<Asimov.HibernateFailReserveOrReach>Cannot Hibernate (can't reach)</Asimov.HibernateFailReserveOrReach>
 	<Asimov.HibernateFail>Cannot Hibernate (unknown reason)</Asimov.HibernateFail>

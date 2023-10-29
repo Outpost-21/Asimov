@@ -29,4 +29,32 @@
 		<prioritizeSustains>true</prioritizeSustains>
 	</WorkGiverDef>
 
+	<WorkGiverDef>
+		<defName>Asimov_RepairOthers</defName>
+		<label>repair subject</label>
+		<giverClass>Asimov.WorkGiver_RepairOther</giverClass>
+		<workType>Crafting</workType>
+		<verb>repair </verb>
+		<gerund>repairing </gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>Asimov_RepairSelf</defName>
+		<label>repair self</label>
+		<giverClass>Asimov.WorkGiver_RepairSelf</giverClass>
+		<workType>Crafting</workType>
+		<verb>repair </verb>
+		<gerund>repairing </gerund>
+		<priorityInType>90</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
 </Defs>

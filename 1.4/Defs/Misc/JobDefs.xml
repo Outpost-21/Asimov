@@ -9,6 +9,20 @@
 	</JobDef>
 
 	<JobDef>
+		<defName>Asimov_HibernateTillRepaired</defName>
+		<driverClass>Asimov.JobDriver_HibernateTillRepaired</driverClass>
+		<reportString>hibernating at TargetA.</reportString>
+		<faceDir>South</faceDir>
+	</JobDef>
+
+	<JobDef>
+	  <defName>Asimov_RepairAutomaton</defName>
+	  <driverClass>Asimov.JobDriver_RepairTarget</driverClass>
+	  <reportString>repairing TargetA.</reportString>
+	  <casualInterruptible>false</casualInterruptible>
+	</JobDef>
+
+	<JobDef>
 		<defName>Asimov_RechargeFromSocket</defName>
 		<driverClass>Asimov.JobDriver_RechargeFromSocket</driverClass>
 		<reportString>recharging at TargetA.</reportString>

@@ -16,7 +16,7 @@ namespace Asimov
     public class Patch_ImmunityHandler_DiseaseContractChanceFactor
     {
         [HarmonyPostfix]
-        public static void Postfix(ImmunityHandler __instance, float __result)
+        public static void Postfix(ImmunityHandler __instance, ref float __result)
         {
             if (__result > 0f)
             {

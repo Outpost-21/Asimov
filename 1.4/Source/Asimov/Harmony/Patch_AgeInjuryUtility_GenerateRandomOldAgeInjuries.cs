@@ -23,6 +23,11 @@ namespace Asimov
             {
 				return false;
             }
+			Comp_Automaton comp = pawn.GetComp<Comp_Automaton>();
+			if(comp != null && comp.Props.immuneToDisease)
+            {
+				return false;
+            }
 			return true;
 		}
 	}

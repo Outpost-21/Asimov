@@ -41,7 +41,7 @@ namespace Asimov
 			{
 				return true;
 			}
-			if (patient.RaceProps.Humanlike)
+			if (!patient.Downed)
 			{
 				return patient.CurJobDef == AsimovDefOf.Asimov_Hibernate || patient.CurJobDef == AsimovDefOf.Asimov_HibernateTillRepaired;
 			}

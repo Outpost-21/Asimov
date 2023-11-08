@@ -22,7 +22,12 @@ namespace Asimov
 			if(def != null && def.pawnSettings.immuneToAge)
             {
 				__result = new List<HediffGiver_Birthday>();
-            }
+			}
+			CompProperties_Automaton comp = raceDef.GetCompProperties<CompProperties_Automaton>();
+			if (comp != null && comp.immuneToDisease)
+			{
+				__result = new List<HediffGiver_Birthday>();
+			}
 		}
 	}
 }

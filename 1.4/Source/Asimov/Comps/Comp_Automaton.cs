@@ -20,7 +20,7 @@ namespace Asimov
 
         public List<WorkTypeDef> extraEnabledWorkTypes = new List<WorkTypeDef>();
 
-        public List<WorkTypeDef> cachedEnabledWorkTypes = new List<WorkTypeDef>();
+        public List<WorkTypeDef> cachedEnabledWorkTypes;
 
         public List<WorkTypeDef> EnabledWorkTypes
         {
@@ -31,7 +31,7 @@ namespace Asimov
                     cachedEnabledWorkTypes = new List<WorkTypeDef>();
                     foreach (WorkTypeDef workType in DefDatabase<WorkTypeDef>.AllDefs)
                     {
-                        if ((Props.enableAllWorkTypes || extraEnabledWorkTypes.Contains(workType) && (bool)Props.enabledWorkTypes?.Contains(workType)) && !cachedEnabledWorkTypes.Contains(workType))
+                        if ((Props.enableAllWorkTypes || extraEnabledWorkTypes.Contains(workType) || (!Props.enabledWorkTypes.NullOrEmpty() && Props.enabledWorkTypes.Contains(workType))) && !cachedEnabledWorkTypes.Contains(workType))
                         {
                             cachedEnabledWorkTypes.Add(workType);
                         }
@@ -41,7 +41,7 @@ namespace Asimov
             }
         }
 
-        public List<WorkTypeDef> cachedDisabledWorkTypes = new List<WorkTypeDef>();
+        public List<WorkTypeDef> cachedDisabledWorkTypes;
 
         public List<WorkTypeDef> DisabledWorkTypes
         {
@@ -54,7 +54,7 @@ namespace Asimov
                     {
                         foreach (WorkTypeDef workType in DefDatabase<WorkTypeDef>.AllDefs)
                         {
-                            if (!extraEnabledWorkTypes.Contains(workType) && (bool)!EnabledWorkTypes?.Contains(workType) && !cachedDisabledWorkTypes.Contains(workType))
+                            if ((EnabledWorkTypes.Contains(workType)) && !cachedDisabledWorkTypes.Contains(workType))
                             {
                                 cachedDisabledWorkTypes.Add(workType);
                             }

@@ -28,11 +28,18 @@ namespace Asimov
                     if (!pawnDef.customGraphics.skinColorPairs.NullOrEmpty() && !comp.resolved)
                     {
                         ColorPair pair = pawnDef.customGraphics.GetSkinColor;
-                        if(comp.skinFirst == null)
+
+                        DefModExt_AutomatonColours modExt = pawn?.kindDef?.GetModExtension<DefModExt_AutomatonColours>() ?? null;
+                        if(modExt != null)
+                        {
+                            pair = modExt.GetSkinColor;
+                        }
+
+                        if (comp.skinFirst == null)
                         {
                             comp.skinFirst = pair.colorOne;
                         }
-                        if(comp.skinSecond == null)
+                        if (comp.skinSecond == null)
                         {
                             comp.skinSecond = pair.colorTwo;
                         }

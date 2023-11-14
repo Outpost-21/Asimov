@@ -6,6 +6,7 @@
 	<Asimov.Automatons>Automatons</Asimov.Automatons>
 	<Asimov.WorkDisabledByProgramming>Disabled by {0} {1}</Asimov.WorkDisabledByProgramming>
 	<Asimov.TabAutoCraft>Crafting</Asimov.TabAutoCraft>
+	<Asimov.TabSkills>Skills</Asimov.TabSkills>
 	<Asimov.SetAutoBill>Set Production</Asimov.SetAutoBill>
 	<Asimov.RepeatAutoBillTip>Repeats current production recipe.</Asimov.RepeatAutoBillTip>
 	<Asimov.DeleteAutoBillTip>Cancels current production recipe.</Asimov.DeleteAutoBillTip>

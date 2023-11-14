@@ -16,7 +16,7 @@ namespace Asimov
 			Comp_Automaton comp = pawn.TryGetComp<Comp_Automaton>();
 			if (comp != null && !pawn.RaceProps.Humanlike && pawn.Faction == Faction.OfPlayer && pawn.workSettings != null)
 			{
-				return comp.EnabledWorkTypes.Contains(def.workType);
+				return !pawn.WorkTypeIsDisabled(def.workType);
 			}
 			return false;
 		}

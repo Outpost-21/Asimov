@@ -91,6 +91,7 @@
     <Compile Include="Comps\Comp_WirelessCharger.cs" />
     <Compile Include="Harmony\Patch_WorkGiver_Tend_HasJobOnThing.cs" />
     <Compile Include="AI\JobDriver_RepairTarget.cs" />
+    <Compile Include="UI\ITab_AutomatonSkills.cs" />
     <Compile Include="ModExtensions\DefModExt_ChargerGraphics.cs" />
     <Compile Include="Harmony\Patch_GatheringsUtility_ShouldGuestKeepAttendingGathering.cs" />
     <Compile Include="Harmony\Patch_MainTabWindow_Research_VisibleResearchProjects.cs" />

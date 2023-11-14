@@ -144,11 +144,11 @@ namespace Asimov
             if (workSettings == null)
             {
                 workSettings = new Pawn_WorkSettings(this);
-                if(workSettings.priorities == null)
+                if (workSettings.priorities == null)
                 {
                     workSettings.priorities = new DefMap<WorkTypeDef, int>();
                 }
-                // Doing the necessary parts manually since this otherwise errors...
+                // Doing the necessary parts manually since this otherwise errors about setting Doctor even when it's obviously disabled.
                 //workSettings.EnableAndInitialize();
                 //workSettings.DisableAll();
             }

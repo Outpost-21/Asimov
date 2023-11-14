@@ -54,7 +54,7 @@ namespace Asimov
                     {
                         foreach (WorkTypeDef workType in DefDatabase<WorkTypeDef>.AllDefs)
                         {
-                            if ((EnabledWorkTypes.Contains(workType)) && !cachedDisabledWorkTypes.Contains(workType))
+                            if ((!EnabledWorkTypes.Contains(workType)) && !cachedDisabledWorkTypes.Contains(workType))
                             {
                                 cachedDisabledWorkTypes.Add(workType);
                             }

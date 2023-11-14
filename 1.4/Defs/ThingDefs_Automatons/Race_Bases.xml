@@ -37,6 +37,7 @@
 			<li>ITab_Pawn_FormingCaravan</li>
 			<li>ITab_Pawn_Gear</li>
 			<li>ITab_Pawn_Log</li>
+			<li>Asimov.ITab_AutomatonSkills</li>
 		</inspectorTabs>
 		<comps>
 			<li Class="Asimov.CompProperties_Hibernation" />

@@ -20,7 +20,7 @@
 		<tickerType>Rare</tickerType>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<thingCategories>
-			<li>BuildingsSpecial</li>
+			<li>BuildingsPower</li>
 		</thingCategories>
 		<statBases>
 			<WorkToBuild>1000</WorkToBuild>

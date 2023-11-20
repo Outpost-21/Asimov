@@ -20,10 +20,14 @@ namespace Asimov
 		{
             if (__result)
 			{
-				ThingDef pawn = ITab_Genes.PawnForGenes(Find.Selector.SingleSelectedThing).def;
-				if (pawn is PawnDef def)
+				Pawn p = Find.Selector.SingleSelectedThing as Pawn;
+				if(p != null && p.genes != null)
 				{
-					__result = false;
+					ThingDef pawn = ITab_Genes.PawnForGenes(p).def;
+					if (pawn is PawnDef def)
+					{
+						__result = false;
+					}
 				}
 			}
 		}

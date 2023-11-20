@@ -21,11 +21,11 @@ namespace Asimov
                 {
                     return EnergyCategory.EmergencyPower;
                 }
-                if (CurLevelPercentage < (0.3f * 0.4f))
+                if (CurLevelPercentage < AsimovMod.settings.energyDesperate)
                 {
                     return EnergyCategory.Desperate;
                 }
-                if (CurLevelPercentage < (0.3f * 0.8f))
+                if (CurLevelPercentage < AsimovMod.settings.energyNormal)
                 {
                     return EnergyCategory.GettingLow;
                 }

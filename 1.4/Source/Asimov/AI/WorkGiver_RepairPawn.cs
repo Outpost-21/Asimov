@@ -28,7 +28,7 @@ namespace Asimov
 
 		public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
 		{
-			if (!(t is Pawn tPawn) || pawn.WorkTypeIsDisabled(WorkTypeDefOf.Crafting) || (def.tendToHumanlikesOnly && !tPawn.RaceProps.Humanlike) || (def.tendToAnimalsOnly && !tPawn.RaceProps.Animal) || !IsReadyForTending(tPawn, pawn) || !HealthAIUtility.ShouldBeTendedNowByPlayer(tPawn) || tPawn.IsForbidden(pawn) || !pawn.CanReserve(tPawn, 1, -1, null, forced) || (tPawn.InAggroMentalState && !tPawn.health.hediffSet.HasHediff(HediffDefOf.Scaria)))
+			if (!(t is Pawn tPawn) || pawn.WorkTypeIsDisabled(WorkTypeDefOf.Crafting) || (!tPawn.IsAutomaton() && !tPawn.IsHumanlikeAutomaton()) || (def.tendToHumanlikesOnly && !tPawn.RaceProps.Humanlike) || (def.tendToAnimalsOnly && !tPawn.RaceProps.Animal) || !IsReadyForTending(tPawn, pawn) || !HealthAIUtility.ShouldBeTendedNowByPlayer(tPawn) || tPawn.IsForbidden(pawn) || !pawn.CanReserve(tPawn, 1, -1, null, forced) || (tPawn.InAggroMentalState && !tPawn.health.hediffSet.HasHediff(HediffDefOf.Scaria)))
 			{
 				return false;
 			}

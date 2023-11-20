@@ -6,6 +6,7 @@
 		<workerClass>Asimov.PawnTable_Automatons</workerClass>
 		<columns>
 			<li>LabelWithIcon</li>
+			<li>Asimov_Rename</li>
 			<li>Asimov_Energy</li>
 			<li>Asimov_DraftAutomaton</li>
 			<li>GapTiny</li>

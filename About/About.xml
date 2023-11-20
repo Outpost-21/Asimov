@@ -38,14 +38,4 @@ You will not see these in-game if there is nothing capable of using them install
 [i]After Isaac Asimov, the famous writer that came up with the three laws of robotics. I'm not creative at coming up with good names for things so I thought that was as good as anything else and more unique than "Robot Framework".[/i]
 [*][b]Why not use Humanoid Alien Races for races?[/b]
 [i]No particular reason not to, in fact for anyone else I'd freely encourage them to if it suits their needs better. If you want to know details why as a modder, I suggest examining the differences yourself, you know what you want to make and I don't, so you'll know better which is more useful to you.[/i][/list]</description>
-	<modDependencies>
-		<li>
-			<packageId>Ludeon.RimWorld.Biotech</packageId>
-			<displayName>RimWorld - Biotech</displayName>
-			<downloadUrl>https://store.steampowered.com/app/1826140/RimWorld__Biotech/</downloadUrl>
-		</li>
-	</modDependencies>
-	<loadAfter>
-		<li>Ludeon.RimWorld.Biotech</li>
-	</loadAfter>
 </ModMetaData>

@@ -11,6 +11,7 @@
 	<Asimov.RepeatAutoBillTip>Repeats current production recipe.</Asimov.RepeatAutoBillTip>
 	<Asimov.DeleteAutoBillTip>Cancels current production recipe.</Asimov.DeleteAutoBillTip>
 	<Asimov.RandomAutomaton>Random Automaton</Asimov.RandomAutomaton>
+	<Asimov.RenameAutomaton>Rename automaton</Asimov.RenameAutomaton>
 
 	<!-- Energy -->
 
@@ -59,5 +60,15 @@
 	<Asimov.Apply>Apply</Asimov.Apply>
 	<Asimov.HexLabel>Hexcode</Asimov.HexLabel>
 	<Asimov.HexColorCodeIsIllFormer>Hex color code is not valid.</Asimov.HexColorCodeIsIllFormer>
+
+	<!-- Settings -->
+
+	<Asimov.Setting_EnergyNeedLabel>Energy Need</Asimov.Setting_EnergyNeedLabel>
+	<Asimov.Setting_EnergyNeedNote>Low should always be more than Desperate, best is to separate them by 5-10% at minimum.</Asimov.Setting_EnergyNeedNote>
+	<Asimov.Setting_LowThreshold>Low Threshold: {0}</Asimov.Setting_LowThreshold>
+	<Asimov.Setting_LowThresholdNote>The level at which automatons with an energy need will begin considering looking to recharge but prioritize work.</Asimov.Setting_LowThresholdNote>
+	<Asimov.Setting_DesperateThreshold>Desperate Threshold: {0}</Asimov.Setting_DesperateThreshold>
+	<Asimov.Setting_DesperateThresholdNote>The level at which automatons with an energy need will prioritize looking to recharge over their current tasks.</Asimov.Setting_DesperateThresholdNote>
+
 	
 </LanguageData>

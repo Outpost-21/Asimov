@@ -13,9 +13,15 @@ namespace Asimov
     {
         public bool verboseLogging = true;
 
+        public float energyDesperate = 0.25f;
+
+        public float energyNormal = 0.5f;
+
         public override void ExposeData()
         {
             base.ExposeData();
+            Scribe_Values.Look(ref energyDesperate, "hungerDesperate");
+            Scribe_Values.Look(ref energyNormal, "energyNormal");
         }
 
         public bool IsValidSetting(string input)

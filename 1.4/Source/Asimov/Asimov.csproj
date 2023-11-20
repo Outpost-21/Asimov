@@ -145,6 +145,7 @@
     <Compile Include="ScenParts\ScenPart_StartingAutomatons.cs" />
     <Compile Include="StockGenerator\StockGenerator_Automatons.cs" />
     <Compile Include="AI\Toils_Repair.cs" />
+    <Compile Include="UI\PawnColumnWorker_Rename.cs" />
     <Compile Include="UI\Popup_ColourPicker.cs" />
     <Compile Include="Utilities\GenUtil.cs" />
     <Compile Include="Harmony\Patch_PawnGenerator_GenerateBodyType.cs" />

@@ -20,7 +20,7 @@ namespace Asimov
 		{
             if (!__result)
 			{
-				if (__instance.SelPawnForGenes.def is PawnDef def)
+				if (__instance.SelPawn != null && __instance.SelPawn.def is PawnDef def)
 				{
 					__result = true;
 				}

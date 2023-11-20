@@ -73,12 +73,22 @@ namespace Asimov
 
         public void InitialisePawnData()
         {
+
+            Initialise_Naming();
             Initialise_Training();
             Initialise_Drafter();
             Initialise_Equipment();
             Initialise_Skills();
             Initialise_Story();
             Initialise_WorkSettings();
+        }
+
+        public void Initialise_Naming()
+        {
+            if(Name == null)
+            {
+                Name = new NameSingle(Label);
+            }
         }
 
         public void Initialise_Training()
@@ -109,6 +119,14 @@ namespace Asimov
             if (equipment == null)
             {
                 equipment = new Pawn_EquipmentTracker(this);
+            }
+            if (outfits == null)
+            {
+                outfits = new Pawn_OutfitTracker(this);
+            }
+            if (apparel == null)
+            {
+                apparel = new Pawn_ApparelTracker(this);
             }
         }
 

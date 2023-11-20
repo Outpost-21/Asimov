@@ -2,6 +2,12 @@
 <Defs>
 
 	<PawnColumnDef>
+		<defName>Asimov_Rename</defName>
+		<label />
+		<workerClass>Asimov.PawnColumnWorker_Rename</workerClass>
+	</PawnColumnDef>
+
+	<PawnColumnDef>
 		<defName>Asimov_Energy</defName>
 		<label>energy</label>
 		<workerClass>Asimov.PawnColumnWorker_Energy</workerClass>

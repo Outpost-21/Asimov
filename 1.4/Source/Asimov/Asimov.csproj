@@ -38,10 +38,6 @@
       <HintPath>packages\Lib.Harmony.2.2.2\lib\net472\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Assembly-CSharp_public_1.4">
       <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp_public_1.4.dll</HintPath>
       <Private>False</Private>
@@ -89,6 +85,8 @@
     <Compile Include="Buildings\Building_ChargepackCharger.cs" />
     <Compile Include="Comps\CompProperties_WirelessCharger.cs" />
     <Compile Include="Comps\Comp_WirelessCharger.cs" />
+    <Compile Include="Harmony\Patch_HistoryAutoRecorderWorker_ColonistMood_PullRecord.cs" />
+    <Compile Include="Harmony\Patch_Pawn_IdeoTracker_CertaintyChangeFactor.cs" />
     <Compile Include="ModExtensions\DefModExt_AutomatonColours.cs" />
     <Compile Include="Harmony\Patch_WorkGiver_Tend_HasJobOnThing.cs" />
     <Compile Include="AI\JobDriver_RepairTarget.cs" />

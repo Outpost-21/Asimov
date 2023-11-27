@@ -7,7 +7,7 @@
 	<supportedVersions>
 		<li>1.4</li>
 	</supportedVersions>
-	<description>After several human sacrifices and a pact made with a crossroads demon I bring to you a foundation mod. Not a framework but a foundation, frameworks have no content built into it, this does, so it's a foundation to build on. No more having half a dozen different batteries/power cells/chargepacks or charging platforms/ports/sockets/plugs to fuel your varied autonomous worker collective from several mods, now just one set usable by any and all that opt to do so. The only cost is a small fragment of your soul and maybe a moment of time configuring settings. If you don't need any of that content though, it won't be visible on the player end outside of messing with DevMode tools. The primary purpose of this is for the creation of Automatons (autonomous working "animals") and non-living pawns (robots, golems, zombies, etc).
+	<description>After several human sacrifices and a pact made with a crossroads demon I bring to you a foundation mod. Not a framework but a foundation, frameworks have no content built into it, this does, so it's a foundation to build on. No more having half a dozen different batteries/power cells/chargepacks or charging platforms/ports/sockets/plugs to fuel your varied autonomous worker collective from several mods, now just one set usable by any and all that opt to do so. The only cost is a small fragment of your soul and maybe a moment of time configuring it. If you don't need any of that content though, it won't be visible on the player end outside of messing with DevMode tools. The primary purpose of this is for the creation of Automatons (autonomous working "animals" and non-living pawns like robots, golems, zombies, etc).
 
 [b]Automatons[/b]
 To be clear, since people would ask and probably will anyway because y'all have literacy issues and fail to read the most basic descriptions, this does not include any Automatons, it is a tool for modders to create them without having to create an entire energy need and functionality for them. These Automatons are typically just simple robots tasked with one or two jobs, like Biotech mechanoids in a way, unlike those however the player has control over the jobs they can currently do with a simple set of toggles, and they don't have any of the Mechanitor mechanics involved.
@@ -29,11 +29,11 @@ You will not see these in-game if there is nothing capable of using them install
 
 [b]FAQ[/b]
 [list][*][b]Why does a framework have CONTENT?[/b]
-[i]If you install this and nothing else, you will not be able to SEE that content outside of developer options. If a building isn't able to be used by any Automatons loaded, it will be hidden from the Architect menu, same goes for Chargepack recipes and charger, they'll all be disabled if you do not need them.[/i]
+[i]If you install this and nothing else, you should not be able to SEE that content outside of developer options. If a building isn't able to be used by any Automatons loaded, it will be hidden from the Architect menu, same goes for Chargepack recipes and charger, they'll all be disabled if you do not need them.[/i]
 [*][b]Why use this?[/b]
 [i]If you don't want to you don't have to. Unless you want to use a mod that needs it to function, in which case I guess you do have to.[/i]
 [*][b]Does this alter how Biotech mechanoids work?[/b]
-[i]Not without a patch mod specifically for doing so, no. I actively avoided even lookin at Biotech's mechanoids till I was done creating this foundation mod so it would not require the DLC, even though you definitely should get the Biotech DLC regardless, it's good.[/i]
+[i]Not without a patch mod specifically for doing so, no. I actively avoided even looking at Biotech's mechanoids so it would not require the DLC, even though you definitely should get the Biotech DLC regardless, it's good.[/i]
 [*][b]Why "Asimov"?[/b]
 [i]After Isaac Asimov, the famous writer that came up with the three laws of robotics. I'm not creative at coming up with good names for things so I thought that was as good as anything else and more unique than "Robot Framework".[/i]
 [*][b]Why not use Humanoid Alien Races for races?[/b]

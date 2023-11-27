@@ -63,7 +63,7 @@ namespace Asimov
             return result;
         }
 
-        public void SetSkinColor(Color color, bool second)
+        public virtual void SetSkinColor(Color color, bool second)
         {
             Pawn pawn = parent as Pawn;
             if (pawn != null)

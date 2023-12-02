@@ -30,6 +30,7 @@ namespace Asimov
         public static JobDef Asimov_RechargeFromSocket;
         public static JobDef Asimov_InsertChargepacks;
         public static JobDef Asimov_RemoveChargepacks;
+        //public static JobDef Asimov_ChargeOther;
 
         public static HediffDef Asimov_EmergencyPower;
 

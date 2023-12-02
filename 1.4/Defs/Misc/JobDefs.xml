@@ -16,10 +16,10 @@
 	</JobDef>
 
 	<JobDef>
-	  <defName>Asimov_RepairAutomaton</defName>
-	  <driverClass>Asimov.JobDriver_RepairTarget</driverClass>
-	  <reportString>repairing TargetA.</reportString>
-	  <casualInterruptible>false</casualInterruptible>
+		<defName>Asimov_RepairAutomaton</defName>
+		<driverClass>Asimov.JobDriver_RepairTarget</driverClass>
+		<reportString>repairing TargetA.</reportString>
+		<casualInterruptible>false</casualInterruptible>
 	</JobDef>
 
 	<JobDef>
@@ -42,19 +42,26 @@
 			</li>
 		</modExtensions>
 	</JobDef>
-	
+
+	<!-- <JobDef>
+		<defName>Asimov_ChargeOther</defName>
+		<driverClass>Asimov.JobDriver_ChargeOther</driverClass>
+		<reportString>charging TargetB with TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef> -->
+
 	<JobDef>
 		<defName>Asimov_FillAutoCrafter</defName>
 		<driverClass>JobDriver_HaulToContainer</driverClass>
 		<reportString>hauling TargetA.</reportString>
 	</JobDef>
-	
+
 	<JobDef>
 		<defName>Asimov_InsertChargepacks</defName>
 		<driverClass>Asimov.JobDriver_InsertChargepacks</driverClass>
 		<reportString>inserting chargepacks.</reportString>
 	</JobDef>
-	
+
 	<JobDef>
 		<defName>Asimov_RemoveChargepacks</defName>
 		<driverClass>Asimov.JobDriver_RemoveChargepacks</driverClass>

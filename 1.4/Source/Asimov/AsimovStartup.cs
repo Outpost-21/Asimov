@@ -25,6 +25,35 @@ namespace Asimov
         {
             CheckIfBuildingsNeeded();
             CatalogRestrictions();
+            DisableCorpseRottingAndEdibility();
+        }
+
+        public static void DisableCorpseRottingAndEdibility()
+        {
+            foreach (ThingDef thingDef in DefDatabase<ThingDef>.AllDefs)
+            {
+                CompProperties_Automaton comp = thingDef.GetCompProperties<CompProperties_Automaton>();
+                if (comp != null)
+                {
+                    ThingDef corpseDef = thingDef?.race?.corpseDef;
+                    if (corpseDef != null)
+                    {
+                        if (!comp.corpseRots)
+                        {
+                            corpseDef.comps.RemoveAll(compProperties => compProperties is CompProperties_Rottable);
+                            corpseDef.comps.RemoveAll(compProperties => compProperties is CompProperties_SpawnerFilth);
+                        }
+                        if (!comp.corpseEdible)
+                        {
+                            if (corpseDef.modExtensions.NullOrEmpty())
+                            {
+                                corpseDef.modExtensions = new List<DefModExtension>();
+                            }
+                            corpseDef.modExtensions.Add(new DefModExt_NonIngestible());
+                        }
+                    }
+                }
+            }
         }
 
         public static void CatalogRestrictions()

@@ -17,11 +17,14 @@ namespace Asimov
 
         public float energyNormal = 0.5f;
 
+        public float energyDrainMultiplier = 1.0f;
+
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref energyDesperate, "hungerDesperate");
             Scribe_Values.Look(ref energyNormal, "energyNormal");
+            Scribe_Values.Look(ref energyDrainMultiplier, "energyDrainMultiplier");
         }
 
         public bool IsValidSetting(string input)

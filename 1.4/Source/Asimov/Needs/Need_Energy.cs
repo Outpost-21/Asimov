@@ -57,6 +57,7 @@ namespace Asimov
             {
                 float energyRate = 1f;
                 energyRate *= pawn.GetStatValue(AsimovDefOf.Asimov_EnergyMultiplier);
+                energyRate *= AsimovMod.settings.energyDrainMultiplier;
                 return energyRate;
             }
         }
@@ -100,7 +101,7 @@ namespace Asimov
         public float GetPawnEnergyConsumption()
         {
             DefModExt_EnergyNeed modExt = pawn.def.GetModExtension<DefModExt_EnergyNeed>();
-            return 2.66666666E-05f * EnergyRate;
+            return (2.66666666E-05f * 0.5f) * EnergyRate;
         }
     }
 }

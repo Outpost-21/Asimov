@@ -43,17 +43,20 @@ namespace Asimov
                     pawn.jobs.TryTakeOrderedJob(new Job(AsimovDefOf.Asimov_Hibernate, hibernationSpot), JobTag.Misc);
                 }
             };
-            yield return new Command_Toggle()
+            if(pawn.needs.TryGetNeed(AsimovDefOf.Asimov_EnergyNeed) != null)
             {
-                defaultLabel = "Asimov.AutoHibernateLabel".Translate(),
-                defaultDesc = "Asimov.AutoHibernateDescription".Translate(),
-                icon = ContentFinder<Texture2D>.Get("Asimov/UI/Hibernate"),
-                isActive = () => autoHibernate,
-                toggleAction = delegate
+                yield return new Command_Toggle()
                 {
-                    autoHibernate = !autoHibernate;
-                }
-            };
+                    defaultLabel = "Asimov.AutoHibernateLabel".Translate(),
+                    defaultDesc = "Asimov.AutoHibernateDescription".Translate(),
+                    icon = ContentFinder<Texture2D>.Get("Asimov/UI/Hibernate"),
+                    isActive = () => autoHibernate,
+                    toggleAction = delegate
+                    {
+                        autoHibernate = !autoHibernate;
+                    }
+                };
+            }
             yield break;
         }
 

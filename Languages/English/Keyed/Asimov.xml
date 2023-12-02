@@ -69,6 +69,7 @@
 	<Asimov.Setting_LowThresholdNote>The level at which automatons with an energy need will begin considering looking to recharge but prioritize work.</Asimov.Setting_LowThresholdNote>
 	<Asimov.Setting_DesperateThreshold>Desperate Threshold: {0}</Asimov.Setting_DesperateThreshold>
 	<Asimov.Setting_DesperateThresholdNote>The level at which automatons with an energy need will prioritize looking to recharge over their current tasks.</Asimov.Setting_DesperateThresholdNote>
+	<Asimov.Setting_EnergyDrainRate>Energy Drain Multiplier: {0}</Asimov.Setting_EnergyDrainRate>
 
 	
 </LanguageData>

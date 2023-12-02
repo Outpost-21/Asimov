@@ -80,12 +80,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="AI\JobDriver_ChargeOther.cs" />
     <Compile Include="AI\JobDriver_HibernateTillRepaired.cs" />
+    <None Include="AI\WorkGiver_ChargeOther.cs" />
     <Compile Include="AI\WorkGiver_RepairPawn.cs" />
     <Compile Include="Buildings\Building_ChargepackCharger.cs" />
     <Compile Include="Comps\CompProperties_WirelessCharger.cs" />
     <Compile Include="Comps\Comp_WirelessCharger.cs" />
+    <Compile Include="ModExtensions\DefModExt_AutomatonApparel.cs" />
+    <Compile Include="Harmony\Patch_Precept_RoleMulti_Unassign.cs" />
+    <Compile Include="Harmony\Patch_Precept_RoleSingle_Assign.cs" />
+    <Compile Include="Harmony\Patch_PawnGraphicSet_HeadMatAt.cs" />
+    <Compile Include="ModExtensions\DefModExt_NonIngestible.cs" />
     <Compile Include="Harmony\Patch_HistoryAutoRecorderWorker_ColonistMood_PullRecord.cs" />
+    <Compile Include="Harmony\Patch_StatPart_Age_ActiveFor.cs" />
     <Compile Include="Harmony\Patch_Pawn_IdeoTracker_CertaintyChangeFactor.cs" />
     <Compile Include="ModExtensions\DefModExt_AutomatonColours.cs" />
     <Compile Include="Harmony\Patch_WorkGiver_Tend_HasJobOnThing.cs" />

@@ -148,5 +148,16 @@ namespace Asimov
                 hediffs[i].Heal(2f);
             }
         }
+
+        public static bool CanWear(this Pawn pawn, Apparel ap)
+        {
+            DefModExt_AutomatonApparel modExt = pawn.def.GetModExtension<DefModExt_AutomatonApparel>();
+            if (modExt != null && !modExt.apparelWhitelist.NullOrEmpty())
+            {
+                return modExt.apparelWhitelist.Contains(ap.def);
+            }
+
+            return false;
+        }
     }
 }

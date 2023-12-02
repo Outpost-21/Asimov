@@ -18,10 +18,9 @@ namespace Asimov
         [HarmonyPrefix]
         public static bool Prefix(ref bool __result, ref ThingDef __instance)
         {
-            CompProperties_Automaton comp = __instance.GetCompProperties<CompProperties_Automaton>();
-            if (comp != null)
+            if (__instance.IsCorpse)
             {
-                if (!comp.corpseEdible)
+                if (__instance.HasModExtension<DefModExt_NonIngestible>())
                 {
                     __result = false;
                     return false;

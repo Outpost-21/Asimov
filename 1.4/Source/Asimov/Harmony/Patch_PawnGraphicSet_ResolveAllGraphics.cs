@@ -98,7 +98,7 @@ namespace Asimov
                 if(comp != null)
                 {
                     Comp_RecolourablePawn compRecol = pawn.TryGetComp<Comp_RecolourablePawn>();
-                    if (!compRecol.Props.skinColorPairs.NullOrEmpty() && !comp.resolved)
+                    if (!compRecol?.Props?.skinColorPairs.NullOrEmpty() ?? false && !comp.resolved)
                     {
                         ColorPair pair = compRecol.Props.GetSkinColor;
                         if (comp.skinFirst == null)

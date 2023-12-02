@@ -29,6 +29,19 @@ namespace Asimov
             }
         }
 
+        public static bool NeedsChargepack(Pawn p)
+        {
+            if (p.needs != null)
+            {
+                Need_Energy need = (Need_Energy)p.needs.TryGetNeed(AsimovDefOf.Asimov_EnergyNeed);
+                if (need != null)
+                {
+                    return need.CurLevelPercentage <= AsimovMod.settings.energyDesperate + 0.02f;
+                }
+            }
+            return false;
+        }
+
         public static List<Thing> GetChargepackChargersOnMap(Map map)
         {
             WorldComp_EnergyNeed comp = GetEnergyNeedWorldComp;

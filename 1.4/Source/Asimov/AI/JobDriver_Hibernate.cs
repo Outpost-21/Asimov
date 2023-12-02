@@ -16,6 +16,8 @@ namespace Asimov
 
         public CompPowerTrader powerTrader;
 
+        public Comp_EnergyProvider energyProvider;
+
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             if (pawn.CanReserveAndReach(Target, PathEndMode.OnCell, Danger.Deadly))
@@ -35,6 +37,7 @@ namespace Asimov
         public override IEnumerable<Toil> MakeNewToils()
         {
             powerTrader = Target.TryGetComp<CompPowerTrader>();
+            energyProvider = Target.EnergyProvider();
 
             this.FailOnDestroyedNullOrForbidden(TargetIndex.A);
             yield return Toils_Reserve.Reserve(TargetIndex.A);
@@ -49,6 +52,7 @@ namespace Asimov
             };
             hibernateToil.tickAction = delegate ()
             {
+                AttemptCharging(energyProvider);
                 // Interrupt if pawn takes damage.
                 if (pawn.mindState.lastHarmTick - Find.TickManager.TicksGame >= -20)
                 {
@@ -74,6 +78,14 @@ namespace Asimov
             };
             hibernateToil.defaultCompleteMode = ToilCompleteMode.Never;
             yield return hibernateToil;
+        }
+
+        public void AttemptCharging(Comp_EnergyProvider provider)
+        {
+            if(provider != null && provider.CanRechargeTick)
+            {
+                provider.RechargePawn(pawn);
+            }
         }
     }
 }

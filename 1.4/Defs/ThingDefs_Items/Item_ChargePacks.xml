@@ -10,6 +10,7 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<socialPropernessMatters>false</socialPropernessMatters>
+		<stackLimit>25</stackLimit>
 		<statBases>
 			<MarketValue>10</MarketValue>
 			<Mass>0.025</Mass>
@@ -51,6 +52,7 @@
 			<texPath>Asimov/Items/EmptyChargepack</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
+		<stackLimit>25</stackLimit>
 		<statBases>
 			<MarketValue>10</MarketValue>
 			<Mass>0.025</Mass>

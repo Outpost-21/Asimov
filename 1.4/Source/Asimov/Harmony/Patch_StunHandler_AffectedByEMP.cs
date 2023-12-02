@@ -22,7 +22,7 @@ namespace Asimov
             if (___parent is Pawn)
             {
                 Comp_Automaton comp = ___parent.TryGetComp<Comp_Automaton>();
-                if (comp != null && !comp.Props.affectedByEMP)
+                if (comp != null && comp.Props.affectedByEMP)
                 {
                     __result = true;
                     return;

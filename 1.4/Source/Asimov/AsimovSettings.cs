@@ -22,9 +22,9 @@ namespace Asimov
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref energyDesperate, "hungerDesperate");
-            Scribe_Values.Look(ref energyNormal, "energyNormal");
-            Scribe_Values.Look(ref energyDrainMultiplier, "energyDrainMultiplier");
+            Scribe_Values.Look(ref energyDesperate, "hungerDesperate", 0.25f);
+            Scribe_Values.Look(ref energyNormal, "energyNormal", 0.5f);
+            Scribe_Values.Look(ref energyDrainMultiplier, "energyDrainMultiplier", 1.0f);
         }
 
         public bool IsValidSetting(string input)

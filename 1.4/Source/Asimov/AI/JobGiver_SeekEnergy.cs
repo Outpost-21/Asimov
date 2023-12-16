@@ -21,6 +21,10 @@ namespace Asimov
         public override float GetPriority(Pawn pawn)
         {
             Need_Energy energy = pawn.needs.TryGetNeed<Need_Energy>();
+            if (energy != null && energy.CurCategory >= EnergyCategory.Desperate)
+            {
+                return 100f;
+            }
             if (energy != null && energy.CurCategory >= EnergyCategory.GettingLow)
             {
                 return 11.5f;
@@ -57,8 +61,11 @@ namespace Asimov
                 }
             }
 
-            Job hibernate = TrySeekHibernation(pawn);
-            if (hibernate != null) { return hibernate; }
+            if(energy != null && energy.CurCategory >= EnergyCategory.Desperate)
+            {
+                Job hibernate = TrySeekHibernation(pawn);
+                if (hibernate != null) { return hibernate; }
+            }
 
             // > Shit, nothing? Yeah you're fucked bud.
             return null;

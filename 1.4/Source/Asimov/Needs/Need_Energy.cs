@@ -43,7 +43,7 @@ namespace Asimov
         {
             get
             {
-                if (!pawn.Dead && pawn.Spawned && (pawn.Faction?.IsPlayer ?? false || pawn.IsPrisonerOfColony))
+                if (!pawn.Dead && pawn.Spawned && (pawn.Faction?.IsPlayer ?? false && pawn.GuestStatus == null))
                 {
                     return !pawn.def.HasModExtension<DefModExt_EnergyNeed>();
                 }

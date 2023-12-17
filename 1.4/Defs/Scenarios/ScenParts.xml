@@ -5,7 +5,8 @@
 		<defName>Asimov_StartingAutomatons</defName>
 		<label>starting automatons</label>
 		<scenPartClass>Asimov.ScenPart_StartingAutomatons</scenPartClass>
-		<category>Fixed</category>
+		<category>StartingImportant</category>
+		<selectionWeight>1.0</selectionWeight>
 		<summaryPriority>499</summaryPriority>
 	</ScenPartDef>
 

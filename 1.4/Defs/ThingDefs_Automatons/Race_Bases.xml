@@ -1,30 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<ThingDef ParentName="AnimalThingBase" Name="AsimovAutomatonBase" Abstract="True">
+	<ThingDef ParentName="AnimalThingBase" Name="AsimovNonEnergyAutomatonBase" Abstract="True">
 		<thingClass>Asimov.Automaton</thingClass>
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<statBases>
 			<MarketValue>1200</MarketValue>
-			<PsychicSensitivity>0</PsychicSensitivity>
-			<ToxicResistance>1</ToxicResistance>
-			<Flammability>0.1</Flammability>
-			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
-			<ComfyTemperatureMax>250</ComfyTemperatureMax>
-			<MeatAmount>0</MeatAmount>
-			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
 			<WorkSpeedGlobal>1.0</WorkSpeedGlobal>
 		</statBases>
 		<tradeability>All</tradeability>
 		<race>
 			<trainability>None</trainability>
-			<fleshType>Asimov_Automaton</fleshType>
 			<intelligence>ToolUser</intelligence>
-			<needsRest>false</needsRest>
-			<hasGenders>false</hasGenders>
-			<foodType>None</foodType>
-			<lifeExpectancy>2500</lifeExpectancy>
-			<bloodDef>Filth_MachineBits</bloodDef>
 			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
 			<soundCallIntervalFriendlyFactor>2</soundCallIntervalFriendlyFactor>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -39,6 +26,26 @@
 			<li>ITab_Pawn_Log</li>
 			<li>Asimov.ITab_AutomatonSkills</li>
 		</inspectorTabs>
+	</ThingDef>
+
+	<ThingDef ParentName="AsimovNonEnergyAutomatonBase" Name="AsimovAutomatonBase" Abstract="True">
+		<statBases>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<ToxicResistance>1</ToxicResistance>
+			<Flammability>0.1</Flammability>
+			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
+			<ComfyTemperatureMax>250</ComfyTemperatureMax>
+			<MeatAmount>0</MeatAmount>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+		</statBases>
+		<race>
+			<fleshType>Asimov_Automaton</fleshType>
+			<needsRest>false</needsRest>
+			<hasGenders>false</hasGenders>
+			<foodType>None</foodType>
+			<lifeExpectancy>2500</lifeExpectancy>
+			<bloodDef>Filth_MachineBits</bloodDef>
+		</race>
 		<comps>
 			<li Class="Asimov.CompProperties_Hibernation" />
 		</comps>

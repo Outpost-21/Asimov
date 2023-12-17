@@ -12,6 +12,7 @@ namespace Asimov
     public class Comp_Automaton : ThingComp
     {
         public CompProperties_Automaton Props => (CompProperties_Automaton)props;
+        public Pawn pawn => parent as Pawn;
 
         public Color? skinFirst;
         public Color? skinSecond;
@@ -33,6 +34,10 @@ namespace Asimov
                     {
                         if ((Props.enableAllWorkTypes || extraEnabledWorkTypes.Contains(workType) || (!Props.enabledWorkTypes.NullOrEmpty() && Props.enabledWorkTypes.Contains(workType))) && !cachedEnabledWorkTypes.Contains(workType))
                         {
+                            if (pawn.RaceProps.Humanlike)
+                            {
+                                pawn.WorkTypeIsDisabled(workType);
+                            }
                             cachedEnabledWorkTypes.Add(workType);
                         }
                     }
@@ -72,6 +77,12 @@ namespace Asimov
             {
                 pawn.Drawer.renderer.graphics.ResolveAllGraphics();
             }
+        }
+
+        public void ResolveWorkRestrictions()
+        {
+            cachedDisabledWorkTypes = null;
+            cachedEnabledWorkTypes = null;
         }
 
         public override void PostExposeData()

@@ -127,9 +127,12 @@ namespace Asimov
             if (anyNeedChargepacks)
             {
                 buildingHideFlag_Chargepacks = false;
+				AsimovDefOf.TableMachining.recipes.Add(AsimovDefOf.Asimov_CraftChargepacks);
+                AsimovDefOf.TableMachining.recipes.Add(AsimovDefOf.Asimov_RechargeChargepack);
+                AsimovDefOf.TableMachining.recipes.Add(AsimovDefOf.Asimov_RechargeChargepackBulk);
+				AsimovDefOf.FabricationBench.recipes.Add(AsimovDefOf.Asimov_CraftChargepacks);
                 AsimovDefOf.FabricationBench.recipes.Add(AsimovDefOf.Asimov_RechargeChargepack);
                 AsimovDefOf.FabricationBench.recipes.Add(AsimovDefOf.Asimov_RechargeChargepackBulk);
-                AsimovDefOf.Asimov_Chargepack.recipeMaker.recipeUsers.Add(AsimovDefOf.FabricationBench);
             }
         }
     }

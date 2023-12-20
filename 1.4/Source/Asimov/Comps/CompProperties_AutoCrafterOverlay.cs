@@ -15,5 +15,25 @@ namespace Asimov
         {
             compClass = typeof(Comp_AutoCrafterOverlay);
         }
+
+        public List<ProgressState> progressStates = new List<ProgressState>();
+
+        public List<RecipeState> recipeStates = new List<RecipeState>();
+    }
+
+    public class ProgressState
+    {
+        public string texPath;
+
+        public float progress;
+
+        public bool flipForWest = true;
+    }
+
+    public class RecipeState
+    {
+        public string recipeDef;
+
+        public List<ProgressState> states = new List<ProgressState>();
     }
 }

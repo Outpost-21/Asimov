@@ -87,6 +87,9 @@
     <Compile Include="Buildings\Building_ChargepackCharger.cs" />
     <Compile Include="Comps\CompProperties_WirelessCharger.cs" />
     <Compile Include="Comps\Comp_WirelessCharger.cs" />
+    <Compile Include="Harmony\Patch_Recipe_Surgery_AvailableOnNow.cs" />
+    <Compile Include="Harmony\Patch_Pawn_AgeTracker_TryChildGrowthMoment.cs" />
+    <Compile Include="Harmony\Patch_Pawn_AgeTracker_TrySimulateGrowthPoints.cs" />
     <Compile Include="ModExtensions\DefModExt_AutomatonApparel.cs" />
     <Compile Include="Harmony\Patch_Precept_RoleMulti_Unassign.cs" />
     <Compile Include="Harmony\Patch_Precept_RoleSingle_Assign.cs" />

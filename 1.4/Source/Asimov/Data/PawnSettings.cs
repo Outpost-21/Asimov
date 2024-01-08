@@ -15,6 +15,7 @@ namespace Asimov
         public bool immuneToAge = false;
         public bool generateRelations = true;
         public bool colonyCaresIfDead = false;
+        public bool hasGrowthMoments = true;
 
         // Body
         public List<HeadTypeDef> headTypeWhitelist = new List<HeadTypeDef>();

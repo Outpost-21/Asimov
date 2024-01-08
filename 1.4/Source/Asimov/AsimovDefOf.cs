@@ -53,6 +53,8 @@ namespace Asimov
 
         // Vanilla
 
+        public static NeedDef DrugDesire;
+
         public static ThingDef FabricationBench;
         public static ThingDef TableMachining;
 

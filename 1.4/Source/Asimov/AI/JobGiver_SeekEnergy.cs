@@ -42,10 +42,10 @@ namespace Asimov
             if(modExt != null)
             {
                 // Best source is wireless baybee!
-                if (modExt.canChargeWirelessly)
-                {
-                    if (TrySeekWirelessEnergy(pawn, energy)) { return null; }
-                }
+                //if (modExt.canChargeWirelessly)
+                //{
+                //    if (TrySeekWirelessEnergy(pawn, energy)) { return null; }
+                //}
 
                 // Try power sockets.
                 if (modExt.canChargeFromSocket)
@@ -71,24 +71,24 @@ namespace Asimov
             return null;
         }
 
-        public bool TrySeekWirelessEnergy(Pawn pawn, Need_Energy energy)
-        {
-            // Try local first.
-            List<Thing> localWireless = pawn.GetWirelessChargersInRange();
-            if (!localWireless.NullOrEmpty())
-            {
-                localWireless.PullEnergyFromChargers(pawn, (energy.MaxLevel - energy.CurLevel) * 100);
-                if (energy.CurCategory < EnergyCategory.GettingLow) { return true; }
-            }
-            // Then Worldwide.
-            List<Thing> worldWireless = EnergyUtil.GetGlobalChargers();
-            if (!worldWireless.NullOrEmpty())
-            {
-                worldWireless.PullEnergyFromChargers(pawn, (energy.MaxLevel - energy.CurLevel) * 100);
-                if (energy.CurCategory < EnergyCategory.GettingLow) { return true; }
-            }
-            return false;
-        }
+        //public bool TrySeekWirelessEnergy(Pawn pawn, Need_Energy energy)
+        //{
+        //    // Try local first.
+        //    List<Thing> localWireless = pawn.GetWirelessChargersInRange();
+        //    if (!localWireless.NullOrEmpty())
+        //    {
+        //        localWireless.PullEnergyFromChargers(pawn, (energy.MaxLevel - energy.CurLevel) * 100);
+        //        if (energy.CurCategory < EnergyCategory.GettingLow) { return true; }
+        //    }
+        //    // Then Worldwide.
+        //    List<Thing> worldWireless = EnergyUtil.GetGlobalChargers();
+        //    if (!worldWireless.NullOrEmpty())
+        //    {
+        //        worldWireless.PullEnergyFromChargers(pawn, (energy.MaxLevel - energy.CurLevel) * 100);
+        //        if (energy.CurCategory < EnergyCategory.GettingLow) { return true; }
+        //    }
+        //    return false;
+        //}
 
         public Job TrySeekChargepad(Pawn pawn)
         {

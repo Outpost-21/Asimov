@@ -70,6 +70,16 @@ namespace Asimov
             }
         }
 
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            base.PostSpawnSetup(respawningAfterLoad);
+        }
+
+        public override void PostDestroy(DestroyMode mode, Map previousMap)
+        {
+            base.PostDestroy(mode, previousMap);
+        }
+
         public void ResolveGraphics()
         {
             Pawn pawn = parent as Pawn;

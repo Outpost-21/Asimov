@@ -57,5 +57,15 @@ namespace Asimov
                 }
             }
         }
+
+        public override string CompInspectStringExtra()
+        {
+            string inspect = base.CompInspectStringExtra() ?? "";
+            if (powerComp?.PowerNet?.batteryComps?.NullOrEmpty() ?? true)
+            {
+                inspect += "Asimov.NoConnectedBatteries".Translate();
+            }
+            return inspect;
+        }
     }
 }

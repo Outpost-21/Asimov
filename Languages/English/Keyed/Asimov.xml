@@ -16,7 +16,7 @@
 	<!-- Energy -->
 
 	<Asimov.ConsumeEnergySource>Charge from energy source</Asimov.ConsumeEnergySource>
-	
+	<Asimov.NoConnectedBatteries>No connected batteries, will not be able to charge.</Asimov.NoConnectedBatteries>
 	<Asimov.GoRechargeLabel>Recharge</Asimov.GoRechargeLabel>
 	<Asimov.GoRechargeDescription>Seek out and recharge from the closest available charging socket/platform.</Asimov.GoRechargeDescription>
 	<Asimov.NoEmptyChargepacksFound>No drained Chargepacks found.</Asimov.NoEmptyChargepacksFound>

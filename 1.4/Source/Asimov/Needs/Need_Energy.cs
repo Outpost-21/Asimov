@@ -87,6 +87,11 @@ namespace Asimov
             {
                 CurLevel -= GetPawnEnergyConsumption() * 200f;
 
+                if(CurCategory >= EnergyCategory.GettingLow)
+                {
+                    TrySeekWirelessEnergy(pawn);
+                }
+
                 if (EmergencyPower)
                 {
                     HealthUtility.AdjustSeverity(pawn, AsimovDefOf.Asimov_EmergencyPower, 0.0113333331f * Mathf.Lerp(0.8f, 1.2f, Rand.ValueSeeded(pawn.thingIDNumber ^ 0x26EF7A)));
@@ -96,6 +101,25 @@ namespace Asimov
                     HealthUtility.AdjustSeverity(pawn, AsimovDefOf.Asimov_EmergencyPower, 0f - (0.0113333331f * Mathf.Lerp(0.8f, 1.2f, Rand.ValueSeeded(pawn.thingIDNumber ^ 0x26EF7A))));
                 }
             }
+        }
+
+        public bool TrySeekWirelessEnergy(Pawn pawn)
+        {
+            // Try local first.
+            List<Thing> localWireless = pawn.GetWirelessChargersInRange();
+            if (!localWireless.NullOrEmpty())
+            {
+                localWireless.PullEnergyFromChargers(pawn, (MaxLevel - CurLevel) * 100);
+                if (CurCategory >= EnergyCategory.GettingLow) { return true; }
+            }
+            // Then Worldwide.
+            List<Thing> worldWireless = EnergyUtil.GetGlobalChargers();
+            if (!worldWireless.NullOrEmpty())
+            {
+                worldWireless.PullEnergyFromChargers(pawn, (MaxLevel - CurLevel) * 100);
+                if (CurCategory >= EnergyCategory.GettingLow) { return true; }
+            }
+            return false;
         }
 
         public float GetPawnEnergyConsumption()

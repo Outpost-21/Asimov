@@ -51,11 +51,11 @@ namespace Asimov
 		public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
 		{
 			Pawn pawn2 = t as Pawn;
-			Thing thing = HealthAIUtility.FindBestMedicine(pawn, pawn2);
-			if (thing != null)
-			{
-				return JobMaker.MakeJob(AsimovDefOf.Asimov_RepairAutomaton, pawn2, thing);
-			}
+			//Thing thing = AutomatonUtil.GetBestRepairThing(pawn, pawn2);
+			//if (thing != null)
+			//{
+			//	return JobMaker.MakeJob(AsimovDefOf.Asimov_RepairAutomaton, pawn2, thing);
+			//}
 			return JobMaker.MakeJob(AsimovDefOf.Asimov_RepairAutomaton, pawn2);
 		}
 	}

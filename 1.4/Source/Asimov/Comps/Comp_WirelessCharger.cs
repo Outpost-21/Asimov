@@ -41,6 +41,11 @@ namespace Asimov
             EnergyUtil.GetEnergyNeedWorldComp.RemoveWirelessCharger(parent, Props.worldWide);
         }
 
+        public override void CompTick()
+        {
+            base.CompTick();
+        }
+
         public float RechargePawn(Pawn pawn, float reqEnergy)
         {
             if(powerComp == null) { return reqEnergy; }
@@ -56,6 +61,16 @@ namespace Asimov
                 }
             }
             return reqEnergy - changeVal;
+        }
+
+        public override string CompInspectStringExtra()
+        {
+            string inspect = base.CompInspectStringExtra() ?? "";
+            if (powerComp?.PowerNet?.batteryComps?.NullOrEmpty() ?? true)
+            {
+                inspect += "Asimov.NoConnectedBatteries".Translate();
+            }
+            return inspect;
         }
     }
 }

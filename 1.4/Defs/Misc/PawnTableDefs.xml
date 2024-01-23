@@ -13,17 +13,17 @@
 			<li>Asimov_AutomatonWork_Firefighter</li>
 			<li>Asimov_AutomatonWork_Doctor</li>
 			<li>Asimov_AutomatonWork_BasicWorker</li>
-			<!-- <li>Asimov_AutomatonWork_Warden</li> -->
-			<!-- <li>Asimov_AutomatonWork_Handling</li> -->
+			<li>Asimov_AutomatonWork_Warden</li>
+			<li>Asimov_AutomatonWork_Handling</li>
 			<li>Asimov_AutomatonWork_Cooking</li>
-			<!-- <li>Asimov_AutomatonWork_Hunting</li> -->
+			<li>Asimov_AutomatonWork_Hunting</li>
 			<li>Asimov_AutomatonWork_Construction</li>
 			<li>Asimov_AutomatonWork_Growing</li>
 			<li>Asimov_AutomatonWork_Mining</li>
 			<li>Asimov_AutomatonWork_PlantCutting</li>
-			<!-- <li>Asimov_AutomatonWork_Smith</li> -->
-			<!-- <li>Asimov_AutomatonWork_Tailoring</li> -->
-			<!-- <li>Asimov_AutomatonWork_Art</li> -->
+			<li>Asimov_AutomatonWork_Smith</li>
+			<li>Asimov_AutomatonWork_Tailoring</li>
+			<li>Asimov_AutomatonWork_Art</li>
 			<li>Asimov_AutomatonWork_Crafting</li>
 			<li>Asimov_AutomatonWork_Hauling</li>
 			<li>Asimov_AutomatonWork_Cleaning</li>

@@ -55,21 +55,21 @@
 		<headerIcon>Asimov/UI/Tameness</headerIcon>
 	</PawnColumnDef>
 
-	<!-- Problematic -->
-	<!-- <PawnColumnDef ParentName="AutomatonWorkColumnBase">
+	<!-- Problematic? -->
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
 		<defName>Asimov_AutomatonWork_Warden</defName>
 		<workType>Warden</workType>
 		<headerTip>warden</headerTip>
 		<headerIcon>Asimov/UI/Warden</headerIcon>
-	</PawnColumnDef> -->
+	</PawnColumnDef>
 	
-	<!-- Problematic -->
-	<!-- <PawnColumnDef ParentName="AutomatonWorkColumnBase">
+	<!-- Problematic? -->
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
 		<defName>Asimov_AutomatonWork_Handling</defName>
 		<workType>Handling</workType>
 		<headerTip>handling</headerTip>
 		<headerIcon>Asimov/UI/Obedience</headerIcon>
-	</PawnColumnDef> -->
+	</PawnColumnDef>
 
 	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
 		<defName>Asimov_AutomatonWork_Cooking</defName>
@@ -78,13 +78,13 @@
 		<headerIcon>Asimov/UI/Cooking</headerIcon>
 	</PawnColumnDef>
 
-	<!-- Problematic -->
-	<!-- <PawnColumnDef ParentName="AutomatonWorkColumnBase">
+	<!-- Problematic? -->
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
 		<defName>Asimov_AutomatonWork_Hunting</defName>
 		<workType>Hunting</workType>
 		<headerTip>hunt</headerTip>
 		<headerIcon>Asimov/UI/Hunting</headerIcon>
-	</PawnColumnDef> -->
+	</PawnColumnDef>
 
 	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
 		<defName>Asimov_AutomatonWork_Construction</defName>
@@ -114,29 +114,29 @@
 		<headerIcon>Asimov/UI/Plants</headerIcon>
 	</PawnColumnDef>
 
-	<!-- Problematic -->
-	<!-- <PawnColumnDef ParentName="AutomatonWorkColumnBase">
+	<!-- Problematic? -->
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
 		<defName>Asimov_AutomatonWork_Smith</defName>
 		<workType>Smithing</workType>
 		<headerTip>smith</headerTip>
-		<headerIcon>Asimov/UI/Smith</headerIcon>
-	</PawnColumnDef> -->
+		<headerIcon>Asimov/UI/Smithing</headerIcon>
+	</PawnColumnDef>
 
-	<!-- Problematic -->
-	<!-- <PawnColumnDef ParentName="AutomatonWorkColumnBase">
+	<!-- Problematic? -->
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
 		<defName>Asimov_AutomatonWork_Tailoring</defName>
 		<workType>Tailoring</workType>
 		<headerTip>tailor</headerTip>
 		<headerIcon>Asimov/UI/Tailor</headerIcon>
-	</PawnColumnDef> -->
+	</PawnColumnDef>
 
-	<!-- Problematic -->
-	<!-- <PawnColumnDef ParentName="AutomatonWorkColumnBase">
+	<!-- Problematic? -->
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
 		<defName>Asimov_AutomatonWork_Art</defName>
 		<workType>Art</workType>
 		<headerTip>art</headerTip>
 		<headerIcon>Asimov/UI/Art</headerIcon>
-	</PawnColumnDef> -->
+	</PawnColumnDef>
 
 	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
 		<defName>Asimov_AutomatonWork_Crafting</defName>

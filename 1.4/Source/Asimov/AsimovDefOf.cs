@@ -23,13 +23,8 @@ namespace Asimov
 
         public static NeedDef Asimov_EnergyNeed;
 
-        public static JobDef Asimov_Hibernate;
-        public static JobDef Asimov_HibernateTillRepaired;
-        public static JobDef Asimov_RepairAutomaton;
-        public static JobDef Asimov_ConsumeEnergySource;
-        public static JobDef Asimov_RechargeFromSocket;
-        public static JobDef Asimov_InsertChargepacks;
-        public static JobDef Asimov_RemoveChargepacks;
+        public static JobDef Asimov_Hibernate, Asimov_HibernateTillRepaired;
+        public static JobDef Asimov_RepairAutomaton, Asimov_ConsumeEnergySource, Asimov_RechargeFromSocket, Asimov_InsertChargepacks, Asimov_RemoveChargepacks;
         //public static JobDef Asimov_ChargeOther;
 
         public static HediffDef Asimov_EmergencyPower;
@@ -38,25 +33,20 @@ namespace Asimov
 
         public static FleshTypeDef Asimov_Automaton;
 
-        public static ThingDef Asimov_HibernationSpot;
-        public static ThingDef Asimov_ChargePad;
-        public static ThingDef Asimov_WirelessCharger;
-        public static ThingDef Asimov_LongRangeWirelessCharger;
+        public static ThingDef Asimov_HibernationSpot, Asimov_ChargePad, Asimov_WirelessCharger, Asimov_LongRangeWirelessCharger;
 
 
-        public static ThingDef Asimov_Chargepack;
-        public static ThingDef Asimov_Chargepack_Empty;
+        public static ThingDef Asimov_Chargepack, Asimov_Chargepack_Empty;
 
-        public static RecipeDef Asimov_CraftChargepacks;
-        public static RecipeDef Asimov_RechargeChargepack;
-        public static RecipeDef Asimov_RechargeChargepackBulk;
+        public static RecipeDef Asimov_CraftChargepacks, Asimov_RechargeChargepack, Asimov_RechargeChargepackBulk;
 
         // Vanilla
 
+        public static WorkTypeDef BasicWorker, Cooking, Cleaning, Warden, Art, Tailoring;
+
         public static NeedDef DrugDesire;
 
-        public static ThingDef FabricationBench;
-        public static ThingDef TableMachining;
+        public static ThingDef FabricationBench, TableMachining;
 
         public static ResearchProjectDef Electricity;
     }

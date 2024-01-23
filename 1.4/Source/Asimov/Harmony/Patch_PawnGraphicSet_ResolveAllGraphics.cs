@@ -98,22 +98,25 @@ namespace Asimov
                 if(comp != null)
                 {
                     Comp_RecolourablePawn compRecol = pawn.TryGetComp<Comp_RecolourablePawn>();
-                    if (!compRecol?.Props?.skinColorPairs.NullOrEmpty() ?? false && !comp.resolved)
+                    if(compRecol != null)
                     {
-                        ColorPair pair = compRecol.Props.GetSkinColor;
-                        if (comp.skinFirst == null)
+                        if (!compRecol?.Props?.skinColorPairs.NullOrEmpty() ?? false && !comp.resolved)
                         {
-                            comp.skinFirst = pair.colorOne;
+                            ColorPair pair = compRecol.Props.GetSkinColor;
+                            if (comp.skinFirst == null)
+                            {
+                                comp.skinFirst = pair.colorOne;
+                            }
+                            if (comp.skinSecond == null)
+                            {
+                                comp.skinSecond = pair.colorTwo;
+                            }
+                            comp.resolved = true;
                         }
-                        if (comp.skinSecond == null)
-                        {
-                            comp.skinSecond = pair.colorTwo;
-                        }
-                        comp.resolved = true;
                     }
 
-                    Color skinFirst = comp.skinFirst ?? pawn.story.SkinColor;
-                    Color skinSecond = comp.skinSecond ?? pawn.story.SkinColor;
+                    Color skinFirst = comp.skinFirst ?? Color.white;
+                    Color skinSecond = comp.skinSecond ?? Color.white;
 
                     PawnKindLifeStage curKindLifeStage = pawn.ageTracker.CurKindLifeStage;
                     string bodyPath = curKindLifeStage.bodyGraphicData.Graphic.path;

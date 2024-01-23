@@ -37,8 +37,12 @@ namespace Asimov
                             if (pawn.RaceProps.Humanlike)
                             {
                                 pawn.WorkTypeIsDisabled(workType);
+                                cachedEnabledWorkTypes.Add(workType);
                             }
-                            cachedEnabledWorkTypes.Add(workType);
+                            else if (workType == WorkTypeDefOf.Crafting || workType == WorkTypeDefOf.Mining || workType == WorkTypeDefOf.Hauling || workType == WorkTypeDefOf.Doctor || workType == WorkTypeDefOf.Hunting || workType == WorkTypeDefOf.Construction || workType == WorkTypeDefOf.Growing || workType == AsimovDefOf.BasicWorker || workType == AsimovDefOf.Cooking || workType == WorkTypeDefOf.PlantCutting || workType == WorkTypeDefOf.Research || workType == AsimovDefOf.Cleaning || workType == WorkTypeDefOf.Firefighter || workType == AsimovDefOf.Tailoring || workType == AsimovDefOf.Art || workType == WorkTypeDefOf.Smithing || workType == AsimovDefOf.Warden || workType == WorkTypeDefOf.Handling)
+                            {
+                                cachedEnabledWorkTypes.Add(workType);
+                            }
                         }
                     }
                 }

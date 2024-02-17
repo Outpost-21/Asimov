@@ -162,7 +162,7 @@ namespace Asimov
         {
             PawnKindDef pawnKind = curRecipe.pawnKind;
 
-            PawnGenerationRequest request = new PawnGenerationRequest(kind: pawnKind, faction: Faction.OfPlayer, forceGenerateNewPawn: true);
+            PawnGenerationRequest request = new PawnGenerationRequest(kind: pawnKind, faction: Faction.OfPlayer, forceGenerateNewPawn: true, forceNoIdeo:true);
             Pawn newThing = PawnGenerator.GeneratePawn(request);
             newThing.ageTracker.DebugSetAge(0);
             GenSpawn.Spawn(newThing, loc, map, WipeMode.Vanish);

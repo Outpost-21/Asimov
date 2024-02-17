@@ -122,6 +122,7 @@ namespace Asimov
             }
             if (anyNeedWireless)
             {
+				buildingHideFlag_wirelessCharging = false;
                 researchHideFlag_wirelessCharging = false;
             }
             if (anyNeedChargepacks)

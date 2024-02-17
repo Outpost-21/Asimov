@@ -14,7 +14,7 @@ namespace Asimov
         // General Stuff
         public bool immuneToAge = false;
         public bool generateRelations = true;
-        public bool colonyCaresIfDead = false;
+        public bool colonyCaresIfDead = true;
         public bool hasGrowthMoments = true;
 
         // Body

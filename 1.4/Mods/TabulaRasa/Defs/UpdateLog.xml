@@ -2,12 +2,15 @@
 <Defs>
 
 	<!-- <TabulaRasa.UpdateDef>
-		<defName>Asimov_24012023</defName>
-		<date>2024/01/23</date>
+		<defName>Asimov_07022024</defName>
+		<date>2024/02/07</date>
 		<contentList>
 			<li>
-				<header></header>
-				<text></text>
+				<header>Fixes</header>
+				<text>- Wireless Chargers wouldn't always unlock with the research, now they do.
+- Style Dominance would error occasionally for Humanlike Automatons, was harmless but now shouldn't error.
+- Crafted Automatons Ideo should now match the dominant one in the colony when crafted.
+- Automatons can now be set to not matter to colonists if they die. (no "colonist killed" debuff, if the mod is set that way)</text>
 			</li>
 		</contentList>
 		<links>

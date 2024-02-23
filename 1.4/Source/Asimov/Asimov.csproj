@@ -87,12 +87,14 @@
     <Compile Include="Buildings\Building_ChargepackCharger.cs" />
     <Compile Include="Comps\CompProperties_WirelessCharger.cs" />
     <Compile Include="Comps\Comp_WirelessCharger.cs" />
-    <None Include="Harmony\Patch_ResearchProjectDef_UnlockedDefs.cs" />
-    <Compile Include="Harmony\Patch_PawnDiedOrDownedThoughtsUtility_AppendThoughts_ForHumanlike.cs" />
+    <None Include="Harmony\Patch_PawnDiedOrDownedThoughtsUtility_AppendThoughts_ForHumanlike.cs" />
     <Compile Include="Harmony\Patch_PawnStyleObserverTracker_UpdateStyleDominanceThoughtIndex.cs" />
+    <Compile Include="Harmony\Patch_Recipe_AddHediff_AvailableOnNow.cs" />
     <Compile Include="Harmony\Patch_Recipe_Surgery_AvailableOnNow.cs" />
     <Compile Include="Harmony\Patch_Pawn_AgeTracker_TryChildGrowthMoment.cs" />
     <Compile Include="Harmony\Patch_Pawn_AgeTracker_TrySimulateGrowthPoints.cs" />
+    <Compile Include="Harmony\Patch_DebugToolsSpawning_GetCategoryForPawnKind.cs" />
+    <Compile Include="Harmony\Patch_WorkGiver_DoBill_ThingIsUsableBillGiver.cs" />
     <Compile Include="ModExtensions\DefModExt_AutomatonApparel.cs" />
     <Compile Include="Harmony\Patch_Precept_RoleMulti_Unassign.cs" />
     <Compile Include="Harmony\Patch_Precept_RoleSingle_Assign.cs" />

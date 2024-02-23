@@ -19,7 +19,7 @@ namespace Asimov
         public static bool Prefix(Pawn victim, DamageInfo? dinfo, PawnDiedOrDownedThoughtsKind thoughtsKind, List<IndividualThoughtToAdd> outIndividualThoughts, List<ThoughtToAddToAll> outAllColonistsThoughts)
 		{
 			bool flag = dinfo.HasValue && dinfo.Value.Def.execution;
-			if (victim.Faction.IsPlayer && thoughtsKind == PawnDiedOrDownedThoughtsKind.Died && !flag)
+			if (victim?.Faction?.IsPlayer ?? false && thoughtsKind == PawnDiedOrDownedThoughtsKind.Died && !flag)
 			{
 				PawnDef pawnDef = victim.def as PawnDef;
 				if (pawnDef != null && pawnDef.pawnSettings != null && !pawnDef.pawnSettings.colonyCaresIfDead)

@@ -27,7 +27,7 @@ namespace Asimov
                 yield return gizmo;
             }
 
-            if(!vanillaDraftButton && drafter != null)
+            if(!vanillaDraftButton && drafter != null && this.Faction.IsPlayer)
             {
                 yield return new Command_Toggle
                 {

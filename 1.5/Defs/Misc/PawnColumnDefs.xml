@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<PawnColumnDef>
+		<defName>Asimov_Rename</defName>
+		<label />
+		<workerClass>Asimov.PawnColumnWorker_Rename</workerClass>
+	</PawnColumnDef>
+
+	<PawnColumnDef>
+		<defName>Asimov_Energy</defName>
+		<label>energy</label>
+		<workerClass>Asimov.PawnColumnWorker_Energy</workerClass>
+	</PawnColumnDef>
+
+	<PawnColumnDef>
+		<defName>Asimov_DraftAutomaton</defName>
+		<label>draft</label>
+		<workerClass>Asimov.PawnColumnWorker_DraftAutomaton</workerClass>
+		<paintable>true</paintable>
+	</PawnColumnDef>
+
+	<PawnColumnDef ParentName="AllowedArea">
+		<defName>Asimov_AllowedAreaAutomaton</defName>
+		<headerTip>Allowed areas only apply for automatons while doing autonomous tasks.</headerTip>
+		<sortable>false</sortable>
+	</PawnColumnDef>
+
+	<!-- Automaton WorkTypes -->
+
+	<PawnColumnDef Name="AutomatonWorkColumnBase" Abstract="True">
+		<workerClass>Asimov.PawnColumnWorker_SkillCheckbox</workerClass>
+		<sortable>true</sortable>
+		<paintable>true</paintable>
+	</PawnColumnDef>
+
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Firefighter</defName>
+		<workType>Firefighter</workType>
+		<headerTip>firefight</headerTip>
+		<headerIcon>Asimov/UI/Firefighting</headerIcon>
+	</PawnColumnDef>
+
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Doctor</defName>
+		<workType>Doctor</workType>
+		<headerTip>doctor</headerTip>
+		<headerIcon>Asimov/UI/Rescue</headerIcon>
+	</PawnColumnDef>
+
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_BasicWorker</defName>
+		<workType>BasicWorker</workType>
+		<headerTip>basic</headerTip>
+		<headerIcon>Asimov/UI/Tameness</headerIcon>
+	</PawnColumnDef>
+
+	<!-- Problematic? -->
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Warden</defName>
+		<workType>Warden</workType>
+		<headerTip>warden</headerTip>
+		<headerIcon>Asimov/UI/Warden</headerIcon>
+	</PawnColumnDef>
+	
+	<!-- Problematic? -->
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Handling</defName>
+		<workType>Handling</workType>
+		<headerTip>handling</headerTip>
+		<headerIcon>Asimov/UI/Obedience</headerIcon>
+	</PawnColumnDef>
+
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Cooking</defName>
+		<workType>Cooking</workType>
+		<headerTip>cook</headerTip>
+		<headerIcon>Asimov/UI/Cooking</headerIcon>
+	</PawnColumnDef>
+
+	<!-- Problematic? -->
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Hunting</defName>
+		<workType>Hunting</workType>
+		<headerTip>hunt</headerTip>
+		<headerIcon>Asimov/UI/Hunting</headerIcon>
+	</PawnColumnDef>
+
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Construction</defName>
+		<workType>Construction</workType>
+		<headerTip>construct</headerTip>
+		<headerIcon>Asimov/UI/Construction</headerIcon>
+	</PawnColumnDef>
+
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Growing</defName>
+		<workType>Growing</workType>
+		<headerTip>grow</headerTip>
+		<headerIcon>Asimov/UI/Plants</headerIcon>
+	</PawnColumnDef>
+
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Mining</defName>
+		<workType>Mining</workType>
+		<headerTip>mine</headerTip>
+		<headerIcon>Asimov/UI/Mining</headerIcon>
+	</PawnColumnDef>
+
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_PlantCutting</defName>
+		<workType>PlantCutting</workType>
+		<headerTip>plant cut</headerTip>
+		<headerIcon>Asimov/UI/Plants</headerIcon>
+	</PawnColumnDef>
+
+	<!-- Problematic? -->
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Smith</defName>
+		<workType>Smithing</workType>
+		<headerTip>smith</headerTip>
+		<headerIcon>Asimov/UI/Smithing</headerIcon>
+	</PawnColumnDef>
+
+	<!-- Problematic? -->
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Tailoring</defName>
+		<workType>Tailoring</workType>
+		<headerTip>tailor</headerTip>
+		<headerIcon>Asimov/UI/Tailor</headerIcon>
+	</PawnColumnDef>
+
+	<!-- Problematic? -->
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Art</defName>
+		<workType>Art</workType>
+		<headerTip>art</headerTip>
+		<headerIcon>Asimov/UI/Art</headerIcon>
+	</PawnColumnDef>
+
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Crafting</defName>
+		<workType>Crafting</workType>
+		<headerTip>craft</headerTip>
+		<headerIcon>Asimov/UI/Crafting</headerIcon>
+	</PawnColumnDef>
+
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Hauling</defName>
+		<workType>Hauling</workType>
+		<headerTip>haul</headerTip>
+		<headerIcon>Asimov/UI/Haul</headerIcon>
+	</PawnColumnDef>
+
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Cleaning</defName>
+		<workType>Cleaning</workType>
+		<headerTip>clean</headerTip>
+		<headerIcon>Asimov/UI/Clean</headerIcon>
+	</PawnColumnDef>
+
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
+		<defName>Asimov_AutomatonWork_Research</defName>
+		<workType>Research</workType>
+		<headerTip>research</headerTip>
+		<headerIcon>Asimov/UI/Research</headerIcon>
+	</PawnColumnDef>
+
+</Defs>

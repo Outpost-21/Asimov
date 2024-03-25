@@ -3,6 +3,7 @@
 	<name>Asimov</name>
 	<author>Neronix17</author>
 	<packageId>Neronix17.Asimov</packageId>
+	<modIconPath IgnoreIfNoMatchingField="True">Asimov/ModIcon</modIconPath>
 	<url>https://www.patreon.com/neronix17</url>
 	<supportedVersions>
 		<li>1.4</li>

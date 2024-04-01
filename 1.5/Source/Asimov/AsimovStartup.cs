@@ -13,6 +13,14 @@ namespace Asimov
     public static class AsimovStartup
     {
         public static Dictionary<TraitDef, List<string>> traitRaceRestrictions = new Dictionary<TraitDef, List<string>>();
+        public static Dictionary<TraitDef, List<string>> traitRaceWhitelist = new Dictionary<TraitDef, List<string>>();
+
+        public static Dictionary<ThingDef, List<string>> apparelRaceRestrictions = new Dictionary<ThingDef, List<string>>();
+        public static Dictionary<ThingDef, List<string>> apparelRaceWhitelist = new Dictionary<ThingDef, List<string>>();
+
+        public static Dictionary<ThingDef, List<string>> weaponRaceRestrictions = new Dictionary<ThingDef, List<string>>();
+        public static Dictionary<ThingDef, List<string>> weaponRaceWhitelist = new Dictionary<ThingDef, List<string>>();
+
 
         public static bool buildingHideFlag_HibernationSpot = true;
         public static bool buildingHideFlag_Chargepacks = true;
@@ -58,13 +66,120 @@ namespace Asimov
 
         public static void CatalogRestrictions()
         {
-            foreach(PawnDef def in DefDatabase<PawnDef>.AllDefs)
+            CatalogRestrictions_Traits();
+            CatalogRestrictions_Apparel();
+            CatalogRestrictions_Weapons();
+        }
+
+        public static void CatalogRestrictions_Weapons()
+        {
+            foreach (PawnDef def in DefDatabase<PawnDef>.AllDefs)
             {
-                // Trait Restrictions
+                if (!def.pawnSettings.weapons.NullOrEmpty())
+                {
+                    foreach (ThingDef weapon in def.pawnSettings.weapons)
+                    {
+                        // Restrictions
+                        if (!weaponRaceRestrictions.ContainsKey(weapon))
+                        {
+                            weaponRaceRestrictions.Add(weapon, new List<string>() { def.defName });
+                        }
+                        else
+                        {
+                            weaponRaceRestrictions[weapon].Add(def.defName);
+                        }
+                    }
+                }
+                if (!def.pawnSettings.weaponsWhitelist.NullOrEmpty())
+                {
+                    foreach (ThingDef weapon in def.pawnSettings.weaponsWhitelist)
+                    {
+                        // Whitelist
+                        if (!apparelRaceWhitelist.ContainsKey(weapon))
+                        {
+                            apparelRaceWhitelist.Add(weapon, new List<string>() { def.defName });
+                        }
+                        else
+                        {
+                            apparelRaceWhitelist[weapon].Add(def.defName);
+                        }
+                    }
+                }
+            }
+            bool logRestrictions = false;
+            if (logRestrictions)
+            {
+                foreach (KeyValuePair<TraitDef, List<string>> kvp in traitRaceRestrictions)
+                {
+                    string apparelMsg = "Apparel Restricted: " + kvp.Key.defName;
+                    foreach (string s in kvp.Value)
+                    {
+                        apparelMsg += "\n- " + s;
+                    }
+                    LogUtil.LogDebug(apparelMsg);
+                }
+            }
+        }
+
+        public static void CatalogRestrictions_Apparel()
+        {
+            foreach (PawnDef def in DefDatabase<PawnDef>.AllDefs)
+            {
+                if (!def.pawnSettings.apparel.NullOrEmpty())
+                {
+                    foreach (ThingDef apparel in def.pawnSettings.apparel)
+                    {
+                        // Restrictions
+                        if (!apparelRaceRestrictions.ContainsKey(apparel))
+                        {
+                            apparelRaceRestrictions.Add(apparel, new List<string>() { def.defName });
+                        }
+                        else
+                        {
+                            apparelRaceRestrictions[apparel].Add(def.defName);
+                        }
+                    }
+                }
+                if (!def.pawnSettings.apparelWhitelist.NullOrEmpty())
+                {
+                    foreach (ThingDef apparel in def.pawnSettings.apparelWhitelist)
+                    {
+                        // Whitelist
+                        if (!apparelRaceWhitelist.ContainsKey(apparel))
+                        {
+                            apparelRaceWhitelist.Add(apparel, new List<string>() { def.defName });
+                        }
+                        else
+                        {
+                            apparelRaceWhitelist[apparel].Add(def.defName);
+                        }
+                    }
+                }
+            }
+            bool logRestrictions = false;
+            if (logRestrictions)
+            {
+                foreach (KeyValuePair<TraitDef, List<string>> kvp in traitRaceRestrictions)
+                {
+                    string apparelMsg = "Apparel Restricted: " + kvp.Key.defName;
+                    foreach (string s in kvp.Value)
+                    {
+                        apparelMsg += "\n- " + s;
+                    }
+                    LogUtil.LogDebug(apparelMsg);
+                }
+            }
+        }
+
+        public static void CatalogRestrictions_Traits()
+        {
+            foreach (PawnDef def in DefDatabase<PawnDef>.AllDefs)
+            {
                 if (!def.pawnSettings.traits.NullOrEmpty())
                 {
-                    foreach(TraitDef trait in def.pawnSettings.traits)
+                    foreach (TraitDef trait in def.pawnSettings.traits)
                     {
+                        // Restrictions
                         if (!traitRaceRestrictions.ContainsKey(trait))
                         {
                             traitRaceRestrictions.Add(trait, new List<string>() { def.defName });
@@ -75,18 +190,33 @@ namespace Asimov
                         }
                     }
                 }
+                if (!def.pawnSettings.traitsWhitelist.NullOrEmpty())
+                {
+                    foreach(TraitDef trait in def.pawnSettings.traitsWhitelist)
+                    {
+                        // Whitelist
+                        if (!traitRaceWhitelist.ContainsKey(trait))
+                        {
+                            traitRaceWhitelist.Add(trait, new List<string>() { def.defName });
+                        }
+                        else
+                        {
+                            traitRaceWhitelist[trait].Add(def.defName);
+                        }
+                    }
+                }
             }
             bool logRestrictions = false;
             if (logRestrictions)
             {
-                foreach(KeyValuePair<TraitDef, List<string>> kvp in traitRaceRestrictions)
+                foreach (KeyValuePair<TraitDef, List<string>> kvp in traitRaceRestrictions)
                 {
                     string traitMsg = "Trait Restricted: " + kvp.Key.defName;
-                    foreach(string s in kvp.Value)
+                    foreach (string s in kvp.Value)
                     {
                         traitMsg += "\n- " + s;
                     }
-                    LogUtil.LogMessage(traitMsg);
+                    LogUtil.LogDebug(traitMsg);
                 }
             }
         }

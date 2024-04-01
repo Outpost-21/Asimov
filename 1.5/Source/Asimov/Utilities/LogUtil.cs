@@ -19,6 +19,20 @@ namespace Asimov
 
         public static readonly string msgPrefix = $":: {AsimovMod.mod.Content.Name} ::";
 
+        public static void LogDebug(string msg)
+        {
+            if (AsimovMod.settings.verboseLogging)
+            {
+                if (Log.ReachedMaxMessagesLimit || !AsimovMod.settings.verboseLogging)
+                {
+                    return;
+                }
+                UnityEngine.Debug.Log(msg);
+                Log.messageQueue.Enqueue(new LogMessage(LogMessageType.Message, $"{msgPrefix.Colorize(msgColor)} {msg}", StackTraceUtility.ExtractStackTrace()));
+                Log.PostMessage();
+            }
+        }
+
         public static void LogMessage(string msg)
         {
             if (Log.ReachedMaxMessagesLimit || !AsimovMod.settings.verboseLogging)

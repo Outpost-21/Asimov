@@ -36,6 +36,7 @@ namespace Asimov
         // Traits
         public bool onlyRestrictedTraits = false;
         public List<TraitDef> traits = new List<TraitDef>();
+        public List<TraitDef> traitsWhitelist = new List<TraitDef>();
         public bool hasTraits = true;
 
         // Backstories
@@ -44,6 +45,12 @@ namespace Asimov
 
         // Apparel
         public bool onlyRestrictedApparel = false;
-        public List<string> apparel = new List<string>();
+        public List<ThingDef> apparel = new List<ThingDef>();
+        public List<ThingDef> apparelWhitelist = new List<ThingDef>();
+
+        // Weapons
+        public bool onlyRestrictedWeapons = false;
+        public List<ThingDef> weapons = new List<ThingDef>();
+        public List<ThingDef> weaponsWhitelist = new List<ThingDef>();
     }
 }

@@ -110,6 +110,7 @@
     <Compile Include="ModExtensions\DefModExt_AutomatonColours.cs" />
     <Compile Include="Harmony\Patch_WorkGiver_Tend_HasJobOnThing.cs" />
     <Compile Include="AI\JobDriver_RepairTarget.cs" />
+    <None Include="Harmony\Patch_EquipmentUtility_CanEquip.cs" />
     <Compile Include="PawnRenderNodes\PawnRenderNode_AutomatonHead.cs" />
     <Compile Include="PawnRenderNodes\PawnRenderNode_AutomatonBody.cs" />
     <Compile Include="UI\ITab_AutomatonSkills.cs" />

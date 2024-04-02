@@ -143,4 +143,42 @@
 		</root>
 	</PawnRenderTreeDef>
 
+	<PawnRenderTreeDef>
+		<defName>Asimov_AutomatonAnimal</defName>
+		<root Class="PawnRenderNodeProperties_Parent">
+			<debugLabel>Root</debugLabel>
+			<tagDef>Root</tagDef>
+			<children>
+				<li>
+					<debugLabel>Body</debugLabel>
+					<tagDef>Body</tagDef>
+					<nodeClass>Asimov.PawnRenderNode_AutomatonAnimalBody</nodeClass>
+					<useRottenColor>true</useRottenColor>
+					<children>
+						<li>
+							<debugLabel>Wounds</debugLabel>
+							<nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+							<workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+							<overlayLayer>Body</overlayLayer>
+							<useGraphic>false</useGraphic>
+							<baseLayer>3</baseLayer>
+						</li>
+						<li>
+							<debugLabel>Firefoam</debugLabel>
+							<nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+							<workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+							<overlayLayer>Body</overlayLayer>
+							<useGraphic>false</useGraphic>
+							<baseLayer>5</baseLayer>
+						</li>
+						<li Class="PawnRenderNodeProperties_Carried">
+							<debugLabel>Weapon/carried thing</debugLabel>
+							<workerClass>PawnRenderNodeWorker_Carried</workerClass>
+						</li>
+					</children>
+				</li>
+			</children>
+		</root>
+	</PawnRenderTreeDef>
+
 </Defs>

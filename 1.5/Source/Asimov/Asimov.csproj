@@ -34,8 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=2.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Lib.Harmony.2.2.2\lib\net472\0Harmony.dll</HintPath>
+    <Reference Include="0Harmony, Version=2.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Lib.Harmony.2.3.3\lib\net48\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
@@ -111,6 +111,7 @@
     <Compile Include="Harmony\Patch_WorkGiver_Tend_HasJobOnThing.cs" />
     <Compile Include="AI\JobDriver_RepairTarget.cs" />
     <None Include="Harmony\Patch_EquipmentUtility_CanEquip.cs" />
+    <Compile Include="PawnRenderNodes\PawnRenderNode_AutomatonAnimalBody.cs" />
     <Compile Include="PawnRenderNodes\PawnRenderNode_AutomatonHead.cs" />
     <Compile Include="PawnRenderNodes\PawnRenderNode_AutomatonBody.cs" />
     <Compile Include="Recipes\Recipe_RepairKit.cs" />
@@ -227,8 +228,6 @@
     <Compile Include="AI\WorkGiver_RepairOther.cs" />
     <Compile Include="AI\WorkGiver_RepairSelf.cs" />
     <Compile Include="WorldComps\WorldComp_EnergyNeed.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

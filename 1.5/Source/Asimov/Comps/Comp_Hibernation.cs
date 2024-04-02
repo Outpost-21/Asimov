@@ -43,7 +43,8 @@ namespace Asimov
                     pawn.jobs.TryTakeOrderedJob(new Job(AsimovDefOf.Asimov_Hibernate, hibernationSpot), JobTag.Misc);
                 }
             };
-            if(pawn.needs.TryGetNeed(AsimovDefOf.Asimov_EnergyNeed) != null)
+            Need_Energy energyNeed = (Need_Energy)pawn.needs.TryGetNeed(AsimovDefOf.Asimov_EnergyNeed);
+            if (energyNeed != null && !energyNeed.Disabled)
             {
                 yield return new Command_Toggle()
                 {

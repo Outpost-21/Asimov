@@ -113,7 +113,7 @@
     <None Include="Harmony\Patch_EquipmentUtility_CanEquip.cs" />
     <Compile Include="PawnRenderNodes\PawnRenderNode_AutomatonHead.cs" />
     <Compile Include="PawnRenderNodes\PawnRenderNode_AutomatonBody.cs" />
-    <Compile Include="Recipe_RepairKit.cs" />
+    <Compile Include="Recipes\Recipe_RepairKit.cs" />
     <Compile Include="UI\ITab_AutomatonSkills.cs" />
     <Compile Include="ModExtensions\DefModExt_ChargerGraphics.cs" />
     <Compile Include="Harmony\Patch_GatheringsUtility_ShouldGuestKeepAttendingGathering.cs" />
@@ -231,8 +231,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Recipes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -50,7 +50,7 @@ namespace Asimov
             Need_Energy energyNeed = (Need_Energy)pawn.needs.TryGetNeed(AsimovDefOf.Asimov_EnergyNeed);
             if(energyNeed != null)
             {
-                if (energyNeed.CurCategory != EnergyCategory.Full && CanRechargeTick)
+                if (energyNeed.CurLevelPercentage < 0.99f && CanRechargeTick)
                 {
                     powerComp.PowerNet.ChangeStoredEnergy(-RechargeCostPerTick);
                     energyNeed.CurLevel += Props.rechargeRate;

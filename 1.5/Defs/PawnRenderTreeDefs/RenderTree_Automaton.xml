@@ -17,29 +17,11 @@
 					<useRottenColor>false</useRottenColor>
 					<useSkinShader>false</useSkinShader>
 					<children>
-						<!-- <li Class="PawnRenderNodeProperties_Tattoo" MayRequire="Ludeon.RimWorld.Ideology">
-							<debugLabel>Body tattoo</debugLabel>
-							<nodeClass>PawnRenderNode_Tattoo_Body</nodeClass>
-							<workerClass>PawnRenderNodeWorker_Body_Tattoo</workerClass>
-							<colorType>Skin</colorType>
-							<useRottenColor>true</useRottenColor>
-							<baseLayer>2</baseLayer>
-							<rotDrawMode>Fresh, Rotting</rotDrawMode>
-						</li> -->
 						<li Class="PawnRenderNodeProperties_Overlay">
 							<debugLabel>Wounds - pre apparel</debugLabel>
 							<workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
 							<overlayLayer>Body</overlayLayer>
 							<baseLayer>8</baseLayer>
-						</li>
-						<li Class="PawnRenderNodeProperties_Swaddle" MayRequire="Ludeon.RimWorld.Biotech">
-							<debugLabel>Baby swaddle</debugLabel>
-							<nodeClass>PawnRenderNode_Swaddle</nodeClass>
-							<workerClass>PawnRenderNodeWorker_Swaddle</workerClass>
-							<texPath>Things/Pawn/Humanlike/Apparel/SwaddledBaby/Swaddled_Child</texPath>
-							<swaddleColorOffset>0.1</swaddleColorOffset>
-							<brightnessRange>0.6~0.89</brightnessRange>
-							<baseLayer>10</baseLayer>
 						</li>
 						<li Class="PawnRenderNodeProperties_Parent">
 							<debugLabel>Apparel root</debugLabel>
@@ -89,32 +71,6 @@
 					<useRottenColor>false</useRottenColor>
 					<useSkinShader>false</useSkinShader>
 					<children>
-						<!-- <li Class="PawnRenderNodeProperties_Tattoo" MayRequire="Ludeon.RimWorld.Ideology">
-							<debugLabel>Head tattoo</debugLabel>
-							<nodeClass>PawnRenderNode_Tattoo_Head</nodeClass>
-							<workerClass>PawnRenderNodeWorker_Tattoo_Head</workerClass>
-							<rotDrawMode>Fresh, Rotting</rotDrawMode>
-							<colorType>Skin</colorType>
-							<baseLayer>52</baseLayer>
-						</li>
-						<li>
-							<debugLabel>Beard</debugLabel>
-							<nodeClass>PawnRenderNode_Beard</nodeClass>
-							<workerClass>PawnRenderNodeWorker_Beard</workerClass>
-							<rotDrawMode>Fresh, Rotting</rotDrawMode>
-							<colorType>Hair</colorType>
-							<skipFlag>Beard</skipFlag>
-							<baseLayer>60</baseLayer>
-						</li>
-						<li>
-							<debugLabel>Hair</debugLabel>
-							<nodeClass>PawnRenderNode_Hair</nodeClass>
-							<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-							<rotDrawMode>Fresh, Rotting</rotDrawMode>
-							<colorType>Hair</colorType>
-							<skipFlag>Hair</skipFlag>
-							<baseLayer>62</baseLayer>
-						</li> -->
 						<li Class="PawnRenderNodeProperties_Overlay">
 							<debugLabel>Head wounds</debugLabel>
 							<workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>

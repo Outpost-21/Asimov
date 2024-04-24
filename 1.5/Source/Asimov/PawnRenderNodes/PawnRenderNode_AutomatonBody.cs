@@ -31,15 +31,18 @@ namespace Asimov
 					pair = modExt.GetSkinColor;
 				}
 
-				if (comp.skinFirst == null)
-				{
-					comp.skinFirst = pair.colorOne;
+				if(comp != null)
+                {
+					if (comp.skinFirst == null)
+					{
+						comp.skinFirst = pair.colorOne;
+					}
+					if (comp.skinSecond == null)
+					{
+						comp.skinSecond = pair.colorTwo;
+					}
+					comp.resolved = true;
 				}
-				if (comp.skinSecond == null)
-				{
-					comp.skinSecond = pair.colorTwo;
-				}
-				comp.resolved = true;
 			}
 
 			Color skinFirst = comp.skinFirst ?? pawn.story.SkinColor;

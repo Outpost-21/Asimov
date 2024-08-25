@@ -125,24 +125,25 @@ namespace Asimov
 
         public static Thing GetClosestPowerSocket(Pawn pawn)
         {
-            Thing building = null;
             List<Thing> localSockets = GetLocalChargingSockets(pawn);
-            if (!localSockets.NullOrEmpty())
+            if (localSockets.NullOrEmpty())
             {
-                for (int i = 0; i < localSockets.Count(); i++)
-                {
-                    Thing curr = localSockets[i];
-                    if ((building == null || building.Position.DistanceTo(pawn.Position) > curr.Position.DistanceTo(pawn.Position)) && curr.EnergyProvider().CanRechargeTick)
-                    {
-                        if (curr.Position.Walkable(pawn.Map) && curr.Position.InAllowedArea(pawn) && pawn.CanReserve(curr) && pawn.CanReach(curr.Position, PathEndMode.OnCell, Danger.Deadly))
-                        {
-                            building = curr;
-                            break;
-                        }
-                    }
+                return null;
+            }
+            Thing best = null;
+            foreach (Thing localSocket in localSockets)
+            {
+                if (localSocket.EnergyProvider().CanRechargeTick &&
+                    localSocket.Position.Walkable(pawn.Map) 
+                    && localSocket.Position.InAllowedArea(pawn) &&
+                    pawn.CanReserve(localSocket) &&
+                    pawn.CanReach(localSocket.Position, PathEndMode.OnCell, Danger.Deadly))
+                { 
+                    if (best == null || best.Position.DistanceTo(pawn.Position) > localSocket.Position.DistanceTo(pawn.Position))
+                        best = localSocket;
                 }
             }
-            return building;
+            return best;
         }
 
         public static Comp_EnergyProvider EnergyProvider(this Thing building)
@@ -152,24 +153,27 @@ namespace Asimov
 
         public static Thing GetClosestUnreservedHibernationSpot(Pawn pawn)
         {
-            Thing building = null;
             List<Thing> localSpots = GetLocalHibernationSpots(pawn);
-            if (!localSpots.NullOrEmpty())
+            if (localSpots.NullOrEmpty())
             {
-                for (int i = 0; i < localSpots.Count(); i++)
+                return null;
+            }
+            Thing best = null;
+            foreach (var localSpot in localSpots)
+            {
+                if (localSpot.Position.Walkable(pawn.Map)
+                    && localSpot.Position.InAllowedArea(pawn) &&
+                    pawn.CanReserve(localSpot) &&
+                    pawn.CanReach(localSpot.Position, PathEndMode.OnCell, Danger.Deadly))
                 {
-                    Thing curr = localSpots[i];
-                    if (building == null || building.Position.DistanceTo(pawn.Position) > curr.Position.DistanceTo(pawn.Position))
+                    if (best == null || best.Position.DistanceTo(pawn.Position) >
+                        localSpot.Position.DistanceTo(pawn.Position))
                     {
-                        if (curr.Position.Walkable(pawn.Map) && curr.Position.InAllowedArea(pawn) && pawn.CanReserve(curr) && pawn.CanReach(curr.Position, PathEndMode.OnCell, Danger.Deadly))
-                        {
-                            building = curr;
-                            break;
-                        }
+                        best = localSpot;
                     }
                 }
             }
-            return building;
+            return best;
         }
 
         public static List<Thing> GetLocalHibernationSpots(Pawn pawn)

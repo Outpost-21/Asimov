@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Core -->
+	
+	<Asimov.Automatons>Automates</Asimov.Automatons>
+	<Asimov.WorkDisabledByProgramming>{0} désactivé par {1}</Asimov.WorkDisabledByProgramming>
+	<Asimov.TabAutoCraft>Artisanat</Asimov.TabAutoCraft>
+	<Asimov.TabSkills>Compétences</Asimov.TabSkills>
+	<Asimov.SetAutoBill>Définir la production</Asimov.SetAutoBill>
+	<Asimov.RepeatAutoBillTip>Répéter la recette de production actuelle.</Asimov.RepeatAutoBillTip>
+	<Asimov.DeleteAutoBillTip>Annuler la recette de production actuelle.</Asimov.DeleteAutoBillTip>
+	<Asimov.RandomAutomaton>Automate aléatoire</Asimov.RandomAutomaton>
+	<Asimov.RenameAutomaton>Renomer l'automate</Asimov.RenameAutomaton>
+
+	<!-- Energy -->
+
+	<Asimov.ConsumeEnergySource>Recharge depuis une source d'énergie</Asimov.ConsumeEnergySource>
+	<Asimov.NoConnectedBatteries>Aucune batterie connectée, pas de recharge possible.</Asimov.NoConnectedBatteries>
+	<Asimov.GoRechargeLabel>Recharge</Asimov.GoRechargeLabel>
+	<Asimov.GoRechargeDescription>Recharger à partir de la source disponible la plus proche.</Asimov.GoRechargeDescription>
+	<Asimov.NoEmptyChargepacksFound>Aucun Chargepack épuisé trouvé.</Asimov.NoEmptyChargepacksFound>
+	<Asimov.BeginProcessingEarlyLabel>Commence le rechargement</Asimov.BeginProcessingEarlyLabel>
+	<Asimov.BeginProcessingEarlyDesc>Vous permet de démarrer manuellement le processus de recharge s'il n'y a pas suffisamment de packs de charge vides pour remplir la machine. Il n'y a aucun inconvénient à le faire, si ce n'est qu'il s'agit d'une plus petite quantité de Charpack rechargée.</Asimov.BeginProcessingEarlyDesc>
+	<Asimov.CurrentState>État actuel :</Asimov.CurrentState>
+	<Asimov.State_Inactive>Inactif</Asimov.State_Inactive>
+	<Asimov.State_AwaitingInput>En attente de Chargepack épuisé</Asimov.State_AwaitingInput>
+	<Asimov.State_Working>Recharge {0}</Asimov.State_Working>
+	<Asimov.State_Finished>Terminé</Asimov.State_Finished>
+	<Asimov.State_ProductRemoved>Réinitialisation...</Asimov.State_ProductRemoved>
+	<Asimov.State_Invalid>Invalide</Asimov.State_Invalid>
+
+	<!-- Drafting -->
+	
+	<Asimov.CannotDraftEmergencyPower>Impossible de mobiliser (Fonctionne sur l'alimentation de secours)</Asimov.CannotDraftEmergencyPower>
+	<Asimov.CannotDraftDownedAutomaton>Impossible de mobiliser (À terre)</Asimov.CannotDraftDownedAutomaton>
+
+	<!-- Hibernation -->
+	
+	<Asimov.Hibernate>Hiberner {0} ici</Asimov.Hibernate>
+	<Asimov.HibernateTillRepaired>Hiberner {0} ici jusqu'à réparation complète</Asimov.HibernateTillRepaired>
+	<Asimov.HibernateFailNoPower>Impossible d'hiberner (Aucune énergie)</Asimov.HibernateFailNoPower>
+	<Asimov.HibernateFailReserveOrReach>Impossible d'hiberner (Aucun accès)</Asimov.HibernateFailReserveOrReach>
+	<Asimov.HibernateFail>Impossible d'hiberner (Raison inconnue)</Asimov.HibernateFail>
+	
+	<Asimov.GoHibernateLabel>Hiberner</Asimov.GoHibernateLabel>
+	<Asimov.GoHibernateDescription>Recherchez et hibernez au point disponible le plus proche.</Asimov.GoHibernateDescription>
+	<Asimov.AutoHibernateLabel>Hiberner automatiquement</Asimov.AutoHibernateLabel>
+	<Asimov.AutoHibernateDescription>Si cette option est activée, lorsque l'énergie est faible et qu'aucune source d'énergie n'est disponible, l'automate cherchera un lieu d'hibernation.</Asimov.AutoHibernateDescription>
+	<Asimov.LowEnergyHibernation>{0} va hiberner en raison d'un manque d'énergie et de l'absence de source utilisable.</Asimov.LowEnergyHibernation>
+	<Asimov.NoHibernationSpot>Aucun lieu d'hibernation accessible et non réservé trouvé.</Asimov.NoHibernationSpot>
+
+	<!-- Recolourable Pawns -->
+
+	<Asimov.FirstColorLabel>Couleur primaire</Asimov.FirstColorLabel>
+	<Asimov.FirstColorDescription>Change la couleur primaire de l'automate.</Asimov.FirstColorDescription>
+	<Asimov.SecondColorLabel>Couleur secondaire</Asimov.SecondColorLabel>
+	<Asimov.SecondColorDescription>Change la couleur secondaire de l'automate.</Asimov.SecondColorDescription>
+	<Asimov.ColorTitle>Sélecteur de couleurs</Asimov.ColorTitle>
+	<Asimov.Apply>Appliquer</Asimov.Apply>
+	<Asimov.HexLabel>Hexcode</Asimov.HexLabel>
+	<Asimov.HexColorCodeIsIllFormer>Code couleur hex non valide.</Asimov.HexColorCodeIsIllFormer>
+
+	<!-- Settings -->
+
+	<Asimov.Setting_EnergyNeedLabel>Besoin d'énergie</Asimov.Setting_EnergyNeedLabel>
+	<Asimov.Setting_EnergyNeedNote>Le seuil bas doit toujours être supérieur au seuil critique, le mieux est de les séparer de 5-10% au minimum.</Asimov.Setting_EnergyNeedNote>
+	<Asimov.Setting_LowThreshold>Seuil bas: {0}</Asimov.Setting_LowThreshold>
+	<Asimov.Setting_LowThresholdNote>Le niveau à partir duquel les automates ayant un besoin d'énergie commenceront à envisager de se recharger tout en priorisant le travail.</Asimov.Setting_LowThresholdNote>
+	<Asimov.Setting_DesperateThreshold>Seuil critique: {0}</Asimov.Setting_DesperateThreshold>
+	<Asimov.Setting_DesperateThresholdNote>Le niveau à partir duquel les automates ayant un besoin d'énergie donneront la priorité à la recherche de recharge plutôt qu'à leurs tâches actuelles.</Asimov.Setting_DesperateThresholdNote>
+	<Asimov.Setting_EnergyDrainRate>Multiplicateur d'énergie utilisé : {0}</Asimov.Setting_EnergyDrainRate>
+	
+</LanguageData>

@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|f:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.5\\source\\asimov\\pawnrendernodes\\pawnrendernode_automatonanimalbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:pawnrendernodes\\pawnrendernode_automatonanimalbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|f:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.5\\source\\asimov\\pawnrendernodes\\pawnrendernode_automatonbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:pawnrendernodes\\pawnrendernode_automatonbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|f:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.5\\source\\asimov\\comps\\comp_automaton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:comps\\comp_automaton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|f:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.5\\source\\asimov\\comps\\comp_recolourablepawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:comps\\comp_recolourablepawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|f:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.5\\source\\asimov\\comps\\compproperties_recolourablepawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:comps\\compproperties_recolourablepawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 231,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PawnRenderNode_AutomatonBody.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\PawnRenderNodes\\PawnRenderNode_AutomatonBody.cs",
+              "RelativeDocumentMoniker": "PawnRenderNodes\\PawnRenderNode_AutomatonBody.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\PawnRenderNodes\\PawnRenderNode_AutomatonBody.cs",
+              "RelativeToolTip": "PawnRenderNodes\\PawnRenderNode_AutomatonBody.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T09:56:32.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PawnRenderNode_AutomatonAnimalBody.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\PawnRenderNodes\\PawnRenderNode_AutomatonAnimalBody.cs",
+              "RelativeDocumentMoniker": "PawnRenderNodes\\PawnRenderNode_AutomatonAnimalBody.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\PawnRenderNodes\\PawnRenderNode_AutomatonAnimalBody.cs",
+              "RelativeToolTip": "PawnRenderNodes\\PawnRenderNode_AutomatonAnimalBody.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T09:36:50.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Comp_Automaton.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\Comps\\Comp_Automaton.cs",
+              "RelativeDocumentMoniker": "Comps\\Comp_Automaton.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\Comps\\Comp_Automaton.cs",
+              "RelativeToolTip": "Comps\\Comp_Automaton.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T09:36:32.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Comp_RecolourablePawn.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\Comps\\Comp_RecolourablePawn.cs",
+              "RelativeDocumentMoniker": "Comps\\Comp_RecolourablePawn.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\Comps\\Comp_RecolourablePawn.cs",
+              "RelativeToolTip": "Comps\\Comp_RecolourablePawn.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwD4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T09:36:00.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CompProperties_RecolourablePawn.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\Comps\\CompProperties_RecolourablePawn.cs",
+              "RelativeDocumentMoniker": "Comps\\CompProperties_RecolourablePawn.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\Comps\\CompProperties_RecolourablePawn.cs",
+              "RelativeToolTip": "Comps\\CompProperties_RecolourablePawn.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T09:35:55.409Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

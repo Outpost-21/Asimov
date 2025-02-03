@@ -16,7 +16,17 @@ namespace Asimov
 		{
 		}
 
-		public override Graphic GraphicFor(Pawn pawn)
+        public override GraphicMeshSet MeshSetFor(Pawn pawn)
+        {
+			Graphic graphic = this.GraphicFor(pawn);
+			if(graphic != null)
+			{
+				return MeshPool.GetMeshSetForSize(graphic.drawSize.x, graphic.drawSize.y);
+			}
+            return base.MeshSetFor(pawn);
+        }
+
+        public override Graphic GraphicFor(Pawn pawn)
 		{
 			Comp_Automaton comp = pawn.TryGetComp<Comp_Automaton>();
 

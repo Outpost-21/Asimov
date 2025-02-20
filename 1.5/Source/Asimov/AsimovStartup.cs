@@ -241,21 +241,21 @@ namespace Asimov
                     anyNeedHibernationSpots = true;
                 }
             }
-            if (anyNeedHibernationSpots)
+            if (anyNeedHibernationSpots || AsimovMod.settings.forceShowEnergyStuff)
             {
                 buildingHideFlag_HibernationSpot = false;
             }
-            if (anyNeedSockets)
+            if (anyNeedSockets || AsimovMod.settings.forceShowEnergyStuff)
             {
                 buildingHideFlag_Chargepad = false;
                 AsimovDefOf.Asimov_ChargePad.researchPrerequisites.Add(AsimovDefOf.Electricity);
             }
-            if (anyNeedWireless)
+            if (anyNeedWireless || AsimovMod.settings.forceShowEnergyStuff)
             {
 				buildingHideFlag_wirelessCharging = false;
                 researchHideFlag_wirelessCharging = false;
             }
-            if (anyNeedChargepacks)
+            if (anyNeedChargepacks || AsimovMod.settings.forceShowEnergyStuff)
             {
                 buildingHideFlag_Chargepacks = false;
 				AsimovDefOf.TableMachining.recipes.Add(AsimovDefOf.Asimov_CraftChargepacks);

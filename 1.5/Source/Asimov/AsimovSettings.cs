@@ -13,6 +13,8 @@ namespace Asimov
     {
         public bool verboseLogging = true;
 
+        public bool forceShowEnergyStuff = false;
+
         public float energyDesperate = 0.25f;
 
         public float energyNormal = 0.5f;
@@ -22,6 +24,7 @@ namespace Asimov
         public override void ExposeData()
         {
             base.ExposeData();
+            Scribe_Values.Look(ref forceShowEnergyStuff, "forceShowEnergyStuff", false);
             Scribe_Values.Look(ref energyDesperate, "hungerDesperate", 0.25f);
             Scribe_Values.Look(ref energyNormal, "energyNormal", 0.5f);
             Scribe_Values.Look(ref energyDrainMultiplier, "energyDrainMultiplier", 1.0f);

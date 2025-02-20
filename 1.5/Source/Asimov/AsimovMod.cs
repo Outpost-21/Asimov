@@ -74,6 +74,7 @@ namespace Asimov
             listing.Note("Asimov.Setting_DesperateThresholdNote".Translate().Colorize(Color.grey));
             if (settings.energyDesperate > settings.energyNormal) { settings.energyNormal = settings.energyDesperate; }
             listing.AddLabeledSlider("Asimov.Setting_EnergyDrainRate".Translate(settings.energyDrainMultiplier.ToStringPercent()), ref settings.energyDrainMultiplier, 0f, 2f);
+            listing.CheckboxEnhanced("Asimov.Setting_ForceShowTechnology".Translate(), "Asimov.Setting_ForceShowTechnologyDesc", ref settings.forceShowEnergyStuff);
         }
     }
 }

@@ -70,6 +70,8 @@
 	<Asimov.Setting_DesperateThreshold>Desperate Threshold: {0}</Asimov.Setting_DesperateThreshold>
 	<Asimov.Setting_DesperateThresholdNote>The level at which automatons with an energy need will prioritize looking to recharge over their current tasks.</Asimov.Setting_DesperateThresholdNote>
 	<Asimov.Setting_EnergyDrainRate>Energy Drain Multiplier: {0}</Asimov.Setting_EnergyDrainRate>
+	<Asimov.Setting_ForceShowTechnology>Force Enable Energy Tech</Asimov.Setting_ForceShowTechnology>
+	<Asimov.Setting_ForceShowTechnologyDesc>Force the chargepacks, chargepads, wireless chargers and hibernation spots to be active regardless of if any automatons are found that need them. If you need to use this you may have worse problems.</Asimov.Setting_ForceShowTechnologyDesc>
 
 	
 </LanguageData>

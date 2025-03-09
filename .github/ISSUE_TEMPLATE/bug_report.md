@@ -1,32 +1,32 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Create a report to help the mod improve
 title: ''
 labels: bug
 assignees: neronix17
 
 ---
 
-**Describe the issue**
-A clear and concise description of what the issue is.
+**Description:**
+A clear and concise description of what the bug is.
 
-**To Reproduce**
-Steps to reproduce the behavior:
+**To Reproduce:**
+Steps to reproduce the behaviour, e.g.
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
-4. See error
+4. See error/problem
 
-**Expected behavior**
+**Expected Behaviour**
 A clear and concise description of what you expected to happen.
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**HugsLib Log**
-A HugsLib Log is always needed regardless of if you see an error or think it is necessary, no excuses. Use the green Share Logs button on the log window or press Ctrl + F12 in-game to get upload them and it'll give you a link. 
-
-If the log fails to upload you can untick "Use Recommended Settings" and copy to clipboard instead, preferably using a website like PasteBin to make a link to it.
+**HugsLib Log:**
+This is not optional. Doesn't matter what you see, provide one or the report will be discarded.
+Pressing Ctrl+F12  in-game should bring up the upload menu, then simply include a link.
+Yes you will need [HugsLib](https://steamcommunity.com/workshop/filedetails/?id=818773962) to do this, it's not a vanilla feature, and the vanilla log doesn't provide enough information.
 
 **Additional context**
 Add any other context about the problem here.

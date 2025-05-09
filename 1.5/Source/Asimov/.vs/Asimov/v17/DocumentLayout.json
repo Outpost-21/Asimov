@@ -3,19 +3,31 @@
   "WorkspaceRootPath": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|f:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.5\\source\\asimov\\asimovstartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|f:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.5\\source\\asimov\\harmony\\patch_pawn_draftcontroller_showdraftgizmo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:harmony\\patch_pawn_draftcontroller_showdraftgizmo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|f:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.5\\source\\asimov\\harmony\\patch_floatmenumakermap_cantakeorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:harmony\\patch_floatmenumakermap_cantakeorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|f:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.5\\source\\asimov\\defs\\automatonrecipedef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:defs\\automatonrecipedef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\asimovstartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:asimovstartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|f:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.5\\source\\asimov\\asimovmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\asimovmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:asimovmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|f:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.5\\source\\asimov\\asimovsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\asimovsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:asimovsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|f:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.5\\source\\asimov\\pawnrendernodes\\pawnrendernode_automatonanimalbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\pawnrendernodes\\pawnrendernode_automatonanimalbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:pawnrendernodes\\pawnrendernode_automatonanimalbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -47,6 +59,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Patch_FloatMenuMakerMap_CanTakeOrder.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\Harmony\\Patch_FloatMenuMakerMap_CanTakeOrder.cs",
+              "RelativeDocumentMoniker": "Harmony\\Patch_FloatMenuMakerMap_CanTakeOrder.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\Harmony\\Patch_FloatMenuMakerMap_CanTakeOrder.cs",
+              "RelativeToolTip": "Harmony\\Patch_FloatMenuMakerMap_CanTakeOrder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:00:53.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Patch_Pawn_DraftController_ShowDraftGizmo.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\Harmony\\Patch_Pawn_DraftController_ShowDraftGizmo.cs",
+              "RelativeDocumentMoniker": "Harmony\\Patch_Pawn_DraftController_ShowDraftGizmo.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\Harmony\\Patch_Pawn_DraftController_ShowDraftGizmo.cs",
+              "RelativeToolTip": "Harmony\\Patch_Pawn_DraftController_ShowDraftGizmo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T12:57:59.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AutomatonRecipeDef.cs",
+              "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\Defs\\AutomatonRecipeDef.cs",
+              "RelativeDocumentMoniker": "Defs\\AutomatonRecipeDef.cs",
+              "ToolTip": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\Defs\\AutomatonRecipeDef.cs",
+              "RelativeToolTip": "Defs\\AutomatonRecipeDef.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T20:44:56.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AsimovMod.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\AsimovMod.cs",
               "RelativeDocumentMoniker": "AsimovMod.cs",
@@ -54,25 +105,23 @@
               "RelativeToolTip": "AsimovMod.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAwwEwAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T16:48:14.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-09T16:48:14.898Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AsimovStartup.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\AsimovStartup.cs",
               "RelativeDocumentMoniker": "AsimovStartup.cs",
               "ToolTip": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\AsimovStartup.cs",
               "RelativeToolTip": "AsimovStartup.cs",
-              "ViewState": "AgIAAOAAAAAAAAAAAAAgwPUAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAkwPUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T16:47:00.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-09T16:47:00.908Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AsimovSettings.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\AsimovSettings.cs",
               "RelativeDocumentMoniker": "AsimovSettings.cs",
@@ -80,12 +129,11 @@
               "RelativeToolTip": "AsimovSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T16:46:07.717Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-09T16:46:07.717Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "PawnRenderNode_AutomatonBody.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\PawnRenderNodes\\PawnRenderNode_AutomatonBody.cs",
               "RelativeDocumentMoniker": "PawnRenderNodes\\PawnRenderNode_AutomatonBody.cs",
@@ -97,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "PawnRenderNode_AutomatonAnimalBody.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\PawnRenderNodes\\PawnRenderNode_AutomatonAnimalBody.cs",
               "RelativeDocumentMoniker": "PawnRenderNodes\\PawnRenderNode_AutomatonAnimalBody.cs",
@@ -105,12 +153,11 @@
               "RelativeToolTip": "PawnRenderNodes\\PawnRenderNode_AutomatonAnimalBody.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T09:36:50.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T09:36:50.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Comp_Automaton.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\Comps\\Comp_Automaton.cs",
               "RelativeDocumentMoniker": "Comps\\Comp_Automaton.cs",
@@ -122,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Comp_RecolourablePawn.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\Comps\\Comp_RecolourablePawn.cs",
               "RelativeDocumentMoniker": "Comps\\Comp_RecolourablePawn.cs",
@@ -134,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "CompProperties_RecolourablePawn.cs",
               "DocumentMoniker": "F:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.5\\Source\\Asimov\\Comps\\CompProperties_RecolourablePawn.cs",
               "RelativeDocumentMoniker": "Comps\\CompProperties_RecolourablePawn.cs",

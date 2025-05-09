@@ -17,7 +17,7 @@ namespace Asimov
         [HarmonyPrefix]
         public static bool Prefix(Pawn ___pawn, ref bool __result)
         {
-            if (___pawn.Faction != null && ___pawn.Faction.IsPlayer && ___pawn.drafter != null)
+            if (___pawn.IsAutomaton() && ___pawn.Faction != null && ___pawn.Faction.IsPlayer && ___pawn.drafter != null)
             {
                 __result = true;
                 return false;

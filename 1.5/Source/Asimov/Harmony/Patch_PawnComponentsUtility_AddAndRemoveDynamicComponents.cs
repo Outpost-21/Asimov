@@ -17,7 +17,7 @@ namespace Asimov
         [HarmonyPostfix]
         public static void Prefix(Pawn pawn)
 		{
-			if (pawn.IsAutomaton() && pawn.Faction != null && pawn.Faction.IsPlayer)
+			if (pawn.IsAutomaton() && pawn.Faction != null && (pawn.Faction?.IsPlayer ?? false))
 			{
 				if (pawn.drafter == null)
 				{

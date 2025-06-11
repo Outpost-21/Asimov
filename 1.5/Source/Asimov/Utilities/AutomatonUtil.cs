@@ -32,7 +32,7 @@ namespace Asimov
 
         public static AcceptanceReport CanDraftAutomaton(Pawn pawn)
         {
-            if (pawn.Faction != null && pawn.Faction.IsPlayer && pawn.drafter != null)
+            if (pawn.Faction != null && (pawn.Faction?.IsPlayer ?? false) && pawn.drafter != null)
             {
                 if (pawn.Downed)
                 {

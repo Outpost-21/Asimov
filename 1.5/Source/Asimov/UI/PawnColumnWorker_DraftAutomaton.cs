@@ -13,7 +13,7 @@ namespace Asimov
 	{
 		public override void DoCell(Rect rect, Pawn pawn, PawnTable table)
 		{
-			if (pawn.Faction == null || !pawn.Faction.IsPlayer || !pawn.Spawned)
+			if (pawn.Faction == null || !(pawn.Faction?.IsPlayer ?? false) || !pawn.Spawned)
 			{
 				return;
 			}

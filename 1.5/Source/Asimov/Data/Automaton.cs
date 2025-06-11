@@ -18,8 +18,10 @@ namespace Asimov
         public override IEnumerable<Gizmo> GetGizmos()
         {
             bool vanillaDraftButton = false;
-            foreach (Gizmo gizmo in base.GetGizmos())
+            IEnumerable<Gizmo> originalGizmos = base.GetGizmos();
+            for (int i = 0; i < originalGizmos.Count(); i++)
             {
+                Gizmo gizmo = originalGizmos.ElementAt(i);
                 if (gizmo is Command_Toggle command && command.defaultDesc == "CommandToggleDraftDesc".Translate())
                 {
                     vanillaDraftButton = true;
@@ -27,7 +29,7 @@ namespace Asimov
                 yield return gizmo;
             }
 
-            if(!vanillaDraftButton && drafter != null && this.Faction.IsPlayer)
+            if(!vanillaDraftButton && drafter != null && (Faction?.IsPlayer ?? false))
             {
                 yield return new Command_Toggle
                 {

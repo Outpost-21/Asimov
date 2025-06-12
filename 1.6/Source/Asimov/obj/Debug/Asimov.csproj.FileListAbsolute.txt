@@ -1,0 +1,17 @@
+C:\RWModCategories\Neronix17\_Libraries\Asimov\1.4\Assemblies\Asimov.dll
+C:\RWModCategories\Neronix17\_Libraries\Asimov\1.4\Source\Asimov\obj\Debug\Asimov.csproj.AssemblyReference.cache
+C:\RWModCategories\Neronix17\_Libraries\Asimov\1.4\Source\Asimov\obj\Debug\Asimov.csproj.CoreCompileInputs.cache
+C:\RWModCategories\Neronix17\_Libraries\Asimov\1.4\Source\Asimov\obj\Debug\Asimov.dll
+F:\RWModCategories\Neronix17\_Libraries\Asimov\1.4\Source\Asimov\obj\Debug\Asimov.csproj.AssemblyReference.cache
+F:\RWModCategories\Neronix17\_Libraries\Asimov\1.4\Source\Asimov\obj\Debug\Asimov.csproj.CoreCompileInputs.cache
+F:\RWModCategories\Neronix17\_Libraries\Asimov\1.4\Source\Asimov\obj\Debug\Asimov.dll
+F:\RWModCategories\Neronix17\_Libraries\Asimov\1.4\Assemblies\Asimov.dll
+F:\RWModCategories\Neronix17\_Libraries\Asimov\1.5\Source\Asimov\obj\Debug\Asimov.csproj.AssemblyReference.cache
+F:\RWModCategories\Neronix17\_Libraries\Asimov\1.5\Source\Asimov\obj\Debug\Asimov.csproj.CoreCompileInputs.cache
+F:\RWModCategories\Neronix17\_Libraries\Asimov\1.5\Source\Asimov\obj\Debug\Asimov.dll
+F:\RWModCategories\Neronix17\_Libraries\Asimov\1.5\Assemblies\Asimov.dll
+F:\RWModCategories\Neronix17\_Libraries\Asimov\1.6\Source\Asimov\obj\Debug\Asimov.csproj.AssemblyReference.cache
+F:\RWModCategories\Neronix17\_Libraries\Asimov\1.6\Source\Asimov\obj\Debug\Asimov.csproj.CoreCompileInputs.cache
+F:\RWModCategories\Neronix17\_Libraries\Asimov\1.6\Source\Asimov\obj\Debug\Asimov.dll
+F:\RWModCategories\Neronix17\_Libraries\Asimov\1.6\Assemblies\Asimov.dll
+F:\RWModCategories\Neronix17\_Libraries\Asimov\1.6\Source\Asimov\obj\Debug\Asimov.csproj.Up2Date

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>Asimov_ChargepackCharger</defName>
+		<label>chargepack charger</label>
+		<description>Charging array used to bulk recharge chargepacks.</description>
+		<graphicData>
+			<texPath>Asimov/Buildings/ChargepackCharger</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3, 3)</drawSize>
+		</graphicData>
+		<uiIconScale>0.80</uiIconScale>
+		<thingClass>Asimov.Building_ChargepackCharger</thingClass>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Standable</passability>
+		<blockWind>false</blockWind>
+		<rotatable>false</rotatable>
+		<fillPercent>0.1</fillPercent>
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<thingCategories>
+			<li>BuildingsPower</li>
+		</thingCategories>
+		<statBases>
+			<WorkToBuild>1000</WorkToBuild>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>0.3</Flammability>
+		</statBases>
+		<costList>
+			<Steel>40</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<designationCategory>Power</designationCategory>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Small</destroySound>
+			<bed_humanlike>false</bed_humanlike>
+			<bed_showSleeperBody>True</bed_showSleeperBody>
+			<sowTag>SupportPlantsOnly</sowTag>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+		</building>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>200</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable" />
+		</comps>
+		<modExtensions>
+			<li Class="Asimov.DefModExt_ChargerGraphics">
+				<workingGraphicData>
+					<texPath>Asimov/Buildings/ChargepackCharger_Working</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(3, 3)</drawSize>
+				</workingGraphicData>
+				<finishedGraphicData>
+					<texPath>Asimov/Buildings/ChargepackCharger_Finished</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(3, 3)</drawSize>
+				</finishedGraphicData>
+			</li>
+		</modExtensions>
+		<placeWorkers>
+			<li>Asimov.PlaceWorker_NeedChargepacks</li>
+		</placeWorkers>
+	</ThingDef>
+
+</Defs>

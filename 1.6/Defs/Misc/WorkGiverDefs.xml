@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<WorkGiverDef>
+		<defName>Asimov_InsertChargepacks</defName>
+		<label>haul to charger</label>
+		<giverClass>Asimov.WorkGiver_InsertChargepacks</giverClass>
+		<workType>Hauling</workType>
+		<verb>fill</verb>
+		<gerund>filling</gerund>
+		<priorityInType>60</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>Asimov_RemoveChargepacks</defName>
+		<label>empty charger</label>
+		<giverClass>Asimov.WorkGiver_RemoveChargepacks</giverClass>
+		<workType>Hauling</workType>
+		<verb>fill</verb>
+		<gerund>filling</gerund>
+		<priorityInType>60</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>Asimov_RepairOthers</defName>
+		<label>repair subject</label>
+		<giverClass>Asimov.WorkGiver_RepairOther</giverClass>
+		<workType>Crafting</workType>
+		<verb>repair </verb>
+		<gerund>repairing </gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>Asimov_RepairSelf</defName>
+		<label>repair self</label>
+		<giverClass>Asimov.WorkGiver_RepairSelf</giverClass>
+		<workType>Crafting</workType>
+		<verb>repair </verb>
+		<gerund>repairing </gerund>
+		<priorityInType>90</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+</Defs>

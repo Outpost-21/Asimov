@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- <ThinkTreeDef>
+		<defName>Asimov_Automaton</defName>
+		<insertTag>Animal_PreWander</insertTag>
+		<insertPriority>1</insertPriority>
+		<thinkRoot Class="ThinkNode_ConditionalHasFaction">
+			<subNodes>
+				<li Class="Asimov.ThinkNode_ConditionalAutomaton">
+					<subNodes>
+						<li Class="ThinkNode_ConditionalTrainableCompleted">
+							<trainable>Obedience</trainable>
+							<subNodes>
+								<li Class="ThinkNode_Tagger">
+									<tagToGive>TrainedAnimalBehavior</tagToGive>
+									<subNodes>
+										<li Class="Asimov.JobGiver_Automaton" />
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef> -->
+
+	<ThinkTreeDef>
+		<defName>Asimov_Automaton</defName>
+		<insertTag>Animal_PreWander</insertTag>
+		<insertPriority>1</insertPriority>
+		<thinkRoot Class="ThinkNode_ConditionalHasFaction">
+			<subNodes>
+				<li Class="Asimov.ThinkNode_ConditionalAutomaton">
+					<subNodes>
+						<li Class="ThinkNode_Tagger">
+							<tagToGive>TrainedAnimalBehavior</tagToGive>
+							<subNodes>
+								<li Class="Asimov.JobGiver_SeekEnergy" />
+								<li Class="Asimov.JobGiver_Automaton" />
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+
+</Defs>

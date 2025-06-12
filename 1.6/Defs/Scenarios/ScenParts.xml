@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ScenPartDef>
+		<defName>Asimov_StartingAutomatons</defName>
+		<label>starting automatons</label>
+		<scenPartClass>Asimov.ScenPart_StartingAutomatons</scenPartClass>
+		<category>StartingImportant</category>
+		<selectionWeight>1.0</selectionWeight>
+		<summaryPriority>499</summaryPriority>
+	</ScenPartDef>
+
+</Defs>

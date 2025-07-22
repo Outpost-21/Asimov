@@ -15,39 +15,39 @@ namespace Asimov
 
         public Comp_Automaton CompAutomaton { get { if (compAutomaton == null) { compAutomaton = this.TryGetComp<Comp_Automaton>(); } return compAutomaton; } }
 
-        public override IEnumerable<Gizmo> GetGizmos()
-        {
-            bool vanillaDraftButton = false;
-            IEnumerable<Gizmo> originalGizmos = base.GetGizmos();
-            for (int i = 0; i < originalGizmos.Count(); i++)
-            {
-                Gizmo gizmo = originalGizmos.ElementAt(i);
-                if (gizmo is Command_Toggle command && command.defaultDesc == "CommandToggleDraftDesc".Translate())
-                {
-                    vanillaDraftButton = true;
-                }
-                yield return gizmo;
-            }
+        //public override IEnumerable<Gizmo> GetGizmos()
+        //{
+        //    bool vanillaDraftButton = false;
+        //    IEnumerable<Gizmo> originalGizmos = base.GetGizmos();
+        //    for (int i = 0; i < originalGizmos.Count(); i++)
+        //    {
+        //        Gizmo gizmo = originalGizmos.ElementAt(i);
+        //        if (gizmo is Command_Toggle command && command.defaultDesc == "CommandToggleDraftDesc".Translate())
+        //        {
+        //            vanillaDraftButton = true;
+        //        }
+        //        yield return gizmo;
+        //    }
 
-            if(!vanillaDraftButton && drafter != null && (Faction?.IsPlayer ?? false))
-            {
-                yield return new Command_Toggle
-                {
-                    toggleAction = delegate
-                    {
-                        drafter.Drafted = !drafter.Drafted;
-                    },
-                    isActive = () => drafter.Drafted,
-                    defaultLabel = (drafter.Drafted ? "CommandUndraftLabel" : "CommandDraftLabel").Translate(),
-                    hotKey = KeyBindingDefOf.Command_ColonistDraft,
-                    defaultDesc = "CommandToggleDraftDesc".Translate(),
-                    icon = ContentFinder<Texture2D>.Get("ui/commands/Draft"),
-                    turnOnSound = SoundDefOf.DraftOn,
-                    groupKey = 81729172,
-                    turnOffSound = SoundDefOf.DraftOff
-                };
-            }
-        }
+        //    if(!vanillaDraftButton && drafter != null && (Faction?.IsPlayer ?? false))
+        //    {
+        //        yield return new Command_Toggle
+        //        {
+        //            toggleAction = delegate
+        //            {
+        //                drafter.Drafted = !drafter.Drafted;
+        //            },
+        //            isActive = () => drafter.Drafted,
+        //            defaultLabel = (drafter.Drafted ? "CommandUndraftLabel" : "CommandDraftLabel").Translate(),
+        //            hotKey = KeyBindingDefOf.Command_ColonistDraft,
+        //            defaultDesc = "CommandToggleDraftDesc".Translate(),
+        //            icon = ContentFinder<Texture2D>.Get("ui/commands/Draft"),
+        //            turnOnSound = SoundDefOf.DraftOn,
+        //            groupKey = 81729172,
+        //            turnOffSound = SoundDefOf.DraftOff
+        //        };
+        //    }
+        //}
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {

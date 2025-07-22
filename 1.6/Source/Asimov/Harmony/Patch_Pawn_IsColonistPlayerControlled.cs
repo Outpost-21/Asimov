@@ -18,9 +18,9 @@ namespace Asimov
         [HarmonyPostfix]
         public static void Postfix(Pawn __instance, ref bool __result)
 		{
-			if (__instance.IsAutomaton())
+			if (__instance.IsPlayerAutomaton())
 			{
-				__result = __instance.Spawned && __instance.HostFaction == null && __instance.Faction == Faction.OfPlayer;
+				__result = __instance.Spawned && __instance.HostFaction == null;
 			}
 		}
 	}

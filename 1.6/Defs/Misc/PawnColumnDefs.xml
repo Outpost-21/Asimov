@@ -148,7 +148,7 @@
 	<PawnColumnDef ParentName="AutomatonWorkColumnBase" MayRequire="Ludeon.RimWorld.Odyssey">
 		<defName>Asimov_AutomatonWork_Fishing</defName>
 		<workType>Fishing</workType>
-		<headerTip>haul</headerTip>
+		<headerTip>fish</headerTip>
 		<headerIcon>Asimov/UI/Fish</headerIcon>
 	</PawnColumnDef>
 

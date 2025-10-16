@@ -1,59 +1,60 @@
 ManifestFileVersion: 0
-CRC: 2125226272
+CRC: 2821102288
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d14a46d4dc6ace52d650d3e10d2578b7
+    Hash: cc40d96ac84149340893b9d5210c2bc6
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2612ac43db082a73502ee80f2eceb73f
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: d14a46d4dc6ace52d650d3e10d2578b7
+    Hash: cc40d96ac84149340893b9d5210c2bc6
 HashAppended: 0
 ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Plus.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Tameness.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Release.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/Buildings/AreaTransmitter.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/ColorPicker.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Hibernate.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/Items/Chargepack/Chargepack_C.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/Items/EmptyChargepack/EmptyChargepack_C.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/Items/Chargepack/Chargepack_A.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Rescue.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/ModIcon.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Hunting.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/Buildings/ChargepackCharger.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/Buildings/MapWideTransmitter.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Warden.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Firefighting.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Tailor.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Construction.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Minus.png
 - Assets/Data/Neronix17.Asimov/Textures/Asimov/Buildings/MapWideTransmitter_MenuIcon.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Clean.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/Buildings/ChargepackCharger_Finished.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Art.png
 - Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/RepeatIcon.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Haul.png
 - Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Plants.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Fish.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/Items/EmptyChargepack/EmptyChargepack_A.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Plus.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Clean.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Research.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Warden.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Crafting.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/Items/EmptyChargepack/EmptyChargepack_C.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Construction.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/Buildings/ChargepackCharger.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Tailor.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Hunting.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Mining.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Icon_Asimov.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/Buildings/ChargepackCharger_Working.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/Buildings/MapWideTransmitter.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/Items/Chargepack/Chargepack_A.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Hibernate.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/NoRecipe.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Smithing.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/ColorWheel.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Cooking.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/Items/EmptyChargepack/EmptyChargepack_B.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/ModIcon.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Firefighting.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/ColorPicker.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Rescue.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/Buildings/AreaTransmitter.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/Items/Chargepack/Chargepack_B.png
 - Assets/Data/Neronix17.Asimov/Textures/Asimov/Buildings/Chargepad.png
 - Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Obedience.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/Items/Chargepack/Chargepack_B.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/Items/EmptyChargepack/EmptyChargepack_A.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Research.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/NoRecipe.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Cooking.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Icon_Asimov.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/ColorWheel.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/Items/EmptyChargepack/EmptyChargepack_B.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Crafting.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/Buildings/ChargepackCharger_Working.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Art.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Smithing.png
-- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Mining.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Tameness.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/Buildings/ChargepackCharger_Finished.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Release.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Haul.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/Items/Chargepack/Chargepack_C.png
+- Assets/Data/Neronix17.Asimov/Textures/Asimov/UI/Minus.png
 Dependencies: []

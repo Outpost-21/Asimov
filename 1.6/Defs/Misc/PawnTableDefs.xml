@@ -25,6 +25,7 @@
 			<li>Asimov_AutomatonWork_Tailoring</li>
 			<li>Asimov_AutomatonWork_Art</li>
 			<li>Asimov_AutomatonWork_Crafting</li>
+			<li MayRequire="Ludeon.RimWorld.Odyssey">Asimov_AutomatonWork_Fishing</li>
 			<li>Asimov_AutomatonWork_Hauling</li>
 			<li>Asimov_AutomatonWork_Cleaning</li>
 			<li>Asimov_AutomatonWork_Research</li>

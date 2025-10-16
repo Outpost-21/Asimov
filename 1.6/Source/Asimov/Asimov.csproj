@@ -90,6 +90,7 @@
     <Compile Include="Harmony\Patch_PawnStyleObserverTracker_UpdateStyleDominanceThoughtIndex.cs" />
     <Compile Include="Harmony\Patch_PawnGenerator_GeneratePawn.cs" />
     <Compile Include="Harmony\Patch_PawnComponentsUtility_AddAndRemoveDynamicComponents.cs" />
+    <Compile Include="Harmony\Patch_PawnUIOverlay_DrawPawnGUIOverlay.cs" />
     <Compile Include="Harmony\Patch_Pawn_DraftController_ShowDraftGizmo.cs" />
     <Compile Include="Harmony\Patch_ThinkNode_ConditionalShouldFollowMaster_ShouldFollowMaster.cs" />
     <Compile Include="Harmony\Patch_Recipe_AddHediff_AvailableOnNow.cs" />

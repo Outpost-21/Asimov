@@ -17,7 +17,20 @@ namespace Asimov
 
         public float RechargeCostPerTick => Props.rechargeRate * Props.drainToRefill;
 
-        public bool CanRechargeTick => powerComp.PowerNet.CurrentStoredEnergy() > RechargeCostPerTick;
+        public bool CanRechargeTick 
+        {
+            get
+            {
+                if (powerComp != null)
+                {
+                    if(powerComp.PowerNet != null)
+                    {
+                        return powerComp.PowerNet?.CurrentStoredEnergy() > RechargeCostPerTick;
+                    }
+                }
+                return false;
+            }
+        }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {

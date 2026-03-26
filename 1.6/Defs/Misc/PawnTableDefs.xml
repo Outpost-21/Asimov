@@ -13,6 +13,7 @@
 			<li>Asimov_AutomatonWork_Firefighter</li>
 			<li>Asimov_AutomatonWork_Doctor</li>
 			<li>Asimov_AutomatonWork_BasicWorker</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">Asimov_AutomatonWork_Childcare</li>
 			<li>Asimov_AutomatonWork_Warden</li>
 			<li>Asimov_AutomatonWork_Handling</li>
 			<li>Asimov_AutomatonWork_Cooking</li>
@@ -20,6 +21,7 @@
 			<li>Asimov_AutomatonWork_Construction</li>
 			<li>Asimov_AutomatonWork_Growing</li>
 			<li>Asimov_AutomatonWork_Mining</li>
+			<li MayRequire="Ogliss.TheWhiteCrayon.Quarry">Asimov_AutomatonWork_Quarry</li>
 			<li>Asimov_AutomatonWork_PlantCutting</li>
 			<li>Asimov_AutomatonWork_Smith</li>
 			<li>Asimov_AutomatonWork_Tailoring</li>

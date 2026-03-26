@@ -55,6 +55,13 @@
 		<headerIcon>Asimov/UI/Tameness</headerIcon>
 	</PawnColumnDef>
 
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase" MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>Asimov_AutomatonWork_Childcare</defName>
+		<workType>Childcare</workType>
+		<headerTip>childcare</headerTip>
+		<headerIcon>Asimov/UI/Childcare</headerIcon>
+	</PawnColumnDef>
+
 	<!-- Problematic? -->
 	<PawnColumnDef ParentName="AutomatonWorkColumnBase">
 		<defName>Asimov_AutomatonWork_Warden</defName>
@@ -104,6 +111,13 @@
 		<defName>Asimov_AutomatonWork_Mining</defName>
 		<workType>Mining</workType>
 		<headerTip>mine</headerTip>
+		<headerIcon>Asimov/UI/Mining</headerIcon>
+	</PawnColumnDef>
+
+	<PawnColumnDef ParentName="AutomatonWorkColumnBase" MayRequire="Ogliss.TheWhiteCrayon.Quarry">
+		<defName>Asimov_AutomatonWork_Quarry</defName>
+		<workType>QuarryMining</workType>
+		<headerTip>quarry</headerTip>
 		<headerIcon>Asimov/UI/Mining</headerIcon>
 	</PawnColumnDef>
 

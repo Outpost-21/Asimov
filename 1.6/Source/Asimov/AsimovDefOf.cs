@@ -51,5 +51,11 @@ namespace Asimov
         public static ThingDef FabricationBench, TableMachining;
 
         public static ResearchProjectDef Electricity;
+
+        [MayRequire("Ogliss.TheWhiteCrayon.Quarry")]
+        public static WorkTypeDef QuarryMining;
+
+        [MayRequireOdyssey]
+        public static WorkTypeDef Fishing;
     }
 }

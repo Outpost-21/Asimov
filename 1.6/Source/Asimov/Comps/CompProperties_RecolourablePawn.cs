@@ -15,6 +15,8 @@ namespace Asimov
 
         public bool channelTwo = false;
 
+        public bool hideGizmos = false;
+
         public List<ColorPair> skinColorPairs = new List<ColorPair>();
 
         public CompProperties_RecolourablePawn()

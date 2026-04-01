@@ -21,7 +21,7 @@ namespace Asimov
             {
                 yield return gizmo;
             }
-            if (!pawn.Faction?.IsPlayer ?? false)
+            if ((!pawn.Faction?.IsPlayer ?? false) || Props.hideGizmos)
             {
                 yield break;
             }

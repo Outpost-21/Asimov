@@ -29,6 +29,12 @@
 		<placeWorkers>
 			<li>Asimov.PlaceWorker_NeedHibernationSpot</li>
 		</placeWorkers>
+		<comps>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>CompAssignableToPawn_Bed</compClass>
+			</li>
+		</comps>
 	</ThingDef>
 
 </Defs>

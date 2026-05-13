@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
-using RimWorld.Planet;
+using Verse.Noise;
 
 namespace Asimov
 {
@@ -54,6 +55,7 @@ namespace Asimov
         public void AddChargepackCharger(Thing building, Map map)
         {
             CheckLists();
+            if (building == null || map == null) { return; }
             if (!chargepackChargers.ContainsKey(map))
             {
                 chargepackChargers.Add(map, new HashSet<Thing>());
@@ -68,6 +70,7 @@ namespace Asimov
         public void RemoveChargepackCharger(Thing building, Map map)
         {
             CheckLists();
+            if (building == null || map == null) { return; }
             if (chargepackChargers.ContainsKey(map))
             {
                 if (chargepackChargers[map].Contains(building))
@@ -80,6 +83,7 @@ namespace Asimov
         public void AddHibernationSpot(Thing building)
         {
             CheckLists();
+            if (building == null) { return; }
             if (!hibernationSpots.Contains(building))
             {
                 hibernationSpots.Add(building);
@@ -89,6 +93,7 @@ namespace Asimov
         public void RemoveHibernationSpot(Thing building)
         {
             CheckLists();
+            if (building == null) { return; }
             if (hibernationSpots.Contains(building))
             {
                 hibernationSpots.Remove(building);
@@ -98,6 +103,7 @@ namespace Asimov
         public void AddSocketCharger(Thing building)
         {
             CheckLists();
+            if (building == null) { return; }
             if (!chargingSockets.Contains(building))
             {
                 chargingSockets.Add(building);
@@ -107,6 +113,7 @@ namespace Asimov
         public void RemoveSocketCharger(Thing building)
         {
             CheckLists();
+            if (building == null) { return; }
             if (chargingSockets.Contains(building))
             {
                 chargingSockets.Remove(building);
@@ -116,6 +123,7 @@ namespace Asimov
         public void AddWirelessCharger(Thing building, bool global)
         {
             CheckLists();
+            if (building == null) { return; }
             if (!wirelessChargers.Contains(building))
             {
                 wirelessChargers.Add(building);
@@ -132,6 +140,7 @@ namespace Asimov
         public void RemoveWirelessCharger(Thing building, bool global)
         {
             CheckLists();
+            if (building == null) { return; }
             if (wirelessChargers.Contains(building))
             {
                 wirelessChargers.Remove(building);

@@ -21,13 +21,18 @@ namespace Asimov
         public List<HeadTypeDef> headTypeWhitelist = new List<HeadTypeDef>();
         public List<BodyTypeDef> bodyTypeWhitelist = new List<BodyTypeDef>();
 
-        // Styles
+        // Styles (Unused, plans changed)
         public bool allowHair = true;
-        public List<string> hairTagWhitelist = new List<string>(); //TODO
+        public List<string> hairTagWhitelist = new List<string>();
         public bool allowBeards = true;
-        public List<string> beardTagWhitelist = new List<string>(); //TODO
+        public List<string> beardTagWhitelist = new List<string>();
         public bool allowTattoos = true;
-        public List<string> tattooTagWhitelist = new List<string>(); //TODO
+        public List<string> tattooTagWhitelist = new List<string>();
+
+        // Render Nodes
+        public List<PawnRenderNodeProperties> renderNodeProperties = new List<PawnRenderNodeProperties>();
+
+        public List<PawnRenderNodeProperties> RenderNodeProperties => renderNodeProperties;
 
         // Thoughts
         public bool onlyRestrictedThoughts = false;

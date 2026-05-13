@@ -88,6 +88,7 @@
     <Compile Include="Comps\CompProperties_WirelessCharger.cs" />
     <Compile Include="Comps\Comp_WirelessCharger.cs" />
     <None Include="Harmony\Patch_PawnDiedOrDownedThoughtsUtility_AppendThoughts_ForHumanlike.cs" />
+    <Compile Include="PawnRenderNodes\DynamicPawnRenderNodeSetup_Automaton.cs" />
     <Compile Include="Harmony\Patch_PawnStyleObserverTracker_UpdateStyleDominanceThoughtIndex.cs" />
     <Compile Include="Harmony\Patch_PawnGenerator_GeneratePawn.cs" />
     <Compile Include="Harmony\Patch_PawnComponentsUtility_AddAndRemoveDynamicComponents.cs" />

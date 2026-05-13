@@ -14,3 +14,7 @@ F:\RWModCategories\Neronix17\_Libraries\Asimov\1.6\Source\Asimov\obj\Debug\Asimo
 F:\RWModCategories\Neronix17\_Libraries\Asimov\1.6\Source\Asimov\obj\Debug\Asimov.csproj.CoreCompileInputs.cache
 F:\RWModCategories\Neronix17\_Libraries\Asimov\1.6\Source\Asimov\obj\Debug\Asimov.dll
 F:\RWModCategories\Neronix17\_Libraries\Asimov\1.6\Assemblies\Asimov.dll
+G:\RWModCategories\Neronix17\_Libraries\Asimov\1.6\Assemblies\Asimov.dll
+G:\RWModCategories\Neronix17\_Libraries\Asimov\1.6\Source\Asimov\obj\Debug\Asimov.csproj.AssemblyReference.cache
+G:\RWModCategories\Neronix17\_Libraries\Asimov\1.6\Source\Asimov\obj\Debug\Asimov.csproj.CoreCompileInputs.cache
+G:\RWModCategories\Neronix17\_Libraries\Asimov\1.6\Source\Asimov\obj\Debug\Asimov.dll

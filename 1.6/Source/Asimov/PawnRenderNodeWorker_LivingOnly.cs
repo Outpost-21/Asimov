@@ -1,0 +1,19 @@
+﻿using RimWorld;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Verse;
+
+namespace Asimov
+{
+    public class PawnRenderNodeWorker_LivingOnly : PawnRenderNodeWorker
+    {
+        public override bool CanDrawNow(PawnRenderNode node, PawnDrawParms parms)
+        {
+            if (parms.dead) { return false; }
+            return base.CanDrawNow(node, parms);
+        }
+    }
+}

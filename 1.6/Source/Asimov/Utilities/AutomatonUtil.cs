@@ -36,6 +36,33 @@ namespace Asimov
             return false;
         }
 
+        public static Thing AssignedAutomatonSpot(this Pawn pawn, Thing newAssignment = null)
+        {
+            WorldComp_EnergyNeed comp = EnergyUtil.GetEnergyNeedWorldComp;
+            Thing spot = null;
+            if (newAssignment != null)
+            {
+                if (comp.assignedAutomatonSpot.ContainsKey(pawn))
+                {
+                    comp.assignedAutomatonSpot[pawn] = newAssignment;
+                }
+                else
+                {
+                    comp.assignedAutomatonSpot.Add(pawn, newAssignment);
+                }
+            }
+            if (comp.assignedAutomatonSpot.ContainsKey(pawn))
+            {
+                spot = comp.assignedAutomatonSpot[pawn];
+            }
+            return spot;
+        }
+
+        public static void UnclaimAutomationSpot(this Pawn pawn)
+        {
+            EnergyUtil.GetEnergyNeedWorldComp.assignedAutomatonSpot.Remove(pawn);
+        }
+
         public static AcceptanceReport CanDraftAutomaton(Pawn pawn)
         {
             if (pawn.Faction != null && (pawn.Faction?.IsPlayer ?? false) && pawn.drafter != null)

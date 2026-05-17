@@ -151,6 +151,11 @@ namespace Asimov
             return building.TryGetComp<Comp_EnergyProvider>();
         }
 
+        public static Thing GetAssignedHibernationSpot(Pawn pawn)
+        {
+            return pawn.AssignedAutomatonSpot();
+        }
+
         public static Thing GetClosestUnreservedHibernationSpot(Pawn pawn)
         {
             List<Thing> localSpots = GetLocalHibernationSpots(pawn);

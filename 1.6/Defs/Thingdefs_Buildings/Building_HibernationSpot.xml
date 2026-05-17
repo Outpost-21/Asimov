@@ -32,7 +32,7 @@
 		<comps>
 			<li Class="CompProperties_AssignableToPawn">
 				<drawAssignmentOverlay>false</drawAssignmentOverlay>
-				<compClass>CompAssignableToPawn_Bed</compClass>
+				<compClass>Asimov.CompAssignableToPawn_AutomatonSpot</compClass>
 			</li>
 		</comps>
 	</ThingDef>

@@ -54,6 +54,10 @@
 				<drainToRefill>50</drainToRefill>
 				<rechargeRate>0.001</rechargeRate>
 			</li>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>Asimov.CompAssignableToPawn_AutomatonSpot</compClass>
+			</li>
 			<li Class="CompProperties_Flickable" />
 		</comps>
 		<placeWorkers>

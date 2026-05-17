@@ -23,9 +23,17 @@ namespace Asimov
 
         public Dictionary<Map, HashSet<Thing>> chargepackChargers = new Dictionary<Map, HashSet<Thing>>();
 
+        public Dictionary<Pawn, Thing> assignedAutomatonSpot = new Dictionary<Pawn, Thing>();
+
         public WorldComp_EnergyNeed(World world) : base(world)
         {
 
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Collections.Look(ref assignedAutomatonSpot, "assignedAutomatonSpot");
         }
 
         public void CheckLists()

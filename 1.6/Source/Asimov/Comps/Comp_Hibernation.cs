@@ -35,8 +35,8 @@ namespace Asimov
                 icon = ContentFinder<Texture2D>.Get("Asimov/UI/Hibernate"),
                 action = delegate
                 {
-                    Thing hibernationSpot = EnergyUtil.GetClosestUnreservedHibernationSpot(pawn);
-                    if(hibernationSpot == null)
+                    Thing hibernationSpot = EnergyUtil.GetAssignedHibernationSpot(pawn) ?? EnergyUtil.GetClosestUnreservedHibernationSpot(pawn);
+                    if (hibernationSpot == null)
                     {
                         Messages.Message("Asimov.NoHibernationSpot".Translate(), MessageTypeDefOf.NegativeEvent);
                     }

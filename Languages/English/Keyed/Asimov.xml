@@ -49,6 +49,7 @@
 	<Asimov.AutoHibernateDescription>If enabled, when energy is low and no power source is available the pawn can use, they will seek a hibernation spot instead.</Asimov.AutoHibernateDescription>
 	<Asimov.LowEnergyHibernation>{0} is going to hibernate due to a lack of energy and no usable sources.</Asimov.LowEnergyHibernation>
 	<Asimov.NoHibernationSpot>No reachable and unreserved hibernation spot found.</Asimov.NoHibernationSpot>
+	<Asimov.CommandAutomatonSpotOwnerDesc>Assign spot to a specific automaton, only they will hibernate/charge here.</Asimov.CommandAutomatonSpotOwnerDesc>
 
 	<!-- Recolourable Pawns -->
 

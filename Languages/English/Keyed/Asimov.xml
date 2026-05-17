@@ -29,6 +29,8 @@
 	<Asimov.State_Finished>Finished</Asimov.State_Finished>
 	<Asimov.State_ProductRemoved>Resetting...</Asimov.State_ProductRemoved>
 	<Asimov.State_Invalid>Invalid</Asimov.State_Invalid>
+	<Asimov.NeedChargingOptions>Need Charging Options</Asimov.NeedChargingOptions>
+	<Asimov.NeedChargingOptionsExplanation>You have automatons in your colony that need some way to charge their energy need, depending on what is available to them you'll need some form of Chagepack Charger, Chargepad or Wireless Charger. Just having some chargepacks without a way to recharge them is not a long term solution and will not satisfy this alert.\n\nIn the meantime to prevent them draining completely you can use Hibernation Spots, where they'll automatically go when they are low on energy and cannot charge, you can also instruct them to hibernate on a spot once placed.\n\nThis alert can be disabled in the Asimov settings.</Asimov.NeedChargingOptionsExplanation>
 
 	<!-- Drafting -->
 	
@@ -73,6 +75,8 @@
 	<Asimov.Setting_EnergyDrainRate>Energy Drain Multiplier: {0}</Asimov.Setting_EnergyDrainRate>
 	<Asimov.Setting_ForceShowTechnology>Force Enable Energy Tech</Asimov.Setting_ForceShowTechnology>
 	<Asimov.Setting_ForceShowTechnologyDesc>Force the chargepacks, chargepads, wireless chargers and hibernation spots to be active regardless of if any automatons are found that need them. If you need to use this you may have worse problems.</Asimov.Setting_ForceShowTechnologyDesc>
+	<Asimov.Setting_ChargingOptionsAlert>Charging Options Alert</Asimov.Setting_ChargingOptionsAlert>
+	<Asimov.Setting_ChargingOptionsAlertDesc>If enabled (default), the game will now display an alert if you have automatons requiring charging, but no options available for sustainable recharging. Having a chargepack charger, chargepad, or wireless charger on the map is enough to satisfy the alert.</Asimov.Setting_ChargingOptionsAlertDesc>
 
 	
 </LanguageData>

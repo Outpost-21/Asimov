@@ -21,6 +21,8 @@ namespace Asimov
 
         public float energyDrainMultiplier = 1.0f;
 
+        public bool chargingOptionsAlert = true;
+
         public override void ExposeData()
         {
             base.ExposeData();
@@ -28,6 +30,7 @@ namespace Asimov
             Scribe_Values.Look(ref energyDesperate, "hungerDesperate", 0.25f);
             Scribe_Values.Look(ref energyNormal, "energyNormal", 0.5f);
             Scribe_Values.Look(ref energyDrainMultiplier, "energyDrainMultiplier", 1.0f);
+            Scribe_Values.Look(ref chargingOptionsAlert, "chargingOptionsAlert", true);
         }
 
         public bool IsValidSetting(string input)

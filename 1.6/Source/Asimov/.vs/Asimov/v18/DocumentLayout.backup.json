@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\worldcomps\\worldcomp_energyneed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:worldcomps\\worldcomp_energyneed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|g:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.6\\source\\asimov\\ui\\alert_needchargingoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:ui\\alert_needchargingoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|g:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.6\\source\\asimov\\asimovmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:asimovmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|g:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.6\\source\\asimov\\asimovsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:asimovsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\utilities\\energyutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:utilities\\energyutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|g:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.6\\source\\asimov\\comps\\compassignabletopawn_automatonspot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:comps\\compassignabletopawn_automatonspot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|g:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.6\\source\\asimov\\ai\\jobgiver_seekenergy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:ai\\jobgiver_seekenergy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|g:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.6\\source\\asimov\\comps\\comp_hibernation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\comps\\comp_hibernation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:comps\\comp_hibernation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|g:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.6\\source\\asimov\\utilities\\energyutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:utilities\\energyutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|g:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.6\\source\\asimov\\compassignabletopawn_automatonspot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:compassignabletopawn_automatonspot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|g:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.6\\source\\asimov\\utilities\\automatonutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\utilities\\automatonutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:utilities\\automatonutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\worldcomps\\worldcomp_energyneed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:worldcomps\\worldcomp_energyneed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +46,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AsimovMod.cs",
+              "DocumentMoniker": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\AsimovMod.cs",
+              "RelativeDocumentMoniker": "AsimovMod.cs",
+              "ToolTip": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\AsimovMod.cs",
+              "RelativeToolTip": "AsimovMod.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAcwE0AAACNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T13:09:48.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AsimovSettings.cs",
+              "DocumentMoniker": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\AsimovSettings.cs",
+              "RelativeDocumentMoniker": "AsimovSettings.cs",
+              "ToolTip": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\AsimovSettings.cs",
+              "RelativeToolTip": "AsimovSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T13:08:52.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CompAssignableToPawn_AutomatonSpot.cs",
+              "DocumentMoniker": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\Comps\\CompAssignableToPawn_AutomatonSpot.cs",
+              "RelativeDocumentMoniker": "Comps\\CompAssignableToPawn_AutomatonSpot.cs",
+              "ToolTip": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\Comps\\CompAssignableToPawn_AutomatonSpot.cs",
+              "RelativeToolTip": "Comps\\CompAssignableToPawn_AutomatonSpot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T12:56:38.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Alert_NeedChargingOptions.cs",
+              "DocumentMoniker": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\UI\\Alert_NeedChargingOptions.cs",
+              "RelativeDocumentMoniker": "UI\\Alert_NeedChargingOptions.cs",
+              "ToolTip": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\UI\\Alert_NeedChargingOptions.cs",
+              "RelativeToolTip": "UI\\Alert_NeedChargingOptions.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAswD0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T12:30:24.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Comp_Hibernation.cs",
               "DocumentMoniker": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\Comps\\Comp_Hibernation.cs",
               "RelativeDocumentMoniker": "Comps\\Comp_Hibernation.cs",
               "ToolTip": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\Comps\\Comp_Hibernation.cs",
               "RelativeToolTip": "Comps\\Comp_Hibernation.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAhwCoAAAB1AAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAhwCcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-17T11:45:13.409Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "JobGiver_SeekEnergy.cs",
               "DocumentMoniker": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\AI\\JobGiver_SeekEnergy.cs",
               "RelativeDocumentMoniker": "AI\\JobGiver_SeekEnergy.cs",
               "ToolTip": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\AI\\JobGiver_SeekEnergy.cs",
               "RelativeToolTip": "AI\\JobGiver_SeekEnergy.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAASwIsAAAAsAQAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAhwIsAAABbAQAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-17T11:44:11.623Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "EnergyUtil.cs",
               "DocumentMoniker": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\Utilities\\EnergyUtil.cs",
               "RelativeDocumentMoniker": "Utilities\\EnergyUtil.cs",
               "ToolTip": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\Utilities\\EnergyUtil.cs",
               "RelativeToolTip": "Utilities\\EnergyUtil.cs",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAYwJsAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAiwCMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-17T11:29:28.695Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AutomatonUtil.cs",
-              "DocumentMoniker": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\Utilities\\AutomatonUtil.cs",
-              "RelativeDocumentMoniker": "Utilities\\AutomatonUtil.cs",
-              "ToolTip": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\Utilities\\AutomatonUtil.cs",
-              "RelativeToolTip": "Utilities\\AutomatonUtil.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAqwD4AAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T11:17:56.13Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CompAssignableToPawn_AutomatonSpot.cs",
-              "DocumentMoniker": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\CompAssignableToPawn_AutomatonSpot.cs",
-              "RelativeDocumentMoniker": "CompAssignableToPawn_AutomatonSpot.cs",
-              "ToolTip": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\CompAssignableToPawn_AutomatonSpot.cs",
-              "RelativeToolTip": "CompAssignableToPawn_AutomatonSpot.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAywDQAAAB0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T11:16:16.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "WorldComp_EnergyNeed.cs",
               "DocumentMoniker": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\WorldComps\\WorldComp_EnergyNeed.cs",
               "RelativeDocumentMoniker": "WorldComps\\WorldComp_EnergyNeed.cs",
               "ToolTip": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\WorldComps\\WorldComp_EnergyNeed.cs",
               "RelativeToolTip": "WorldComps\\WorldComp_EnergyNeed.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAiwCQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAiwCMAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-09T23:03:47.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AutomatonUtil.cs",
+              "DocumentMoniker": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\Utilities\\AutomatonUtil.cs",
+              "RelativeDocumentMoniker": "Utilities\\AutomatonUtil.cs",
+              "ToolTip": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\Utilities\\AutomatonUtil.cs",
+              "RelativeToolTip": "Utilities\\AutomatonUtil.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEEAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T11:17:56.13Z",
               "EditorCaption": ""
             }
           ]

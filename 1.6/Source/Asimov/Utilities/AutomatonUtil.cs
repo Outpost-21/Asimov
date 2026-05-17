@@ -63,6 +63,22 @@ namespace Asimov
             EnergyUtil.GetEnergyNeedWorldComp.assignedAutomatonSpot.Remove(pawn);
         }
 
+        public static bool SpotUsableByPawn(Thing thing, Pawn pawn)
+        {
+            CompAssignableToPawn comp = thing.TryGetComp<CompAssignableToPawn>();
+            if (comp != null)
+            {
+                if (!comp.assignedPawns.NullOrEmpty())
+                {
+                    if (!comp.assignedPawns.Contains(pawn))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
         public static AcceptanceReport CanDraftAutomaton(Pawn pawn)
         {
             if (pawn.Faction != null && (pawn.Faction?.IsPlayer ?? false) && pawn.drafter != null)

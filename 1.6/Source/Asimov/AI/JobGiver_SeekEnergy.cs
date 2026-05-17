@@ -137,7 +137,7 @@ namespace Asimov
             }
 
             // > Hmm, alright lets try on the map.
-            Thing closestConsumablePowerSource = pawn.AssignedAutomatonSpot() ?? GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest.ForGroup(ThingRequestGroup.HaulableEver), PathEndMode.OnCell, TraverseParms.For(pawn), 9999f, thing => thing.TryGetComp<Comp_EnergySource>() != null && !thing.IsForbidden(pawn) && pawn.CanReserve(new LocalTargetInfo(thing)) && thing.Position.InAllowedArea(pawn) && pawn.CanReach(new LocalTargetInfo(thing), PathEndMode.OnCell, Danger.Deadly));
+            Thing closestConsumablePowerSource = pawn.AssignedAutomatonSpot() ?? GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest.ForGroup(ThingRequestGroup.HaulableEver), PathEndMode.OnCell, TraverseParms.For(pawn), 9999f, thing => thing.TryGetComp<Comp_EnergySource>() != null && AutomatonUtil.SpotUsableByPawn(thing, pawn) && !thing.IsForbidden(pawn) && pawn.CanReserve(new LocalTargetInfo(thing)) && thing.Position.InAllowedArea(pawn) && pawn.CanReach(new LocalTargetInfo(thing), PathEndMode.OnCell, Danger.Deadly));
             if (closestConsumablePowerSource != null)
             {
                 Comp_EnergySource energySourceComp = closestConsumablePowerSource.TryGetComp<Comp_EnergySource>();

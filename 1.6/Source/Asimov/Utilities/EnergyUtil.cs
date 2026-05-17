@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -166,7 +167,7 @@ namespace Asimov
             Thing best = null;
             foreach (var localSpot in localSpots)
             {
-                if (localSpot.Position.Walkable(pawn.Map)
+                if (localSpot.Position.Walkable(pawn.Map) && AutomatonUtil.SpotUsableByPawn(localSpot, pawn)
                     && localSpot.Position.InAllowedArea(pawn) &&
                     pawn.CanReserve(localSpot) &&
                     pawn.CanReach(localSpot.Position, PathEndMode.OnCell, Danger.Deadly))

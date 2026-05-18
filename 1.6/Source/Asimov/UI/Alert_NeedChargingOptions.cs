@@ -42,7 +42,7 @@ namespace Asimov
                 List<Pawn> automatonsForReading = automatons.ToList();
                 for (int i = 0; automatonsForReading.Count() < i; i++)
                 {
-                    Need_Energy need = (Need_Energy)automatonsForReading[i].needs.TryGetNeed(AsimovDefOf.Asimov_EnergyNeed);
+                    Need_Energy need = (Need_Energy)automatonsForReading[i].needs?.TryGetNeed(AsimovDefOf.Asimov_EnergyNeed);
                     if (need != null)
                     {
                         return true;

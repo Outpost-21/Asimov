@@ -15,4 +15,18 @@
 		<prioritizeSustains>true</prioritizeSustains>
 	</WorkGiverDef>
 
+	<WorkGiverDef>
+		<defName>Asimov_RestoreAutomatonPower</defName>
+		<label>restore automatons lacking power</label>
+		<giverClass>WorkGiver_RestorePower</giverClass>
+		<workType>Doctor</workType>
+		<priorityInType>70</priorityInType>
+		<verb>recharge</verb>
+		<gerund>recharging</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
 </Defs>

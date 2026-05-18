@@ -83,8 +83,10 @@
     <None Include="AI\JobDriver_ChargeOther.cs" />
     <Compile Include="AI\JobDriver_HibernateTillRepaired.cs" />
     <None Include="AI\WorkGiver_ChargeOther.cs" />
+    <Compile Include="AI\JobDriver_RestorePower.cs" />
+    <Compile Include="AI\WorkGiver_RestorePower.cs" />
     <Compile Include="AI\WorkGiver_RepairPawn.cs" />
-    <None Include="Harmony\Patch_Alert_NeedBatteries_NeedBatteries.cs" />
+    <Compile Include="Harmony\Patch_Alert_NeedBatteries_NeedBatteries.cs" />
     <Compile Include="UI\Alert_NeedChargingOptions.cs" />
     <Compile Include="Buildings\Building_ChargepackCharger.cs" />
     <Compile Include="Comps\CompAssignableToPawn_AutomatonSpot.cs" />

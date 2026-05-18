@@ -68,4 +68,12 @@
 		<reportString>removing chargepacks.</reportString>
 	</JobDef>
 
+	<JobDef>
+		<defName>Asimov_RestoreAutomatonPower</defName>
+		<driverClass>Asimov.JobDriver_RestorePower</driverClass>
+		<reportString>recharging TargetA.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<suspendable>false</suspendable>
+	</JobDef>
+
 </Defs>

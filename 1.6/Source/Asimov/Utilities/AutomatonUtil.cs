@@ -36,6 +36,23 @@ namespace Asimov
             return false;
         }
 
+        public static bool DiedFromPowerLoss(this Pawn pawn)
+        {
+            if (pawn.health.hediffSet.HasHediff(AsimovDefOf.Asimov_EmergencyPower))
+            {
+                Hediff powerLoss = pawn.health.hediffSet.GetFirstHediffOfDef(AsimovDefOf.Asimov_EmergencyPower);
+                if (pawn.Dead && powerLoss.Severity >= powerLoss.def.lethalSeverity)
+                {
+                    return true;
+                }
+                if (pawn.Downed && powerLoss.Severity >= 0.8f)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public static Thing AssignedAutomatonSpot(this Pawn pawn, Thing newAssignment = null)
         {
             WorldComp_EnergyNeed comp = EnergyUtil.GetEnergyNeedWorldComp;
@@ -92,6 +109,18 @@ namespace Asimov
             return false;
         }
 
+        public static Thing GetBestChargepack(Pawn tender, Pawn target)
+        {
+            if (target.IsAutomaton() || target.IsHumanlikeAutomaton())
+            {
+                LogUtil.LogError("Tried to get chargepack for automaton but target is not an automaton.");
+                return null;
+            }
+            Predicate<Thing> validator = (Thing m) => (!m.IsForbidden(tender) && (target.playerSettings == null || target.playerSettings.medCare.AllowsMedicine(m.def)) && tender.CanReserve(m, 10, 1)) ? true : false;
+            Thing bestRepairThing = GenClosest.ClosestThing_Global_Reachable(target.Position, target.Map, GetAllChargepacks(target.Map), PathEndMode.ClosestTouch, TraverseParms.For(tender), 9999f, validator, null);
+            return bestRepairThing;
+        }
+
         public static Thing GetBestRepairThing(Pawn tender, Pawn target)
         {
             Comp_Automaton comp = target.TryGetComp<Comp_Automaton>();
@@ -107,6 +136,18 @@ namespace Asimov
             Predicate<Thing> validator = (Thing m) => (!m.IsForbidden(tender) && (target.playerSettings == null || target.playerSettings.medCare.AllowsMedicine(m.def)) && tender.CanReserve(m, 10, 1)) ? true : false;
             Thing bestRepairThing = GenClosest.ClosestThing_Global_Reachable(target.Position, target.Map, GetAllRepairThings(comp.Props.repairThings, target.Map), PathEndMode.ClosestTouch, TraverseParms.For(tender), 9999f, validator, null);
             return bestRepairThing;
+        }
+
+        public static IEnumerable<Thing> GetAllChargepacks(Map map)
+        {
+            foreach (Thing thing in map.listerThings.ThingsInGroup(ThingRequestGroup.HaulableEver))
+            {
+                if (thing.def == AsimovDefOf.Asimov_Chargepack)
+                {
+                    yield return thing;
+                }
+            }
+            yield break;
         }
 
         public static IEnumerable<Thing> GetAllRepairThings(List<ThingDef> acceptableDefs, Map map)
@@ -132,6 +173,56 @@ namespace Asimov
                 }
             }
             return total;
+        }
+
+        public static void DoRestorePower(Pawn doctor, Pawn patient, Thing medicine)
+        {
+            if (!patient.DiedFromPowerLoss())
+            {
+                return;
+            }
+            if (medicine != null && medicine.Destroyed)
+            {
+                Log.Warning("Tried to use destroyed energy source.");
+                medicine = null;
+            }
+            RestorePower(patient);
+            if (doctor != null && doctor.Faction == Faction.OfPlayer && patient.Faction != doctor.Faction && !patient.IsPrisoner && patient.Faction != null)
+            {
+                patient.mindState.timesGuestTendedToByPlayer++;
+            }
+            if (doctor != null && doctor.RaceProps.Humanlike && patient.RaceProps.Animal && patient.RaceProps.playerCanChangeMaster && RelationsUtility.TryDevelopBondRelation(doctor, patient, 0.004f) && doctor.Faction != null && doctor.Faction != patient.Faction)
+            {
+                InteractionWorker_RecruitAttempt.DoRecruit(doctor, patient, useAudiovisualEffects: false);
+            }
+            patient.records.Increment(RecordDefOf.TimesTendedTo);
+            doctor?.records.Increment(RecordDefOf.TimesTendedOther);
+            if (medicine != null)
+            {
+                if (medicine.stackCount > 1)
+                {
+                    medicine.stackCount--;
+                }
+                else if (!medicine.Destroyed)
+                {
+                    medicine.Destroy();
+                }
+            }
+            if (ModsConfig.IdeologyActive && doctor != null && doctor.Ideo != null)
+            {
+                Precept_Role role = doctor.Ideo.GetRole(doctor);
+                if (role != null && role.def.roleEffects != null)
+                {
+                    foreach (RoleEffect roleEffect in role.def.roleEffects)
+                    {
+                        roleEffect.Notify_Tended(doctor, patient);
+                    }
+                }
+            }
+            if (doctor != null && doctor.Faction == Faction.OfPlayer && doctor != patient)
+            {
+                QuestUtility.SendQuestTargetSignals(patient.questTags, "PlayerTended", patient.Named("SUBJECT"));
+            }
         }
 
         public static void DoRepair(Pawn doctor, Pawn patient, Thing medicine)
@@ -185,6 +276,21 @@ namespace Asimov
             if (doctor != null && doctor.Faction == Faction.OfPlayer && doctor != patient)
             {
                 QuestUtility.SendQuestTargetSignals(patient.questTags, "PlayerTended", patient.Named("SUBJECT"));
+            }
+        }
+
+        public static void RestorePower(Pawn pawn)
+        {
+            Hediff powerLoss = pawn.health.hediffSet.GetFirstHediffOfDef(AsimovDefOf.Asimov_EmergencyPower);
+            pawn.health.RemoveHediff(powerLoss);
+            if (pawn.Dead)
+            {
+                ResurrectionUtility.TryResurrect(pawn, new ResurrectionParams() { restoreMissingParts = false, removeDiedThoughts = true });
+            }
+            Need_Energy need = pawn.needs?.TryGetNeed<Need_Energy>();
+            if (need != null)
+            {
+                need.CurLevel = need.MaxLevel;
             }
         }
 

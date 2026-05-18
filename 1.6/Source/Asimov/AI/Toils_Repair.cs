@@ -88,5 +88,30 @@ namespace Asimov
 			toil.defaultCompleteMode = ToilCompleteMode.Instant;
 			return toil;
 		}
+
+		public static Toil FinalizeRestorePower(Pawn patient)
+		{
+			Toil toil = ToilMaker.MakeToil("FinalizeRestorePower");
+			toil.initAction = delegate
+			{
+				Pawn actor = toil.actor;
+				Thing materials = (Thing)actor.CurJob.targetB.Thing;
+				if (actor.skills != null)
+				{
+					actor.skills.Learn(SkillDefOf.Crafting, patient.RaceProps.Animal ? 25f : 50f);
+				}
+				AutomatonUtil.DoRestorePower(actor, patient, materials);
+				if (materials != null && materials.Destroyed)
+				{
+					actor.CurJob.SetTarget(TargetIndex.B, LocalTargetInfo.Invalid);
+				}
+				if (toil.actor.CurJob.endAfterTendedOnce)
+				{
+					actor.jobs.EndCurrentJob(JobCondition.Succeeded);
+				}
+			};
+            toil.defaultCompleteMode = ToilCompleteMode.Instant;
+            return toil;
+        }
 	}
 }

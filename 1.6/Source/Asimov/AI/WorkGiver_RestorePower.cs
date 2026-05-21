@@ -53,7 +53,7 @@ namespace Asimov
 			Thing thing = AutomatonUtil.GetBestChargepack(pawn, pawn2);
 			if (thing != null)
             {
-                return JobMaker.MakeJob(AsimovDefOf.Asimov_RestoreAutomatonPower, pawn2, thing);
+                //return JobMaker.MakeJob(AsimovDefOf.Asimov_RestoreAutomatonPower, pawn2, thing);
             }
 			return null;
 		}

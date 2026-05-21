@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|g:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.6\\source\\asimov\\ai\\workgiver_restorepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\ai\\workgiver_restorepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:ai\\workgiver_restorepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|g:\\rwmodcategories\\neronix17\\_libraries\\asimov\\1.6\\source\\asimov\\asimovdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:asimovdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\ai\\jobdriver_restorepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\ai\\toils_repair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:ai\\toils_repair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\asimovdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|solutionrelative:asimovdefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E50F1C9F-872D-4DB6-B525-755948B925F6}|Asimov.csproj|G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\harmony\\patch_alert_needbatteries_needbatteries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -60,26 +60,27 @@
               "RelativeDocumentMoniker": "AI\\WorkGiver_RestorePower.cs",
               "ToolTip": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\AI\\WorkGiver_RestorePower.cs",
               "RelativeToolTip": "AI\\WorkGiver_RestorePower.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowCwAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAASwDcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T19:08:30.504Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "AsimovDefOf.cs",
               "DocumentMoniker": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\AsimovDefOf.cs",
               "RelativeDocumentMoniker": "AsimovDefOf.cs",
               "ToolTip": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\AsimovDefOf.cs",
               "RelativeToolTip": "AsimovDefOf.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACQAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T18:45:05.296Z"
+              "WhenOpened": "2026-05-18T18:45:05.296Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Toils_Repair.cs",
               "DocumentMoniker": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\AI\\Toils_Repair.cs",
               "RelativeDocumentMoniker": "AI\\Toils_Repair.cs",
@@ -87,12 +88,11 @@
               "RelativeToolTip": "AI\\Toils_Repair.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAAAqwGYAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T18:20:48.757Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T18:20:48.757Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AutomatonUtil.cs",
               "DocumentMoniker": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\Utilities\\AutomatonUtil.cs",
               "RelativeDocumentMoniker": "Utilities\\AutomatonUtil.cs",
@@ -100,12 +100,11 @@
               "RelativeToolTip": "Utilities\\AutomatonUtil.cs",
               "ViewState": "AgIAABUAAAAAAAAAAADwvysAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T18:13:22.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T18:13:22.574Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "JobDriver_RestorePower.cs",
               "DocumentMoniker": "G:\\RWModCategories\\Neronix17\\_Libraries\\Asimov\\1.6\\Source\\Asimov\\AI\\JobDriver_RestorePower.cs",
               "RelativeDocumentMoniker": "AI\\JobDriver_RestorePower.cs",
@@ -113,8 +112,7 @@
               "RelativeToolTip": "AI\\JobDriver_RestorePower.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAADUAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T18:12:05.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T18:12:05.457Z"
             },
             {
               "$type": "Document",

@@ -14,7 +14,7 @@ namespace Asimov
 	{
 		public override PathEndMode PathEndMode => PathEndMode.InteractionCell;
 
-		public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForGroup(ThingRequestGroup.Pawn);
+		public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForGroup(ThingRequestGroup.Corpse);
 
 		public override Danger MaxPathDanger(Pawn pawn)
 		{
@@ -24,13 +24,15 @@ namespace Asimov
 		public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
 		{
 			List<Thing> unburiedAutomatonCorpsesResult = new List<Thing>();
-			List<Thing> list = pawn.Map.listerThings.ThingsMatching(ThingRequest.ForGroup(ThingRequestGroup.Corpse));
+			List<Thing> list = pawn.Map.listerThings.ThingsMatching(PotentialWorkThingRequest);
 			for (int i = 0; i < list.Count; i++)
 			{
 				Corpse corpse = (Corpse)list[i];
 				if (corpse.InnerPawn.DiedFromPowerLoss())
-				{
-					unburiedAutomatonCorpsesResult.Add(corpse);
+                {
+					Log.Message(corpse.InnerPawn.Name);
+
+                    unburiedAutomatonCorpsesResult.Add(corpse);
 				}
 			}
 			return unburiedAutomatonCorpsesResult;
@@ -38,7 +40,7 @@ namespace Asimov
 
 		public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
 		{
-			if (!(t is Pawn tPawn) || pawn.WorkTypeIsDisabled(WorkTypeDefOf.Crafting) || (!tPawn.IsAutomaton() && !tPawn.IsHumanlikeAutomaton()) || (def == AsimovDefOf.DoctorTendToHumanlikes && !tPawn.RaceProps.Humanlike) || (def == AsimovDefOf.DoctorTendToAnimals && !tPawn.RaceProps.Animal) || !HealthAIUtility.ShouldBeTendedNowByPlayer(tPawn) || tPawn.IsForbidden(pawn) || !pawn.CanReserve(tPawn, 1, -1, null, forced) || (tPawn.InAggroMentalState && !tPawn.health.hediffSet.HasHediff(HediffDefOf.Scaria)))
+			if (!(t is Corpse corpse) || pawn.WorkTypeIsDisabled(WorkTypeDefOf.Crafting) || (!corpse.InnerPawn.IsAutomaton() && !corpse.InnerPawn.IsHumanlikeAutomaton()) || corpse.IsForbidden(pawn) || !pawn.CanReserve(corpse, 1, -1, null, forced) || corpse.InnerPawn.InAggroMentalState)
 			{
 				return false;
 			}

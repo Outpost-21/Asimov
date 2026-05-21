@@ -89,7 +89,7 @@ namespace Asimov
 			return toil;
 		}
 
-		public static Toil FinalizeRestorePower(Pawn patient)
+		public static Toil FinalizeRestorePower(Corpse target)
 		{
 			Toil toil = ToilMaker.MakeToil("FinalizeRestorePower");
 			toil.initAction = delegate
@@ -98,9 +98,9 @@ namespace Asimov
 				Thing materials = (Thing)actor.CurJob.targetB.Thing;
 				if (actor.skills != null)
 				{
-					actor.skills.Learn(SkillDefOf.Crafting, patient.RaceProps.Animal ? 25f : 50f);
+					actor.skills.Learn(SkillDefOf.Crafting, target.InnerPawn.RaceProps.Animal ? 25f : 50f);
 				}
-				AutomatonUtil.DoRestorePower(actor, patient, materials);
+				AutomatonUtil.DoRestorePower(actor, target, materials);
 				if (materials != null && materials.Destroyed)
 				{
 					actor.CurJob.SetTarget(TargetIndex.B, LocalTargetInfo.Invalid);

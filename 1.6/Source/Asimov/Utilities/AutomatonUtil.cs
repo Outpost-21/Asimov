@@ -41,11 +41,7 @@ namespace Asimov
             if (pawn.health.hediffSet.HasHediff(AsimovDefOf.Asimov_EmergencyPower))
             {
                 Hediff powerLoss = pawn.health.hediffSet.GetFirstHediffOfDef(AsimovDefOf.Asimov_EmergencyPower);
-                if (pawn.Dead && powerLoss.Severity >= powerLoss.def.lethalSeverity)
-                {
-                    return true;
-                }
-                if (pawn.Downed && powerLoss.Severity >= 0.8f)
+                if (powerLoss.Severity >= powerLoss.def.lethalSeverity)
                 {
                     return true;
                 }
@@ -175,9 +171,9 @@ namespace Asimov
             return total;
         }
 
-        public static void DoRestorePower(Pawn doctor, Pawn patient, Thing medicine)
+        public static void DoRestorePower(Pawn doctor, Corpse target, Thing medicine)
         {
-            if (!patient.DiedFromPowerLoss())
+            if (!target.InnerPawn.DiedFromPowerLoss())
             {
                 return;
             }
@@ -186,16 +182,12 @@ namespace Asimov
                 Log.Warning("Tried to use destroyed energy source.");
                 medicine = null;
             }
-            RestorePower(patient);
-            if (doctor != null && doctor.Faction == Faction.OfPlayer && patient.Faction != doctor.Faction && !patient.IsPrisoner && patient.Faction != null)
+            RestorePower(target);
+            if (doctor != null && doctor.Faction == Faction.OfPlayer && target.InnerPawn.Faction != doctor.Faction && !target.InnerPawn.IsPrisoner && target.InnerPawn.Faction != null)
             {
-                patient.mindState.timesGuestTendedToByPlayer++;
+                target.InnerPawn.mindState.timesGuestTendedToByPlayer++;
             }
-            if (doctor != null && doctor.RaceProps.Humanlike && patient.RaceProps.Animal && patient.RaceProps.playerCanChangeMaster && RelationsUtility.TryDevelopBondRelation(doctor, patient, 0.004f) && doctor.Faction != null && doctor.Faction != patient.Faction)
-            {
-                InteractionWorker_RecruitAttempt.DoRecruit(doctor, patient, useAudiovisualEffects: false);
-            }
-            patient.records.Increment(RecordDefOf.TimesTendedTo);
+            target.InnerPawn.records.Increment(RecordDefOf.TimesTendedTo);
             doctor?.records.Increment(RecordDefOf.TimesTendedOther);
             if (medicine != null)
             {
@@ -215,13 +207,13 @@ namespace Asimov
                 {
                     foreach (RoleEffect roleEffect in role.def.roleEffects)
                     {
-                        roleEffect.Notify_Tended(doctor, patient);
+                        roleEffect.Notify_Tended(doctor, target.InnerPawn);
                     }
                 }
             }
-            if (doctor != null && doctor.Faction == Faction.OfPlayer && doctor != patient)
+            if (doctor != null && doctor.Faction == Faction.OfPlayer && doctor != target.InnerPawn)
             {
-                QuestUtility.SendQuestTargetSignals(patient.questTags, "PlayerTended", patient.Named("SUBJECT"));
+                QuestUtility.SendQuestTargetSignals(target.questTags, "PlayerTended", target.Named("SUBJECT"));
             }
         }
 
@@ -279,15 +271,15 @@ namespace Asimov
             }
         }
 
-        public static void RestorePower(Pawn pawn)
+        public static void RestorePower(Corpse target)
         {
-            Hediff powerLoss = pawn.health.hediffSet.GetFirstHediffOfDef(AsimovDefOf.Asimov_EmergencyPower);
-            pawn.health.RemoveHediff(powerLoss);
-            if (pawn.Dead)
+            Hediff powerLoss = target.InnerPawn.health.hediffSet.GetFirstHediffOfDef(AsimovDefOf.Asimov_EmergencyPower);
+            target.InnerPawn.health.RemoveHediff(powerLoss);
+            if (target.InnerPawn.Dead)
             {
-                ResurrectionUtility.TryResurrect(pawn, new ResurrectionParams() { restoreMissingParts = false, removeDiedThoughts = true });
+                ResurrectionUtility.TryResurrect(target.InnerPawn, new ResurrectionParams() { restoreMissingParts = false, removeDiedThoughts = true });
             }
-            Need_Energy need = pawn.needs?.TryGetNeed<Need_Energy>();
+            Need_Energy need = target.InnerPawn.needs?.TryGetNeed<Need_Energy>();
             if (need != null)
             {
                 need.CurLevel = need.MaxLevel;

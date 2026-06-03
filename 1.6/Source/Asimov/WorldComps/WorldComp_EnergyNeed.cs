@@ -33,7 +33,7 @@ namespace Asimov
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Collections.Look(ref assignedAutomatonSpot, "assignedAutomatonSpot", LookMode.Value);
+            Scribe_Collections.Look(ref assignedAutomatonSpot, "assignedAutomatonSpot", LookMode.Value, LookMode.Value);
         }
 
         public void CheckLists()

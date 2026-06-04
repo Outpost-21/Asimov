@@ -23,6 +23,8 @@ namespace Asimov
 
         public bool chargingOptionsAlert = true;
 
+        public bool doManualPriorities = false;
+
         public override void ExposeData()
         {
             base.ExposeData();
@@ -31,6 +33,7 @@ namespace Asimov
             Scribe_Values.Look(ref energyNormal, "energyNormal", 0.5f);
             Scribe_Values.Look(ref energyDrainMultiplier, "energyDrainMultiplier", 1.0f);
             Scribe_Values.Look(ref chargingOptionsAlert, "chargingOptionsAlert", true);
+            Scribe_Values.Look(ref doManualPriorities, "doManualPriorities", true);
         }
 
         public bool IsValidSetting(string input)

@@ -261,9 +261,11 @@ namespace Asimov
 				AsimovDefOf.TableMachining.recipes.Add(AsimovDefOf.Asimov_CraftChargepacks);
                 AsimovDefOf.TableMachining.recipes.Add(AsimovDefOf.Asimov_RechargeChargepack);
                 AsimovDefOf.TableMachining.recipes.Add(AsimovDefOf.Asimov_RechargeChargepackBulk);
+                AsimovDefOf.TableMachining.allRecipesCached = null;
 				AsimovDefOf.FabricationBench.recipes.Add(AsimovDefOf.Asimov_CraftChargepacks);
                 AsimovDefOf.FabricationBench.recipes.Add(AsimovDefOf.Asimov_RechargeChargepack);
                 AsimovDefOf.FabricationBench.recipes.Add(AsimovDefOf.Asimov_RechargeChargepackBulk);
+                AsimovDefOf.FabricationBench.allRecipesCached = null;
             }
         }
     }

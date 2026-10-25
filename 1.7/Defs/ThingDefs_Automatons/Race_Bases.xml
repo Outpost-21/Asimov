@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="AnimalThingBase" Name="AsimovNonEnergyAutomatonBase" Abstract="True">
+		<thingClass>Asimov.Automaton</thingClass>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<statBases>
+			<MarketValue>1200</MarketValue>
+			<WorkSpeedGlobal>1.0</WorkSpeedGlobal>
+		</statBases>
+		<tradeability>All</tradeability>
+		<race>
+			<trainability>None</trainability>
+			<intelligence>ToolUser</intelligence>
+			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+			<soundCallIntervalFriendlyFactor>2</soundCallIntervalFriendlyFactor>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		</race>
+		<inspectorTabs Inherit="False">
+			<li>ITab_Pawn_Health</li>
+			<li>ITab_Pawn_Needs</li>
+			<li>ITab_Pawn_FormingCaravan</li>
+			<li>ITab_Pawn_Gear</li>
+			<li>ITab_Pawn_Log</li>
+			<li>Asimov.ITab_AutomatonSkills</li>
+		</inspectorTabs>
+	</ThingDef>
+
+	<ThingDef ParentName="AsimovNonEnergyAutomatonBase" Name="AsimovAutomatonBase" Abstract="True">
+		<statBases>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<ToxicResistance>1</ToxicResistance>
+			<Flammability>0.1</Flammability>
+			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
+			<ComfyTemperatureMax>250</ComfyTemperatureMax>
+			<MeatAmount>0</MeatAmount>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+		</statBases>
+		<race>
+			<fleshType>Asimov_Automaton</fleshType>
+			<needsRest>false</needsRest>
+			<hasGenders>false</hasGenders>
+			<foodType>None</foodType>
+			<lifeExpectancy>2500</lifeExpectancy>
+			<bloodDef>Filth_MachineBits</bloodDef>
+		</race>
+		<comps>
+			<li Class="Asimov.CompProperties_Hibernation" />
+		</comps>
+		<modExtensions>
+			<li Class="Asimov.DefModExt_EnergyNeed" />
+		</modExtensions>
+	</ThingDef>
+
+	<PawnKindDef Name="AsimovAutomatonKindBase" Abstract="True">
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<aiAvoidCover>true</aiAvoidCover>
+		<destroyGearOnDrop>false</destroyGearOnDrop>
+		<canStrip>true</canStrip>
+		<minGenerationAge>200</minGenerationAge>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<weaponMoney>9999~9999</weaponMoney>
+		<combatPower>10</combatPower>
+		<weaponTags></weaponTags>
+		<techHediffsChance>1</techHediffsChance>
+		<techHediffsMoney>9999~9999</techHediffsMoney>
+	</PawnKindDef>
+
+	<Asimov.AutomatonRecipeDef Name="AsimovAutomatonRecipeBase" Abstract="True">
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workSkill>Crafting</workSkill>
+	</Asimov.AutomatonRecipeDef>
+
+</Defs>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Asimov_Chargepack</defName>
+		<label>chargepack (full)</label>
+		<description>Consumable cells of energy used by automatons to recharge.</description>
+		<graphicData>
+			<texPath>Asimov/Items/Chargepack</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<MarketValue>10</MarketValue>
+			<Mass>0.025</Mass>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.3</Flammability>
+			<DeteriorationRate>2.0</DeteriorationRate>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<effectWorking>Repair</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<workAmount>800</workAmount>
+			<targetCountAdjustment>5</targetCountAdjustment>
+			<productCount>5</productCount>
+			<workSkill>Crafting</workSkill>
+			<recipeUsers>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Steel>10</Steel>
+			<Chemfuel>10</Chemfuel>
+		</costList>
+        <comps>
+            <li Class="Asimov.CompProperties_EnergySource">
+				<energyGiven>0.7</energyGiven>
+                <outputThing>Asimov_Chargepack_Empty</outputThing>
+            </li>
+        </comps>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Asimov_Chargepack_Empty</defName>
+		<label>chargepack (depleted)</label>
+		<description>Consumable cells of energy used by automatons to recharge. This one appears to be dead, and must be recharged before it can be used again.</description>
+		<graphicData>
+			<texPath>Asimov/Items/EmptyChargepack</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<MarketValue>10</MarketValue>
+			<Mass>0.025</Mass>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.3</Flammability>
+			<DeteriorationRate>2.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+	</ThingDef>
+
+</Defs>

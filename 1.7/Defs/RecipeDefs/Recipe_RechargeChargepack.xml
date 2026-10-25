@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<RecipeDef>
+		<defName>Asimov_CraftChargepacks</defName>
+		<label>craft chargepacks</label>
+		<description>Craft chargepacks.</description>
+		<jobString>crafting chargepacks.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>800</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Chemfuel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Asimov_Chargepack>5</Asimov_Chargepack>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>0</displayPriority>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>Asimov_RechargeChargepack</defName>
+		<label>recharge chargepacks</label>
+		<description>Recharge chargepacks.</description>
+		<jobString>recharging chargepacks.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>800</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Asimov_Chargepack_Empty</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Asimov_Chargepack_Empty</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Asimov_Chargepack>5</Asimov_Chargepack>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>0</displayPriority>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>Asimov_RechargeChargepackBulk</defName>
+		<label>recharge chargepacks (bulk)</label>
+		<description>Recharge chargepacks.</description>
+		<jobString>recharging chargepacks.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>1200</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Asimov_Chargepack_Empty</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Asimov_Chargepack_Empty</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Asimov_Chargepack>20</Asimov_Chargepack>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>0</displayPriority>
+	</RecipeDef>
+
+</Defs>

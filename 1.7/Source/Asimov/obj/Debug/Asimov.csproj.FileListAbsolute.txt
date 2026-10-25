@@ -1,0 +1,11 @@
+G:\RWModCategories\Neronix17\_Libraries\Asimov\1.7\Source\Asimov\obj\Debug\Asimov.csproj.AssemblyReference.cache
+G:\RWModCategories\Neronix17\_Libraries\Asimov\1.7\Source\Asimov\obj\Debug\Asimov.GeneratedMSBuildEditorConfig.editorconfig
+G:\RWModCategories\Neronix17\_Libraries\Asimov\1.7\Source\Asimov\obj\Debug\Asimov.AssemblyInfoInputs.cache
+G:\RWModCategories\Neronix17\_Libraries\Asimov\1.7\Source\Asimov\obj\Debug\Asimov.AssemblyInfo.cs
+G:\RWModCategories\Neronix17\_Libraries\Asimov\1.7\Source\Asimov\obj\Debug\Asimov.csproj.CoreCompileInputs.cache
+G:\RWModCategories\Neronix17\_Libraries\Asimov\1.7\Assemblies\Asimov.dll
+G:\RWModCategories\Neronix17\_Libraries\Asimov\1.7\Source\Asimov\obj\Debug\Asimov.dll
+G:\RWModCategories\Neronix17\_Libraries\Asimov\1.7\Source\Asimov\obj\Debug\refint\Asimov.dll
+G:\RWModCategories\Neronix17\_Libraries\Asimov\1.7\Source\Asimov\obj\Debug\ref\Asimov.dll
+G:\RWModCategories\Neronix17\_Libraries\Asimov\1.7\Source\Asimov\obj\Debug\Asimov.csproj.Up2Date
+G:\RWModCategories\Neronix17\_Libraries\Asimov\1.7\Source\Asimov\obj\Debug\Asimov.sourcelink.json

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<HediffGiverSetDef>
+		<defName>Asimov_Automaton</defName>
+		<hediffGivers>
+			<li Class="HediffGiver_Bleeding">
+				<hediff>Asimov_CoolantLoss</hediff>
+			</li>
+		</hediffGivers>
+	</HediffGiverSetDef>
+
+</Defs>

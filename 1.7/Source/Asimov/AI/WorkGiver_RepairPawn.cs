@@ -28,14 +28,19 @@ namespace Asimov
 
 		public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
 		{
-			if (!(t is Pawn tPawn) || pawn.WorkTypeIsDisabled(WorkTypeDefOf.Crafting) || (!tPawn.IsAutomaton() && !tPawn.IsHumanlikeAutomaton()) || (def == AsimovDefOf.DoctorTendToHumanlikes && !tPawn.RaceProps.Humanlike) || (def == AsimovDefOf.DoctorTendToAnimals && !tPawn.RaceProps.Animal) || !IsReadyForTending(tPawn, pawn) || !HealthAIUtility.ShouldBeTendedNowByPlayer(tPawn) || tPawn.IsForbidden(pawn) || !pawn.CanReserve(tPawn, 1, -1, null, forced) || (tPawn.InAggroMentalState && !tPawn.health.hediffSet.HasHediff(HediffDefOf.Scaria)))
+			if (!(t is Pawn tPawn) || (!tPawn.IsAutomaton() && !tPawn.IsHumanlikeAutomaton()) || !IsReadyForRepairs(tPawn, pawn) || !HealthAIUtility.ShouldBeTendedNowByPlayer(tPawn) || tPawn.IsForbidden(pawn) || !pawn.CanReserve(tPawn, 1, -1, null, forced) || (tPawn.InAggroMentalState && !tPawn.health.hediffSet.HasHediff(HediffDefOf.Scaria)))
+			{
+				return false;
+			}
+			Comp_Automaton compAutomaton = tPawn.GetAutomatonComp();
+			if (!compAutomaton?.Props?.canBeRepaired ?? true || pawn.WorkTypeIsDisabled(compAutomaton?.Props?.repairWorkType ?? WorkTypeDefOf.Crafting))
 			{
 				return false;
 			}
 			return true;
 		}
 
-		public static bool IsReadyForTending(Pawn patient, Pawn doctor)
+		public static bool IsReadyForRepairs(Pawn patient, Pawn doctor)
 		{
 			if (patient == doctor)
 			{

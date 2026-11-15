@@ -37,6 +37,12 @@
 	<Asimov.CannotDraftEmergencyPower>Cannot Draft (Running on Emergency Power)</Asimov.CannotDraftEmergencyPower>
 	<Asimov.CannotDraftDownedAutomaton>Cannot draft (Downed)</Asimov.CannotDraftDownedAutomaton>
 
+	<!-- Repairing -->
+
+	<Asimov.Repair>Repair {0}</Asimov.Repair>
+	<Asimov.CannotRepair>Cannot Repair {0}</Asimov.CannotRepair>
+	<Asimov.RepairNotRequired>Not Required</Asimov.RepairNotRequired>
+
 	<!-- Hibernation -->
 	
 	<Asimov.Hibernate>Hibernate {0} Here</Asimov.Hibernate>

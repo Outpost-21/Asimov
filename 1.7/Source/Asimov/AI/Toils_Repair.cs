@@ -16,7 +16,7 @@ namespace Asimov
 
 		public static Toil ReserveMaterials(TargetIndex ind, Pawn injured)
 		{
-			Toil toil = ToilMaker.MakeToil("ReserveMedicine");
+			Toil toil = ToilMaker.MakeToil("ReserveMaterials");
 			toil.initAction = delegate
 			{
 				Pawn actor = toil.actor;
@@ -33,9 +33,9 @@ namespace Asimov
 			return toil;
 		}
 
-		public static Toil PickupMedicine(TargetIndex ind, Pawn injured)
+		public static Toil PickupMaterials(TargetIndex ind, Pawn injured)
 		{
-			Toil toil = ToilMaker.MakeToil("PickupMedicine");
+			Toil toil = ToilMaker.MakeToil("PickupMaterials");
 			toil.initAction = delegate
 			{
 				Pawn actor = toil.actor;
@@ -62,9 +62,9 @@ namespace Asimov
 			return toil;
 		}
 
-		public static Toil FinalizeTend(Pawn patient)
+		public static Toil FinalizeRepair(Pawn patient)
 		{
-			Toil toil = ToilMaker.MakeToil("FinalizeTend");
+			Toil toil = ToilMaker.MakeToil("FinalizeRepair");
 			toil.initAction = delegate
 			{
 				Pawn actor = toil.actor;
@@ -73,7 +73,7 @@ namespace Asimov
 				{
 					float num = (patient.RaceProps.Animal ? 175f : 500f);
 					float num2 = materials?.def.MedicineTendXpGainFactor ?? 0.5f;
-					actor.skills.Learn(SkillDefOf.Crafting, num * num2);
+					actor.skills.Learn(patient.GetAutomatonComp()?.Props?.repairWorkType?.relevantSkills?.First() ?? SkillDefOf.Crafting, num * num2);
 				}
 				AutomatonUtil.DoRepair(actor, patient, materials);
 				if (materials != null && materials.Destroyed)
@@ -98,7 +98,7 @@ namespace Asimov
 				Thing materials = (Thing)actor.CurJob.targetB.Thing;
 				if (actor.skills != null)
 				{
-					actor.skills.Learn(SkillDefOf.Crafting, target.InnerPawn.RaceProps.Animal ? 25f : 50f);
+					actor.skills.Learn(target.InnerPawn?.GetAutomatonComp()?.Props?.repairWorkType?.relevantSkills?.First() ?? SkillDefOf.Crafting, target.InnerPawn.RaceProps.Animal ? 25f : 50f);
 				}
 				AutomatonUtil.DoRestorePower(actor, target, materials);
 				if (materials != null && materials.Destroyed)

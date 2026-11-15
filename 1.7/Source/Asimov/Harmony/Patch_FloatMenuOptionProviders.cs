@@ -12,16 +12,17 @@ using Verse.AI;
 
 namespace Asimov
 {
-    [HarmonyPatch(typeof(FloatMenuOptionProvider_DraftedTend), "AppliesInt")]
-    public static class Patch_FloatMenuOptionProvider_DraftedTend_AppliesInt
+    [HarmonyPatch(typeof(FloatMenuOptionProvider_DraftedTend), "IsValidTendTarget")]
+    public static class Patch_FloatMenuOptionProvider_DraftedTend_IsValidTendTarget
     {
         [HarmonyPrefix]
-        public static bool Prefix(FloatMenuContext context)
+        public static bool Prefix(Pawn doctor, Pawn patient, ref bool __result)
 		{
-			if (context.FirstSelectedPawn.IsAutomaton())
-			{
-				if (context.FirstSelectedPawn.WorkTagIsDisabled(WorkTags.Caring))
-				{
+			if (patient.IsAutomaton() || patient.IsHumanlikeAutomaton())
+            {
+                if (!patient.GetAutomatonComp()?.Props?.canBeTended ?? true)
+                {
+                    __result = false;
 					return false;
 				}
 			}

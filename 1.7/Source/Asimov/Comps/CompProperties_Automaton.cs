@@ -38,6 +38,10 @@ namespace Asimov
 
         public List<SkillLevelSetting> skillSettings = new List<SkillLevelSetting>();
 
+        public bool canBeRepaired = true;
+
+        public WorkTypeDef repairWorkType;
+
         public List<ThingDef> repairThings = new List<ThingDef>();
 
         public List<NeedDef> disabledNeeds = new List<NeedDef>();

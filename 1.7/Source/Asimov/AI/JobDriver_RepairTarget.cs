@@ -93,7 +93,7 @@ namespace Asimov
 			};
 			yield return Toils_Jump.Jump(waitToil);
 			yield return waitToil;
-			yield return Toils_Repair.FinalizeTend(Deliveree);
+			yield return Toils_Repair.FinalizeRepair(Deliveree);
 			yield return Toils_Jump.Jump(gotoToil);
 		}
 

@@ -36,6 +36,15 @@ namespace Asimov
             return false;
         }
 
+        public static Comp_Automaton GetAutomatonComp(this Pawn pawn)
+        {
+            if (!pawn.IsAutomaton() && !pawn.IsHumanlikeAutomaton())
+            {
+                return null;
+            }
+            return pawn.TryGetComp<Comp_Automaton>();
+        }
+
         public static bool DiedFromPowerLoss(this Pawn pawn)
         {
             if (pawn.health.hediffSet.HasHediff(AsimovDefOf.Asimov_EmergencyPower))

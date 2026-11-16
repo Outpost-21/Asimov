@@ -21,10 +21,9 @@ namespace Asimov
             if (!__instance.parent.def.building.bed_humanlike)
             {
                 IEnumerable<Pawn> additions = from p in __instance.parent.Map.mapPawns.PawnsInFaction(Faction.OfPlayer)
-                                              where p.IsPlayerAutomaton() && p.RaceProps.needsRest
+                                              where p.IsAutomaton() && p.RaceProps.needsRest
                                               select p;
-                __result.Concat(additions).OrderBy(p => (p.kindDef.label, p.Label));
-
+                __result = __result.Concat(additions);
             }
 		}
 	}
